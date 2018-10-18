@@ -45,6 +45,9 @@ Contributor(s):
     <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/cv_online?zeroDateTimeBehavior=convertToNull</property>
     <property name="hibernate.connection.username">root</property>
     <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+    <property name="hibernate.current_session_context_class">thread</property>
+    <property name="enable_lazy_load_no_trans">true</property>
+    <property name="hibernate.default_schema">cv_online</property>
     <mapping class="models.Bahasa"/>
     <mapping class="models.Detillowongan"/>
     <mapping class="models.Kandidat"/>
