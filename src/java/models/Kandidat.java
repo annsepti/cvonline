@@ -27,7 +27,7 @@ import javax.xml.bind.annotation.XmlTransient;
 
 /**
  *
- * @author 680183
+ * @author Nande
  */
 @Entity
 @Table(name = "kandidat")
@@ -137,6 +137,31 @@ public class Kandidat implements Serializable {
 
     public Kandidat(Integer idKandidat) {
         this.idKandidat = idKandidat;
+    }
+
+    public Kandidat(Integer idKandidat, String namaKandidat, String email, String noHp, String noTelp, String noTelpkerabat, String namaKerabat, String tempatLahir, Date tglLahir, String nik, String alamatKtp, String alamatSekarang, String npwp, String agama, String jenisKelamin, String statusNikah, String username, String password, byte[] foto, String statusKandidat, String statusLamaran, String uploadCv) {
+        this.idKandidat = idKandidat;
+        this.namaKandidat = namaKandidat;
+        this.email = email;
+        this.noHp = noHp;
+        this.noTelp = noTelp;
+        this.noTelpkerabat = noTelpkerabat;
+        this.namaKerabat = namaKerabat;
+        this.tempatLahir = tempatLahir;
+        this.tglLahir = tglLahir;
+        this.nik = nik;
+        this.alamatKtp = alamatKtp;
+        this.alamatSekarang = alamatSekarang;
+        this.npwp = npwp;
+        this.agama = agama;
+        this.jenisKelamin = jenisKelamin;
+        this.statusNikah = statusNikah;
+        this.username = username;
+        this.password = password;
+        this.foto = foto;
+        this.statusKandidat = statusKandidat;
+        this.statusLamaran = statusLamaran;
+        this.uploadCv = uploadCv;
     }
 
     public Integer getIdKandidat() {
