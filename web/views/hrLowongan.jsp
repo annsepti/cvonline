@@ -1,12 +1,15 @@
-<!doctype html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang=""> <!--<![endif]-->
+<%-- 
+    Document   : hrLowongan
+    Created on : Oct 19, 2018, 12:35:43 AM
+    Author     : USER
+--%>
+
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
     <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Sufee Admin - HTML5 Admin Template</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>CV Online MII</title>
         <meta name="description" content="Sufee Admin - HTML5 Admin Template">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -60,7 +63,6 @@
                 </div><!-- /.navbar-collapse -->
             </nav>
         </aside><!-- /#left-panel -->
-
         <!-- Left Panel -->
 
         <!-- Right Panel -->
@@ -108,7 +110,7 @@
                 <div class="col-sm-4">
                     <div class="page-header float-left">
                         <div class="page-title">
-                            <h1>Data Kandidat</h1>
+                            <h1>Data Pekerjaan</h1>
                         </div>
                     </div>
                 </div>

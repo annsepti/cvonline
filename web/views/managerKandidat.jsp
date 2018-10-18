@@ -1,12 +1,15 @@
-<!doctype html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang=""> <!--<![endif]-->
+<%-- 
+    Document   : managerKandidatForm
+    Created on : Oct 19, 2018, 12:48:36 AM
+    Author     : USER
+--%>
+
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
     <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Sufee Admin - HTML5 Admin Template</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>CV Online MII</title>
         <meta name="description" content="Sufee Admin - HTML5 Admin Template">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -38,44 +41,18 @@
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-menu" aria-controls="main-menu" aria-expanded="false" aria-label="Toggle navigation">
                         <i class="fa fa-bars"></i>
                     </button>
-                    <a class="navbar-brand" href="a-cv.html"><img src="images/logo.png" alt="Logo"></a>
-                    <a class="navbar-brand hidden" href="a-cv.html"><img src="images/logo2.png" alt="Logo"></a>
+                    <a class="navbar-brand" href="a-hrd.html"><img src="images/logo.png" alt="Logo"></a>
+                    <a class="navbar-brand hidden" href="a-hrd.html"><img src="images/logo2.png" alt="Logo"></a>
                 </div>
 
                 <div id="main-menu" class="main-menu collapse navbar-collapse">
                     <ul class="nav navbar-nav">
                         <li class="active">
-                            <a href="a-cv.html"> <i class="menu-icon fa fa-dashboard"></i>BERANDA </a>
+                            <a href="a-manager.html"> <i class="menu-icon fa fa-dashboard"></i>BERANDA </a>
                         </li>
-                        <h3 class="menu-title">CURRICULUM VITAE</h3><!-- /.menu-title -->
-                        <li class="menu-item-has-children dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-laptop"></i>Data CV</a>
-                            <ul class="sub-menu children dropdown-menu">
-                                <li><i class="fa fa-user"></i><a href="a-datapribadi.html">Data Pribadi</a></li>
-                                <li><i class="fa fa-heart"></i><a href="a-keluarga.html">Keluarga</a></li>
-                                <li><i class="fa fa-bookmark"></i><a href="a-pendidikanformal.html">Pendidikan Formal</a></li>
-                                <li><i class="fa fa-bookmark-o"></i><a href="a-pendidikannonformal.html">Pendidikan Non Formal</a></li>
-                                <li><i class="fa fa-building-o"></i><a href="a-pengalamankerja.html">Pengalaman Kerja</a></li>
-                                <li><i class="fa fa-group"></i><a href="a-referensi.html">Referensi</a></li>
-                                <li><i class="fa fa-asterisk"></i><a href="a-lainlain.html">Lain-lain</a></li>
-                            </ul>
-                        </li>
-                        <li class="menu-item-has-children dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-folder-open-o "></i>Lihat CV</a>
-                            <ul class="sub-menu children dropdown-menu">
-                                <li><i class="fa fa-print"></i><a href="a-lihatcv.html">CV Online</a></li>
-                                <li><i class="fa fa-upload"></i><a href="a-unggahcv.html">Unggah CV</a></li>
-                            </ul>
-                        </li>
-
-                        <h3 class="menu-title">LOWONGAN</h3><!-- /.menu-title -->
-
+                        <h3 class="menu-title">KANDIDAT</h3><!-- /.menu-title -->
                         <li>
-                            <a href="a-lowongan.html" > <i class="menu-icon fa fa-suitcase"></i>Lihat Lowongan Tersedia</a>
-
-                        </li>
-                        <li>
-                            <a href="a-daftarpekerjaan.html"> <i class="menu-icon fa fa-tasks"></i>Daftar Pekerjaan</a>
+                            <a href="a-managerkandidat.html" > <i class="menu-icon fa fa-suitcase"></i>Daftar Kandidat</a>
                         </li>
                     </ul>
                 </div><!-- /.navbar-collapse -->
@@ -129,7 +106,7 @@
                 <div class="col-sm-4">
                     <div class="page-header float-left">
                         <div class="page-title">
-                            <h1>Daftar Status Pekerjaan</h1>
+                            <h1>Data Kandidat</h1>
                         </div>
                     </div>
                 </div>
