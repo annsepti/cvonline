@@ -9,6 +9,7 @@ import controllers.GeneralController;
 import controllers.InterfaceController;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.List;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -17,6 +18,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import models.Kandidat;
+import models.Karyawan;
 import tools.HibernateUtil;
 
 /**
@@ -45,10 +47,20 @@ public class LoginServlet extends HttpServlet {
         try (PrintWriter out = response.getWriter()) {
             /* TODO output your page here. You may use following sample code. */
             InterfaceController<Kandidat> ic = new GeneralController<>(HibernateUtil.getSessionFactory(), Kandidat.class);
-            session.setAttribute("dataKandidat", ic.getByLogin(username, password));
-            dis = request.getRequestDispatcher("/views/??.jsp");
-            dis.include(request, response);
+            InterfaceController<Karyawan> ick = new GeneralController<>(HibernateUtil.getSessionFactory(), Karyawan.class);
             
+            List<Kandidat> kandidats = (List<Kandidat>) ic.getByLoginKandidat(username, password);
+            if(kandidats.size() > 0){
+                session.setAttribute("dataKandidat", kandidats);
+                dis = request.getRequestDispatcher("/views/cv.jsp");
+            }
+            else{
+                Karyawan karyawan = (Karyawan) ick.getByLoginKaryawan(username, password);
+                session.setAttribute("dataKaryawan", karyawan);
+                if(karyawan.getRole().equals("1")) dis = request.getRequestDispatcher("/views/hr.jsp");
+                else dis = request.getRequestDispatcher("/views/manager.jsp");
+            }
+            dis.include(request, response);
         }
     }
 

@@ -10,6 +10,7 @@ import daos.InterfaceDAO;
 import java.util.ArrayList;
 import java.util.List;
 import models.Kandidat;
+import models.Karyawan;
 import org.hibernate.SessionFactory;
 
 /**
@@ -61,9 +62,15 @@ public class GeneralController<T> implements InterfaceController<T>{
     }
 
     @Override
-    public T getByLogin(String username, String password) {
+    public T getByLoginKandidat(String username, String password) {
         Kandidat kandidat = new Kandidat(username, password);
-        return (T) iDAO.getByLogin(iDAO.getByLogin(kandidat));
+        return (T) iDAO.getByLoginKandidat(kandidat);
+    }
+
+    @Override
+    public T getByLoginKaryawan(String username, String password) {
+        Karyawan karyawan = new Karyawan(username, password);
+        return (T) iDAO.getByLoginKaryawan(karyawan);
     }
     
 }

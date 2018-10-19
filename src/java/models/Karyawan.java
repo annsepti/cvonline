@@ -61,6 +61,11 @@ public class Karyawan implements Serializable {
         this.idKaryawan = idKaryawan;
     }
 
+    public Karyawan(String username, String password) {
+        this.username = username;
+        this.password = password;
+    }
+
     public Karyawan(Integer idKaryawan, String username, String password, String role) {
         this.idKaryawan = idKaryawan;
         this.username = username;

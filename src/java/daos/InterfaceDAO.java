@@ -20,5 +20,6 @@ public interface InterfaceDAO {
     public List<Object> search(String category, Object key);
     public Object getById(Object id);
     public Object getLastId();
-    public Object getByLogin(Object model);
+    public Object getByLoginKandidat(Object model);
+    public Object getByLoginKaryawan(Object model);
 }

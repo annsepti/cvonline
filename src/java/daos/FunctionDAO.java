@@ -7,6 +7,7 @@ package daos;
 
 //import models.Employee;
 import models.Kandidat;
+import models.Karyawan;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
@@ -84,6 +85,11 @@ public class FunctionDAO {
                 return session.createCriteria(type)
                         .add(Restrictions.and(Restrictions.eq("username", kandidat.getUsername())
                                 , Restrictions.eq("password", kandidat.getPassword()))).uniqueResult();
+            case 6:
+                Karyawan karyawan = (Karyawan) key;
+                return session.createCriteria(type)
+                        .add(Restrictions.and(Restrictions.eq("username", karyawan.getUsername())
+                                , Restrictions.eq("password", karyawan.getPassword()))).uniqueResult();
             default:
                 return session.createQuery("FROM " + type
                         .getSimpleName() + " ORDER BY 1").list();

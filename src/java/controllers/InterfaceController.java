@@ -24,5 +24,6 @@ public interface InterfaceController<T> {
     public List<T> search(String category, String key);
 
     public T getById(Object id);
-    public T getByLogin(String username, String password);
+    public T getByLoginKandidat(String username, String password);
+    public T getByLoginKaryawan(String username, String password);
 }

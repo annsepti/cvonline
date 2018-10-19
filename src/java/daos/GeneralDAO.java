@@ -74,8 +74,13 @@ public class GeneralDAO implements InterfaceDAO {
     }
 
     @Override
-    public Object getByLogin(Object model) {
+    public Object getByLoginKandidat(Object model) {
         return gdao.execute(5, null, type, null, model);
+    }
+
+    @Override
+    public Object getByLoginKaryawan(Object model) {
+        return gdao.execute(6, null, type, null, model);
     }
     
 }
