@@ -70,16 +70,6 @@ public class Pendidikan implements Serializable {
         this.idPendidikan = idPendidikan;
     }
 
-    public Pendidikan(Integer idPendidikan, String jenjangPendidikan, String namaSekolah, Date tahunMasuk, Date tahunSelesai, Float nilaiAkhir, Kandidat idKandidat) {
-        this.idPendidikan = idPendidikan;
-        this.jenjangPendidikan = jenjangPendidikan;
-        this.namaSekolah = namaSekolah;
-        this.tahunMasuk = tahunMasuk;
-        this.tahunSelesai = tahunSelesai;
-        this.nilaiAkhir = nilaiAkhir;
-        this.idKandidat = idKandidat;
-    }
-
     public Integer getIdPendidikan() {
         return idPendidikan;
     }

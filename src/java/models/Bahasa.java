@@ -22,7 +22,7 @@ import javax.xml.bind.annotation.XmlRootElement;
 
 /**
  *
- * @author Nande
+ * @author 680183
  */
 @Entity
 @Table(name = "bahasa")
@@ -59,15 +59,6 @@ public class Bahasa implements Serializable {
 
     public Bahasa(Integer idBahasa) {
         this.idBahasa = idBahasa;
-    }
-
-    public Bahasa(Integer idBahasa, String namaBahasa, String speaking, String reading, String writing, Kandidat idKandidat) {
-        this.idBahasa = idBahasa;
-        this.namaBahasa = namaBahasa;
-        this.speaking = speaking;
-        this.reading = reading;
-        this.writing = writing;
-        this.idKandidat = idKandidat;
     }
 
     public Integer getIdBahasa() {

@@ -52,12 +52,6 @@ public class Penghargaan implements Serializable {
         this.idPenghargaan = idPenghargaan;
     }
 
-    public Penghargaan(Integer idPenghargaan, String namaPenghargaan, Kandidat idKandidat) {
-        this.idPenghargaan = idPenghargaan;
-        this.namaPenghargaan = namaPenghargaan;
-        this.idKandidat = idKandidat;
-    }
-
     public Integer getIdPenghargaan() {
         return idPenghargaan;
     }

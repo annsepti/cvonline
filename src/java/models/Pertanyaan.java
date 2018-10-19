@@ -52,11 +52,6 @@ public class Pertanyaan implements Serializable {
         this.idPertanyaan = idPertanyaan;
     }
 
-    public Pertanyaan(Integer idPertanyaan, String pertanyaan) {
-        this.idPertanyaan = idPertanyaan;
-        this.pertanyaan = pertanyaan;
-    }
-
     public Integer getIdPertanyaan() {
         return idPertanyaan;
     }

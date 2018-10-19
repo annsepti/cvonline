@@ -27,7 +27,7 @@ import javax.xml.bind.annotation.XmlTransient;
 
 /**
  *
- * @author Nande
+ * @author 680183
  */
 @Entity
 @Table(name = "kandidat")
@@ -124,8 +124,6 @@ public class Kandidat implements Serializable {
     @OneToMany(mappedBy = "idKandidat", fetch = FetchType.LAZY)
     private List<Keahlian> keahlianList;
     @OneToMany(mappedBy = "idKandidat", fetch = FetchType.LAZY)
-    private List<Lowongan> lowonganList;
-    @OneToMany(mappedBy = "idKandidat", fetch = FetchType.LAZY)
     private List<Keluarga> keluargaList;
     @OneToMany(mappedBy = "idKandidat", fetch = FetchType.LAZY)
     private List<Pelatihan> pelatihanList;
@@ -137,36 +135,6 @@ public class Kandidat implements Serializable {
 
     public Kandidat(Integer idKandidat) {
         this.idKandidat = idKandidat;
-    }
-
-    public Kandidat(String username, String password) {
-        this.username = username;
-        this.password = password;
-    }
-
-    public Kandidat(Integer idKandidat, String namaKandidat, String email, String noHp, String noTelp, String noTelpkerabat, String namaKerabat, String tempatLahir, Date tglLahir, String nik, String alamatKtp, String alamatSekarang, String npwp, String agama, String jenisKelamin, String statusNikah, String username, String password, byte[] foto, String statusKandidat, String statusLamaran, String uploadCv) {
-        this.idKandidat = idKandidat;
-        this.namaKandidat = namaKandidat;
-        this.email = email;
-        this.noHp = noHp;
-        this.noTelp = noTelp;
-        this.noTelpkerabat = noTelpkerabat;
-        this.namaKerabat = namaKerabat;
-        this.tempatLahir = tempatLahir;
-        this.tglLahir = tglLahir;
-        this.nik = nik;
-        this.alamatKtp = alamatKtp;
-        this.alamatSekarang = alamatSekarang;
-        this.npwp = npwp;
-        this.agama = agama;
-        this.jenisKelamin = jenisKelamin;
-        this.statusNikah = statusNikah;
-        this.username = username;
-        this.password = password;
-        this.foto = foto;
-        this.statusKandidat = statusKandidat;
-        this.statusLamaran = statusLamaran;
-        this.uploadCv = uploadCv;
     }
 
     public Integer getIdKandidat() {
@@ -415,15 +383,6 @@ public class Kandidat implements Serializable {
 
     public void setKeahlianList(List<Keahlian> keahlianList) {
         this.keahlianList = keahlianList;
-    }
-
-    @XmlTransient
-    public List<Lowongan> getLowonganList() {
-        return lowonganList;
-    }
-
-    public void setLowonganList(List<Lowongan> lowonganList) {
-        this.lowonganList = lowonganList;
     }
 
     @XmlTransient

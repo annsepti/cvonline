@@ -67,17 +67,6 @@ public class Referensi implements Serializable {
         this.idReferensi = idReferensi;
     }
 
-    public Referensi(Integer idReferensi, String nama, String noHp, String email, String lamaKenal, String konfirmasi, String alamat, Kandidat idKandidat) {
-        this.idReferensi = idReferensi;
-        this.nama = nama;
-        this.noHp = noHp;
-        this.email = email;
-        this.lamaKenal = lamaKenal;
-        this.konfirmasi = konfirmasi;
-        this.alamat = alamat;
-        this.idKandidat = idKandidat;
-    }
-
     public Integer getIdReferensi() {
         return idReferensi;
     }
