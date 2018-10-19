@@ -5,13 +5,19 @@
  */
 package servlets.manage;
 
+import controllers.GeneralController;
+import controllers.InterfaceController;
 import java.io.IOException;
 import java.io.PrintWriter;
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+import models.Pertanyaan;
+import tools.HibernateUtil;
 
 /**
  *
@@ -32,17 +38,19 @@ public class SaveOrUpdatePertanyaan extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
+        String id = request.getParameter("id");
+        String namaPertanyaan = request.getParameter("namapenghargaan");
+        HttpSession session = request.getSession();
+        RequestDispatcher dis = null;
         try (PrintWriter out = response.getWriter()) {
             /* TODO output your page here. You may use following sample code. */
-            out.println("<!DOCTYPE html>");
-            out.println("<html>");
-            out.println("<head>");
-            out.println("<title>Servlet SaveOrUpdatePertanyaan</title>");            
-            out.println("</head>");
-            out.println("<body>");
-            out.println("<h1>Servlet SaveOrUpdatePertanyaan at " + request.getContextPath() + "</h1>");
-            out.println("</body>");
-            out.println("</html>");
+            InterfaceController<Pertanyaan> icp = new GeneralController<>(HibernateUtil.getSessionFactory(), Pertanyaan.class);
+            Pertanyaan pertanyaan = new Pertanyaan();
+            String message = "Gagal dongs";
+            if(icp.saveOrUpdate(pertanyaan)) message = "Sukses dongs";
+            session.setAttribute("message", message);
+            dis = request.getRequestDispatcher("??");
+            dis.forward(request, response);
         }
     }
 

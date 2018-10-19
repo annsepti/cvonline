@@ -33,28 +33,28 @@ import javax.xml.bind.annotation.XmlTransient;
 @Table(name = "kandidat")
 @XmlRootElement
 @NamedQueries({
-    @NamedQuery(name = "Kandidat.findAll", query = "SELECT k FROM Kandidat k")
-    , @NamedQuery(name = "Kandidat.findByIdKandidat", query = "SELECT k FROM Kandidat k WHERE k.idKandidat = :idKandidat")
-    , @NamedQuery(name = "Kandidat.findByNamaKandidat", query = "SELECT k FROM Kandidat k WHERE k.namaKandidat = :namaKandidat")
-    , @NamedQuery(name = "Kandidat.findByEmail", query = "SELECT k FROM Kandidat k WHERE k.email = :email")
-    , @NamedQuery(name = "Kandidat.findByNoHp", query = "SELECT k FROM Kandidat k WHERE k.noHp = :noHp")
-    , @NamedQuery(name = "Kandidat.findByNoTelp", query = "SELECT k FROM Kandidat k WHERE k.noTelp = :noTelp")
-    , @NamedQuery(name = "Kandidat.findByNoTelpkerabat", query = "SELECT k FROM Kandidat k WHERE k.noTelpkerabat = :noTelpkerabat")
-    , @NamedQuery(name = "Kandidat.findByNamaKerabat", query = "SELECT k FROM Kandidat k WHERE k.namaKerabat = :namaKerabat")
-    , @NamedQuery(name = "Kandidat.findByTempatLahir", query = "SELECT k FROM Kandidat k WHERE k.tempatLahir = :tempatLahir")
-    , @NamedQuery(name = "Kandidat.findByTglLahir", query = "SELECT k FROM Kandidat k WHERE k.tglLahir = :tglLahir")
-    , @NamedQuery(name = "Kandidat.findByNik", query = "SELECT k FROM Kandidat k WHERE k.nik = :nik")
-    , @NamedQuery(name = "Kandidat.findByAlamatKtp", query = "SELECT k FROM Kandidat k WHERE k.alamatKtp = :alamatKtp")
-    , @NamedQuery(name = "Kandidat.findByAlamatSekarang", query = "SELECT k FROM Kandidat k WHERE k.alamatSekarang = :alamatSekarang")
-    , @NamedQuery(name = "Kandidat.findByNpwp", query = "SELECT k FROM Kandidat k WHERE k.npwp = :npwp")
-    , @NamedQuery(name = "Kandidat.findByAgama", query = "SELECT k FROM Kandidat k WHERE k.agama = :agama")
-    , @NamedQuery(name = "Kandidat.findByJenisKelamin", query = "SELECT k FROM Kandidat k WHERE k.jenisKelamin = :jenisKelamin")
-    , @NamedQuery(name = "Kandidat.findByStatusNikah", query = "SELECT k FROM Kandidat k WHERE k.statusNikah = :statusNikah")
-    , @NamedQuery(name = "Kandidat.findByUsername", query = "SELECT k FROM Kandidat k WHERE k.username = :username")
-    , @NamedQuery(name = "Kandidat.findByPassword", query = "SELECT k FROM Kandidat k WHERE k.password = :password")
-    , @NamedQuery(name = "Kandidat.findByStatusKandidat", query = "SELECT k FROM Kandidat k WHERE k.statusKandidat = :statusKandidat")
-    , @NamedQuery(name = "Kandidat.findByStatusLamaran", query = "SELECT k FROM Kandidat k WHERE k.statusLamaran = :statusLamaran")
-    , @NamedQuery(name = "Kandidat.findByUploadCv", query = "SELECT k FROM Kandidat k WHERE k.uploadCv = :uploadCv")})
+    @NamedQuery(name = "Kandidat_1.findAll", query = "SELECT k FROM Kandidat_1 k")
+    , @NamedQuery(name = "Kandidat_1.findByIdKandidat", query = "SELECT k FROM Kandidat_1 k WHERE k.idKandidat = :idKandidat")
+    , @NamedQuery(name = "Kandidat_1.findByNamaKandidat", query = "SELECT k FROM Kandidat_1 k WHERE k.namaKandidat = :namaKandidat")
+    , @NamedQuery(name = "Kandidat_1.findByEmail", query = "SELECT k FROM Kandidat_1 k WHERE k.email = :email")
+    , @NamedQuery(name = "Kandidat_1.findByNoHp", query = "SELECT k FROM Kandidat_1 k WHERE k.noHp = :noHp")
+    , @NamedQuery(name = "Kandidat_1.findByNoTelp", query = "SELECT k FROM Kandidat_1 k WHERE k.noTelp = :noTelp")
+    , @NamedQuery(name = "Kandidat_1.findByNoTelpkerabat", query = "SELECT k FROM Kandidat_1 k WHERE k.noTelpkerabat = :noTelpkerabat")
+    , @NamedQuery(name = "Kandidat_1.findByNamaKerabat", query = "SELECT k FROM Kandidat_1 k WHERE k.namaKerabat = :namaKerabat")
+    , @NamedQuery(name = "Kandidat_1.findByTempatLahir", query = "SELECT k FROM Kandidat_1 k WHERE k.tempatLahir = :tempatLahir")
+    , @NamedQuery(name = "Kandidat_1.findByTglLahir", query = "SELECT k FROM Kandidat_1 k WHERE k.tglLahir = :tglLahir")
+    , @NamedQuery(name = "Kandidat_1.findByNik", query = "SELECT k FROM Kandidat_1 k WHERE k.nik = :nik")
+    , @NamedQuery(name = "Kandidat_1.findByAlamatKtp", query = "SELECT k FROM Kandidat_1 k WHERE k.alamatKtp = :alamatKtp")
+    , @NamedQuery(name = "Kandidat_1.findByAlamatSekarang", query = "SELECT k FROM Kandidat_1 k WHERE k.alamatSekarang = :alamatSekarang")
+    , @NamedQuery(name = "Kandidat_1.findByNpwp", query = "SELECT k FROM Kandidat_1 k WHERE k.npwp = :npwp")
+    , @NamedQuery(name = "Kandidat_1.findByAgama", query = "SELECT k FROM Kandidat_1 k WHERE k.agama = :agama")
+    , @NamedQuery(name = "Kandidat_1.findByJenisKelamin", query = "SELECT k FROM Kandidat_1 k WHERE k.jenisKelamin = :jenisKelamin")
+    , @NamedQuery(name = "Kandidat_1.findByStatusNikah", query = "SELECT k FROM Kandidat_1 k WHERE k.statusNikah = :statusNikah")
+    , @NamedQuery(name = "Kandidat_1.findByUsername", query = "SELECT k FROM Kandidat_1 k WHERE k.username = :username")
+    , @NamedQuery(name = "Kandidat_1.findByPassword", query = "SELECT k FROM Kandidat_1 k WHERE k.password = :password")
+    , @NamedQuery(name = "Kandidat_1.findByStatusKandidat", query = "SELECT k FROM Kandidat_1 k WHERE k.statusKandidat = :statusKandidat")
+    , @NamedQuery(name = "Kandidat_1.findByStatusLamaran", query = "SELECT k FROM Kandidat_1 k WHERE k.statusLamaran = :statusLamaran")
+    , @NamedQuery(name = "Kandidat_1.findByUploadCv", query = "SELECT k FROM Kandidat_1 k WHERE k.uploadCv = :uploadCv")})
 public class Kandidat implements Serializable {
 
     private static final long serialVersionUID = 1L;
@@ -108,29 +108,7 @@ public class Kandidat implements Serializable {
     @Column(name = "upload_cv")
     private String uploadCv;
     @OneToMany(mappedBy = "idKandidat", fetch = FetchType.LAZY)
-    private List<Detillowongan> detillowonganList;
-    @OneToMany(mappedBy = "idKandidat", fetch = FetchType.LAZY)
-    private List<Bahasa> bahasaList;
-    @OneToMany(mappedBy = "idKandidat", fetch = FetchType.LAZY)
-    private List<Pendidikan> pendidikanList;
-    @OneToMany(mappedBy = "idKandidat", fetch = FetchType.LAZY)
-    private List<Referensi> referensiList;
-    @OneToMany(mappedBy = "idKandidat", fetch = FetchType.LAZY)
-    private List<Organisasi> organisasiList;
-    @OneToMany(mappedBy = "idKandidat", fetch = FetchType.LAZY)
-    private List<Pengalamankerja> pengalamankerjaList;
-    @OneToMany(mappedBy = "idKandidat", fetch = FetchType.LAZY)
-    private List<Lain> lainList;
-    @OneToMany(mappedBy = "idKandidat", fetch = FetchType.LAZY)
     private List<Keahlian> keahlianList;
-    @OneToMany(mappedBy = "idKandidat", fetch = FetchType.LAZY)
-    private List<Lowongan> lowonganList;
-    @OneToMany(mappedBy = "idKandidat", fetch = FetchType.LAZY)
-    private List<Keluarga> keluargaList;
-    @OneToMany(mappedBy = "idKandidat", fetch = FetchType.LAZY)
-    private List<Pelatihan> pelatihanList;
-    @OneToMany(mappedBy = "idKandidat", fetch = FetchType.LAZY)
-    private List<Penghargaan> penghargaanList;
 
     public Kandidat() {
     }
@@ -139,11 +117,15 @@ public class Kandidat implements Serializable {
         this.idKandidat = idKandidat;
     }
 
+    public Integer getIdKandidat() {
+        return idKandidat;
+    }
+
     public Kandidat(String username, String password) {
         this.username = username;
         this.password = password;
     }
-
+    
     public Kandidat(Integer idKandidat, String namaKandidat, String email, String noHp, String noTelp, String noTelpkerabat, String namaKerabat, String tempatLahir, Date tglLahir, String nik, String alamatKtp, String alamatSekarang, String npwp, String agama, String jenisKelamin, String statusNikah, String username, String password, byte[] foto, String statusKandidat, String statusLamaran, String uploadCv) {
         this.idKandidat = idKandidat;
         this.namaKandidat = namaKandidat;
@@ -168,11 +150,7 @@ public class Kandidat implements Serializable {
         this.statusLamaran = statusLamaran;
         this.uploadCv = uploadCv;
     }
-
-    public Integer getIdKandidat() {
-        return idKandidat;
-    }
-
+    
     public void setIdKandidat(Integer idKandidat) {
         this.idKandidat = idKandidat;
     }
@@ -346,111 +324,12 @@ public class Kandidat implements Serializable {
     }
 
     @XmlTransient
-    public List<Detillowongan> getDetillowonganList() {
-        return detillowonganList;
-    }
-
-    public void setDetillowonganList(List<Detillowongan> detillowonganList) {
-        this.detillowonganList = detillowonganList;
-    }
-
-    @XmlTransient
-    public List<Bahasa> getBahasaList() {
-        return bahasaList;
-    }
-
-    public void setBahasaList(List<Bahasa> bahasaList) {
-        this.bahasaList = bahasaList;
-    }
-
-    @XmlTransient
-    public List<Pendidikan> getPendidikanList() {
-        return pendidikanList;
-    }
-
-    public void setPendidikanList(List<Pendidikan> pendidikanList) {
-        this.pendidikanList = pendidikanList;
-    }
-
-    @XmlTransient
-    public List<Referensi> getReferensiList() {
-        return referensiList;
-    }
-
-    public void setReferensiList(List<Referensi> referensiList) {
-        this.referensiList = referensiList;
-    }
-
-    @XmlTransient
-    public List<Organisasi> getOrganisasiList() {
-        return organisasiList;
-    }
-
-    public void setOrganisasiList(List<Organisasi> organisasiList) {
-        this.organisasiList = organisasiList;
-    }
-
-    @XmlTransient
-    public List<Pengalamankerja> getPengalamankerjaList() {
-        return pengalamankerjaList;
-    }
-
-    public void setPengalamankerjaList(List<Pengalamankerja> pengalamankerjaList) {
-        this.pengalamankerjaList = pengalamankerjaList;
-    }
-
-    @XmlTransient
-    public List<Lain> getLainList() {
-        return lainList;
-    }
-
-    public void setLainList(List<Lain> lainList) {
-        this.lainList = lainList;
-    }
-
-    @XmlTransient
     public List<Keahlian> getKeahlianList() {
         return keahlianList;
     }
 
     public void setKeahlianList(List<Keahlian> keahlianList) {
         this.keahlianList = keahlianList;
-    }
-
-    @XmlTransient
-    public List<Lowongan> getLowonganList() {
-        return lowonganList;
-    }
-
-    public void setLowonganList(List<Lowongan> lowonganList) {
-        this.lowonganList = lowonganList;
-    }
-
-    @XmlTransient
-    public List<Keluarga> getKeluargaList() {
-        return keluargaList;
-    }
-
-    public void setKeluargaList(List<Keluarga> keluargaList) {
-        this.keluargaList = keluargaList;
-    }
-
-    @XmlTransient
-    public List<Pelatihan> getPelatihanList() {
-        return pelatihanList;
-    }
-
-    public void setPelatihanList(List<Pelatihan> pelatihanList) {
-        this.pelatihanList = pelatihanList;
-    }
-
-    @XmlTransient
-    public List<Penghargaan> getPenghargaanList() {
-        return penghargaanList;
-    }
-
-    public void setPenghargaanList(List<Penghargaan> penghargaanList) {
-        this.penghargaanList = penghargaanList;
     }
 
     @Override
@@ -475,7 +354,7 @@ public class Kandidat implements Serializable {
 
     @Override
     public String toString() {
-        return "models.Kandidat[ idKandidat=" + idKandidat + " ]";
+        return "models.Kandidat_1[ idKandidat=" + idKandidat + " ]";
     }
     
 }

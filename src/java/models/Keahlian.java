@@ -25,7 +25,7 @@ import javax.xml.bind.annotation.XmlRootElement;
 
 /**
  *
- * @author 680183
+ * @author Nande
  */
 @Entity
 @Table(name = "keahlian")
@@ -34,7 +34,8 @@ import javax.xml.bind.annotation.XmlRootElement;
     @NamedQuery(name = "Keahlian.findAll", query = "SELECT k FROM Keahlian k")
     , @NamedQuery(name = "Keahlian.findByIdKeahlian", query = "SELECT k FROM Keahlian k WHERE k.idKeahlian = :idKeahlian")
     , @NamedQuery(name = "Keahlian.findBySertifikat", query = "SELECT k FROM Keahlian k WHERE k.sertifikat = :sertifikat")
-    , @NamedQuery(name = "Keahlian.findByTglSertifikat", query = "SELECT k FROM Keahlian k WHERE k.tglSertifikat = :tglSertifikat")})
+    , @NamedQuery(name = "Keahlian.findByTglSertifikat", query = "SELECT k FROM Keahlian k WHERE k.tglSertifikat = :tglSertifikat")
+    , @NamedQuery(name = "Keahlian.findByDeskripsi", query = "SELECT k FROM Keahlian k WHERE k.deskripsi = :deskripsi")})
 public class Keahlian implements Serializable {
 
     private static final long serialVersionUID = 1L;
@@ -48,6 +49,9 @@ public class Keahlian implements Serializable {
     @Column(name = "tgl_sertifikat")
     @Temporal(TemporalType.DATE)
     private Date tglSertifikat;
+    @Basic(optional = false)
+    @Column(name = "deskripsi")
+    private String deskripsi;
     @JoinColumn(name = "id_kandidat", referencedColumnName = "id_kandidat")
     @ManyToOne(fetch = FetchType.LAZY)
     private Kandidat idKandidat;
@@ -59,13 +63,19 @@ public class Keahlian implements Serializable {
         this.idKeahlian = idKeahlian;
     }
 
-    public Keahlian(Integer idKeahlian, String sertifikat, Date tglSertifikat, Kandidat idKandidat) {
+    public Keahlian(Integer idKeahlian, String sertifikat, Date tglSertifikat, String deskripsi, Kandidat idKandidat) {
         this.idKeahlian = idKeahlian;
         this.sertifikat = sertifikat;
         this.tglSertifikat = tglSertifikat;
+        this.deskripsi = deskripsi;
         this.idKandidat = idKandidat;
     }
- 
+    
+    public Keahlian(Integer idKeahlian, String deskripsi) {
+        this.idKeahlian = idKeahlian;
+        this.deskripsi = deskripsi;
+    }
+
     public Integer getIdKeahlian() {
         return idKeahlian;
     }
@@ -88,6 +98,14 @@ public class Keahlian implements Serializable {
 
     public void setTglSertifikat(Date tglSertifikat) {
         this.tglSertifikat = tglSertifikat;
+    }
+
+    public String getDeskripsi() {
+        return deskripsi;
+    }
+
+    public void setDeskripsi(String deskripsi) {
+        this.deskripsi = deskripsi;
     }
 
     public Kandidat getIdKandidat() {
