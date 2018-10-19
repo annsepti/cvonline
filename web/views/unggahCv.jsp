@@ -1,11 +1,14 @@
-<!doctype html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang=""> <!--<![endif]-->
+<%-- 
+    Document   : unggahCv
+    Created on : Oct 19, 2018, 12:55:07 AM
+    Author     : USER
+--%>
+
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
     <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>CV Online MII</title>
         <meta name="description" content="Sufee Admin - HTML5 Admin Template">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -129,7 +132,18 @@
                 <div class="col-sm-4">
                     <div class="page-header float-left">
                         <div class="page-title">
-                            <h1>Beranda</h1>
+                            <h1>Dashboard</h1>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-8">
+                    <div class="page-header float-right">
+                        <div class="page-title">
+                            <ol class="breadcrumb text-right">
+                                <li><a href="#">Beranda</a></li>
+                                <li><a href="#">Curriculum Vitae</a></li>
+                                <li class="active">Data Pribadi</li>
+                            </ol>
                         </div>
                     </div>
                 </div>
@@ -139,31 +153,32 @@
                 <div class="animated fadeIn">
 
                     <div class="row">
-                        <div class="col-md-3">
-                            
-                        </div>
-                        <div class="col-md-6">
+
+                        <div class="col-xs-6 col-sm-12">
                             <div class="card">
                                 <div class="card-header">
-                                    <strong class="card-title mb-3">Profil Singkat</strong>
+                                    <strong>CV Pribadi</strong> <small>  </small>
                                 </div>
-                                <div class="card-body">
-                                    <div class="mx-auto d-block">
-                                        <img class="rounded-circle mx-auto d-block" src="images/admin.jpg" alt="Card image cap">
-                                        <h5 class="text-sm-center mt-2 mb-1">Steven Lee</h5>
-                                        <div class="location text-sm-center"><i class="fa fa-map-marker"></i> California, United States</div>
+                                <div class="card-body card-block">
+                                    <div class="row form-group">
+                                        <div class="col col-md-4"><label for="file-input" class=" form-control-label">Unggah CV format pribadi</label></div>
+                                        <div class="col-12 col-md-8"><input type="file" id="file-input" name="file-input" class="form-control-file"></div>
                                     </div>
-                                    <hr>
-                                    <div class="card-text text-sm-center">
-                                        <h8>Status Tersedia</h8>
-                                        <label class="switch switch-text switch-success switch-pill"><input type="checkbox" class="switch-input" checked="true"> <span data-on="On" data-off="Off" class="switch-label"></span> <span class="switch-handle"></span></label>
-                                    </div>
+                                </div>
+                                <div class="card-footer">
+                                    <button type="submit" class="btn btn-primary btn-sm">
+                                      <i class="fa fa-dot-circle-o"></i> Simpan
+                                    </button>
+                                    <button type="reset" class="btn btn-danger btn-sm">
+                                      <i class="fa fa-ban"></i> Reset
+                                    </button>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-3">
-                            
-                        </div>
+
+
+
+
                     </div>
 
 
@@ -191,6 +206,5 @@
                 });
             });
         </script>
-
     </body>
 </html>

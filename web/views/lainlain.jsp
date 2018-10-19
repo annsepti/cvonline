@@ -1,11 +1,14 @@
-<!doctype html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang=""> <!--<![endif]-->
+<%-- 
+    Document   : lainlainForm
+    Created on : Oct 19, 2018, 12:44:07 AM
+    Author     : USER
+--%>
+
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
     <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>CV Online MII</title>
         <meta name="description" content="Sufee Admin - HTML5 Admin Template">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -38,7 +41,7 @@
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-menu" aria-controls="main-menu" aria-expanded="false" aria-label="Toggle navigation">
                         <i class="fa fa-bars"></i>
                     </button>
-                    <a class="navbar-brand" href="a-cv.html"><img src="images/logo.png" alt="Logo"></a>
+                    <a class="navbar-brand" href="./"><img src="images/logo.png" alt="Logo"></a>
                     <a class="navbar-brand hidden" href="a-cv.html"><img src="images/logo2.png" alt="Logo"></a>
                 </div>
 
@@ -139,7 +142,7 @@
                             <ol class="breadcrumb text-right">
                                 <li><a href="#">Beranda</a></li>
                                 <li><a href="#">Curriculum Vitae</a></li>
-                                <li class="active">Data Pribadi</li>
+                                <li class="active">Referensi</li>
                             </ol>
                         </div>
                     </div>
@@ -154,111 +157,40 @@
                         <div class="col-xs-6 col-sm-12">
                             <div class="card">
                                 <div class="card-header">
-                                    <strong>Profil</strong> <small>  </small>
+                                    <strong>Pendidikan</strong> <small>  </small>
                                 </div>
                                 <div class="card-body card-block">
                                     <div class="row form-group">
                                         <div class="col col-md-3"><label for="text-input" class=" form-control-label">Nama</label></div>
-                                        <div class="col-12 col-md-9"><input type="text" id="text-input" name="text-input" placeholder="" class="form-control"><small class="form-text text-muted">Nama lengkap sesuai KTP</small></div>
-                                    </div>
-                                    <div class="row form-group">
-                                        <div class="col col-md-3"><label for="text-input" class=" form-control-label">Tempat Lahir</label></div>
                                         <div class="col-12 col-md-9"><input type="text" id="text-input" name="text-input" placeholder="" class="form-control"></div>
                                     </div>
                                     <div class="row form-group">
-                                        <div class="col col-md-3"><label for="text-input" class=" form-control-label">Tanggal Lahir</label></div>
-                                        <div class="col-12 col-md-9"><input type="text" id="text-input" name="text-input" placeholder="" class="form-control"><small class="form-text text-muted">Format DD/MM/YYY</small></div>
-                                    </div>
-                                    <div class="row form-group">
-                                        <div class="col col-md-3"><label for="text-input" class=" form-control-label">NIK (No. KTP)</label></div>
+                                        <div class="col col-md-3"><label for="text-input" class=" form-control-label">No HP</label></div>
                                         <div class="col-12 col-md-9"><input type="text" id="text-input" name="text-input" placeholder="" class="form-control"></div>
                                     </div>
                                     <div class="row form-group">
-                                        <div class="col col-md-3"><label class=" form-control-label">Jenis Kelamin</label></div><br>
-                                        <div class="col col-md-9">
-                                            <div class="form-check">
-                                                <div class="radio">
-                                                    <label for="radio1" class="form-check-label ">
-                                                        <input type="radio" id="radio1" name="radios" value="option1" class="form-check-input">Laki-laki
-                                                    </label>
-                                                </div>
-                                                <div class="radio">
-                                                    <label for="radio2" class="form-check-label ">
-                                                        <input type="radio" id="radio2" name="radios" value="option2" class="form-check-input">Perempuan
-                                                </div>
+                                        <div class="col col-md-3"><label for="text-input" class=" form-control-label">Email</label></div>
+                                        <div class="col-12 col-md-9"><input type="text" id="text-input" name="text-input" placeholder="" class="form-control"></div>
+                                    </div>
+                                    <div class="row form-group">
+                                        <div class="col col-md-3"><label for="text-input" class=" form-control-label">Lama Kenal</label></div>
+                                        <div class="col-12 col-md-9"><input type="text" id="text-input" name="text-input" placeholder="" class="form-control"></div>
+                                    </div>
+                                    <div class="row form-group">
+                                        <div class="col col-md-3"><label for="textarea-input" class=" form-control-label">Alamat</label></div>
+                                        <div class="col-12 col-md-9"><textarea name="textarea-input" id="textarea-input" rows="9" placeholder="" class="form-control"></textarea></div>
+                                    </div>
+                                    <div class="row form-group">
+                                        <div class="col col-md-4"><label class=" form-control-label">Konfirmasi untuk dapat dihubungi?</label></div>
+                                        <div class="col col-md-8">
+                                          <div class="form-check">
+                                            <div class="checkbox">
+                                              <label for="checkbox1" class="form-check-label ">
+                                                <input type="checkbox" id="checkbox1" name="checkbox1" value="option1" class="form-check-input">Ya
+                                              </label>
                                             </div>
+                                          </div>
                                         </div>
-                                    </div>
-                                    <div class="row form-group">
-                                        <div class="col col-md-3"><label for="select" class=" form-control-label">Status Perkawinan</label></div><br>
-                                        <div class="col-12 col-md-9">
-                                           <select name="select" id="select" class="form-control">
-                                                <option value="0">Silahkan Pilih</option>
-                                                <option value="1">Belum Menikah</option>
-                                                <option value="2">Sudah Menikah</option>
-                                                <option value="3">Single Parent</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <div class="row form-group">
-                                        <div class="col col-md-3"><label for="select" class=" form-control-label">Agama</label></div><br>
-                                        <div class="col-12 col-md-9">
-                                           <select name="select" id="select" class="form-control">
-                                                <option value="0">Silahkan Pilih</option>
-                                                <option value="1">Islam</option>
-                                                <option value="2">Kristen</option>
-                                                <option value="3">Katolik</option>
-                                                <option value="1">Budha</option>
-                                                <option value="2">Hindu</option>
-                                                <option value="3">Lainnya</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <div class="row form-group">
-                                        <div class="col col-md-3"><label for="textarea-input" class=" form-control-label">Alamat Sesuai KTP</label></div>
-                                        <div class="col-12 col-md-9"><textarea name="textarea-input" id="textarea-input" rows="9" placeholder="" class="form-control"></textarea></div>
-                                    </div>
-                                    <div class="row form-group">
-                                        <div class="col col-md-3"><label for="textarea-input" class=" form-control-label">Alamat Sekarang</label></div>
-                                        <div class="col-12 col-md-9"><textarea name="textarea-input" id="textarea-input" rows="9" placeholder="" class="form-control"></textarea></div>
-                                    </div>
-                                    <div class="row form-group">
-                                        <div class="col col-md-3"><label for="text-input" class=" form-control-label">NPWP</label></div>
-                                        <div class="col-12 col-md-9"><input type="text" id="text-input" name="text-input" placeholder="" class="form-control"></div>
-                                    </div>
-                                    <div class="row form-group">
-                                        <div class="col col-md-3"><label for="text-input" class=" form-control-label">Ponsel</label></div>
-                                        <div class="col-12 col-md-9"><input type="text" id="text-input" name="text-input" placeholder="" class="form-control"></div>
-                                    </div>
-                                    <div class="row form-group">
-                                        <div class="col col-md-3"><label for="text-input" class=" form-control-label">Telepon Rumah</label></div>
-                                        <div class="col-12 col-md-9"><input type="text" id="text-input" name="text-input" placeholder="" class="form-control"></div>
-                                    </div>
-                                    <div class="row form-group">
-                                        <div class="col col-md-3"><label for="text-input" class=" form-control-label">Telepon Kerabat</label></div>
-                                        <div class="col-12 col-md-4"><input type="text" id="text-input" name="text-input" placeholder="" class="form-control"></div>
-                                        <div class="col col-md-2"><label for="text-input" class=" form-control-label">Atas Nama</label></div>
-                                        <div class="col-12 col-md-3"><input type="text" id="text-input" name="text-input" placeholder="" class="form-control"></div>
-
-                                    </div>
-                                    <div class="row form-group">
-                                        <div class="col col-md-3"><label for="select" class=" form-control-label">Pendidikan Terakhir</label></div><br>
-                                        <div class="col-12 col-md-9">
-                                           <select name="select" id="select" class="form-control">
-                                                <option value="0">Silahkan Pilih</option>
-                                                <option value="1">S3</option>
-                                                <option value="2">S2</option>
-                                                <option value="3">S1</option>
-                                                <option value="1">D4</option>
-                                                <option value="2">D3</option>
-                                                <option value="3">D2</option>
-                                                <option value="1">D1</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <div class="row form-group">
-                                        <div class="col col-md-3"><label for="file-input" class=" form-control-label">Unggah Foto</label></div>
-                                        <div class="col-12 col-md-9"><input type="file" id="file-input" name="file-input" class="form-control-file"></div>
                                     </div>
                                 </div>
                                 <div class="card-footer">

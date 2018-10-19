@@ -1,11 +1,14 @@
-<!doctype html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang=""> <!--<![endif]-->
+<%-- 
+    Document   : pengalamanKerja
+    Created on : Oct 19, 2018, 12:59:34 AM
+    Author     : USER
+--%>
+
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
     <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>CV Online MII</title>
         <meta name="description" content="Sufee Admin - HTML5 Admin Template">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -50,15 +53,15 @@
                         <h3 class="menu-title">CURRICULUM VITAE</h3><!-- /.menu-title -->
                         <li class="menu-item-has-children dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-laptop"></i>Data CV</a>
-                        <ul class="sub-menu children dropdown-menu">
-                            <li><i class="fa fa-user"></i><a href="a-datapribadi.html">Data Pribadi</a></li>
-                            <li><i class="fa fa-heart"></i><a href="a-keluarga.html">Keluarga</a></li>
-                            <li><i class="fa fa-bookmark"></i><a href="a-pendidikanformal.html">Pendidikan Formal</a></li>
-                            <li><i class="fa fa-bookmark-o"></i><a href="a-pendidikannonformal.html">Pendidikan Non Formal</a></li>
-                            <li><i class="fa fa-building-o"></i><a href="a-pengalamankerja.html">Pengalaman Kerja</a></li>
-                            <li><i class="fa fa-group"></i><a href="a-referensi.html">Referensi</a></li>
-                            <li><i class="fa fa-asterisk"></i><a href="a-lainlain.html">Lain-lain</a></li>
-                        </ul>
+                            <ul class="sub-menu children dropdown-menu">
+                                <li><i class="fa fa-user"></i><a href="a-datapribadi.html">Data Pribadi</a></li>
+                                <li><i class="fa fa-heart"></i><a href="a-keluarga.html">Keluarga</a></li>
+                                <li><i class="fa fa-bookmark"></i><a href="a-pendidikanformal.html">Pendidikan Formal</a></li>
+                                <li><i class="fa fa-bookmark-o"></i><a href="a-pendidikannonformal.html">Pendidikan Non Formal</a></li>
+                                <li><i class="fa fa-building-o"></i><a href="a-pengalamankerja.html">Pengalaman Kerja</a></li>
+                                <li><i class="fa fa-group"></i><a href="a-referensi.html">Referensi</a></li>
+                                <li><i class="fa fa-asterisk"></i><a href="a-lainlain.html">Lain-lain</a></li>
+                            </ul>
                         </li>
                         <li class="menu-item-has-children dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-folder-open-o "></i>Lihat CV</a>
@@ -164,10 +167,10 @@
                                 </div>
                                 <div class="card-footer">
                                     <button type="submit" class="btn btn-primary btn-sm">
-                                      <i class="fa fa-dot-circle-o"></i> Simpan
+                                        <i class="fa fa-dot-circle-o"></i> Simpan
                                     </button>
                                     <button type="reset" class="btn btn-danger btn-sm">
-                                      <i class="fa fa-ban"></i> Reset
+                                        <i class="fa fa-ban"></i> Reset
                                     </button>
                                 </div>
                             </div>
@@ -217,64 +220,65 @@
                                                 <div class="radio">
                                                     <label for="radio2" class="form-check-label ">
                                                         <input type="radio" id="radio2" name="radios" value="option2" class="form-check-input">Net
+                                                        </div>
+                                                        </div>
+                                                        </div>
+                                                        </div>
+                                                        <div class="row form-group">
+                                                            <div class="col col-md-3"><label for="textarea-input" class=" form-control-label">Proyek</label></div>
+                                                            <div class="col-12 col-md-9"><textarea name="textarea-input" id="textarea-input" rows="9" placeholder="" class="form-control"></textarea><small class="form-text text-muted">Proyek yang pernah ditangani</small></div>
+                                                        </div>
+                                                        <div class="row form-group">
+                                                            <div class="col col-md-3"><label for="text-input" class=" form-control-label">Nama Atasan</label></div>
+                                                            <div class="col-12 col-md-9"><input type="text" id="text-input" name="text-input" placeholder="" class="form-control"></div>
+                                                        </div>
+                                                        <div class="row form-group">
+                                                            <div class="col col-md-3"><label for="textarea-input" class=" form-control-label">Alasan keluar</label></div>
+                                                            <div class="col-12 col-md-9"><textarea name="textarea-input" id="textarea-input" rows="9" placeholder="" class="form-control"></textarea></div>
+                                                        </div>
+                                                </div>
+                                                <div class="card-footer">
+                                                    <button type="submit" class="btn btn-primary btn-sm">
+                                                        <i class="fa fa-dot-circle-o"></i> Simpan
+                                                    </button>
+                                                    <button type="reset" class="btn btn-danger btn-sm">
+                                                        <i class="fa fa-ban"></i> Reset
+                                                    </button>
                                                 </div>
                                             </div>
                                         </div>
+
+
+
+
                                     </div>
-                                    <div class="row form-group">
-                                        <div class="col col-md-3"><label for="textarea-input" class=" form-control-label">Proyek</label></div>
-                                        <div class="col-12 col-md-9"><textarea name="textarea-input" id="textarea-input" rows="9" placeholder="" class="form-control"></textarea><small class="form-text text-muted">Proyek yang pernah ditangani</small></div>
-                                    </div>
-                                    <div class="row form-group">
-                                        <div class="col col-md-3"><label for="text-input" class=" form-control-label">Nama Atasan</label></div>
-                                        <div class="col-12 col-md-9"><input type="text" id="text-input" name="text-input" placeholder="" class="form-control"></div>
-                                    </div>
-                                    <div class="row form-group">
-                                        <div class="col col-md-3"><label for="textarea-input" class=" form-control-label">Alasan keluar</label></div>
-                                        <div class="col-12 col-md-9"><textarea name="textarea-input" id="textarea-input" rows="9" placeholder="" class="form-control"></textarea></div>
-                                    </div>
-                                </div>
-                                <div class="card-footer">
-                                    <button type="submit" class="btn btn-primary btn-sm">
-                                      <i class="fa fa-dot-circle-o"></i> Simpan
-                                    </button>
-                                    <button type="reset" class="btn btn-danger btn-sm">
-                                      <i class="fa fa-ban"></i> Reset
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
 
 
+                                </div><!-- .animated -->
+                            </div><!-- .content -->
 
 
-                    </div>
+                        </div><!-- /#right-panel -->
+
+                        <!-- Right Panel -->
 
 
-                </div><!-- .animated -->
-            </div><!-- .content -->
+                        <script src="assets/js/vendor/jquery-2.1.4.min.js"></script>
+                        <script src="assets/js/popper.min.js"></script>
+                        <script src="assets/js/plugins.js"></script>
+                        <script src="assets/js/main.js"></script>
+                        <script src="assets/js/lib/chosen/chosen.jquery.min.js"></script>
 
+                        <script>
+                            jQuery(document).ready(function () {
+                                jQuery(".standardSelect").chosen({
+                                    disable_search_threshold: 10,
+                                    no_results_text: "Oops, nothing found!",
+                                    width: "100%"
+                                });
+                            });
+                        </script>
 
-        </div><!-- /#right-panel -->
+                        </body>
+                        </html>
 
-        <!-- Right Panel -->
-
-
-        <script src="assets/js/vendor/jquery-2.1.4.min.js"></script>
-        <script src="assets/js/popper.min.js"></script>
-        <script src="assets/js/plugins.js"></script>
-        <script src="assets/js/main.js"></script>
-        <script src="assets/js/lib/chosen/chosen.jquery.min.js"></script>
-
-        <script>
-            jQuery(document).ready(function () {
-                jQuery(".standardSelect").chosen({
-                    disable_search_threshold: 10,
-                    no_results_text: "Oops, nothing found!",
-                    width: "100%"
-                });
-            });
-        </script>
-
-    </body>
-</html>
