@@ -16,16 +16,17 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
-import models.Bahasa;
 import models.Kandidat;
+import models.Lain;
+import models.Pertanyaan;
 import tools.HibernateUtil;
 
 /**
  *
  * @author Nande
  */
-@WebServlet(name = "SaveOrUpdateBahasa", urlPatterns = {"/soubahasa"})
-public class SaveOrUpdateBahasa extends HttpServlet {
+@WebServlet(name = "SaveOrUpdateLain", urlPatterns = {"/soulain"})
+public class SaveOrUpdateLain extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -42,19 +43,20 @@ public class SaveOrUpdateBahasa extends HttpServlet {
         HttpSession session = request.getSession();
         RequestDispatcher dis = null;
         String id = request.getParameter("id");
-        String bahasa = request.getParameter("bahasa");
-        String speaking = request.getParameter("speaking");
-        String reading = request.getParameter("reading");
-        String writing = request.getParameter("writing");
+        String namaPertanyaan = request.getParameter("namapertanyaan");
         String namaKandidat = request.getParameter("namakandidat");
+        String jawaban = request.getParameter("jawaban");
+        
         try (PrintWriter out = response.getWriter()) {
             /* TODO output your page here. You may use following sample code. */
-            InterfaceController<Bahasa> ic = new GeneralController<>(HibernateUtil.getSessionFactory(), Bahasa.class);
+            InterfaceController<Lain> icl = new GeneralController<>(HibernateUtil.getSessionFactory(), Lain.class);
+            InterfaceController<Pertanyaan> icp = new GeneralController<>(HibernateUtil.getSessionFactory(), Pertanyaan.class);
             InterfaceController<Kandidat> icka = new GeneralController<>(HibernateUtil.getSessionFactory(), Kandidat.class);
+            Pertanyaan pertanyaan = new Pertanyaan(icp.search("pertanyaan", namaPertanyaan).get(0).getIdPertanyaan());
             Kandidat kandidat = new Kandidat(icka.search("namaKandidat", namaKandidat).get(0).getIdKandidat());
-            Bahasa b = new Bahasa(new Integer(id), bahasa, speaking, reading, writing, kandidat);
+            Lain lain = new Lain(new Integer(id), jawaban, kandidat, pertanyaan);
             String message = "Gagal dongs";
-            if(ic.saveOrUpdate(b)) message = "Sukses dongs";
+            if(icl.saveOrUpdate(lain)) message = "Sukses dongs";
             session.setAttribute("message", message);
             dis = request.getRequestDispatcher("??");
             dis.forward(request, response);

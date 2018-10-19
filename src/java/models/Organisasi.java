@@ -52,6 +52,12 @@ public class Organisasi implements Serializable {
         this.idOrganisasi = idOrganisasi;
     }
 
+    public Organisasi(Integer idOrganisasi, String namaOrganisasi, Kandidat idKandidat) {
+        this.idOrganisasi = idOrganisasi;
+        this.namaOrganisasi = namaOrganisasi;
+        this.idKandidat = idKandidat;
+    }
+
     public Integer getIdOrganisasi() {
         return idOrganisasi;
     }

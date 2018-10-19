@@ -51,7 +51,7 @@ public class SaveOrUpdateKeahlian extends HttpServlet {
             /* TODO output your page here. You may use following sample code. */
             InterfaceController<Keahlian> icke = new GeneralController<>(HibernateUtil.getSessionFactory(), Keahlian.class);
             InterfaceController<Kandidat> icka = new GeneralController<>(HibernateUtil.getSessionFactory(), Kandidat.class);
-            Kandidat kandidat = new Kandidat(icka.search("idKandidat", namaKandidat).get(0).getIdKandidat());
+            Kandidat kandidat = new Kandidat(icka.search("namaKandidat", namaKandidat).get(0).getIdKandidat());
             Keahlian keahlian = new Keahlian(new Integer(id), sertifikat, date, kandidat);
             String message = "Gagal dongs";
             if(icke.saveOrUpdate(keahlian)) message = "Sukses dongs";

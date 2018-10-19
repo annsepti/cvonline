@@ -64,6 +64,12 @@ public class Lowongan implements Serializable {
         return idLowongan;
     }
 
+    public Lowongan(Integer idLowongan, String namaPosisi, String syarat) {
+        this.idLowongan = idLowongan;
+        this.namaPosisi = namaPosisi;
+        this.syarat = syarat;
+    }
+
     public void setIdLowongan(Integer idLowongan) {
         this.idLowongan = idLowongan;
     }

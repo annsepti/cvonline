@@ -139,6 +139,11 @@ public class Kandidat implements Serializable {
         this.idKandidat = idKandidat;
     }
 
+    public Kandidat(String username, String password) {
+        this.username = username;
+        this.password = password;
+    }
+
     public Kandidat(Integer idKandidat, String namaKandidat, String email, String noHp, String noTelp, String noTelpkerabat, String namaKerabat, String tempatLahir, Date tglLahir, String nik, String alamatKtp, String alamatSekarang, String npwp, String agama, String jenisKelamin, String statusNikah, String username, String password, byte[] foto, String statusKandidat, String statusLamaran, String uploadCv) {
         this.idKandidat = idKandidat;
         this.namaKandidat = namaKandidat;
