@@ -38,7 +38,7 @@
                 <div class="login-content">
                     <div class="login-logo">
                         <a href="index.html">
-                            <img class="align-content" src="../images/logo.png" alt="">
+                            <img class="align-content" src="../images/cv-online-logo.png" alt="">
                         </a>
                     </div>
                     <div class="login-form">
@@ -66,6 +66,8 @@
         <script src="../assets/js/popper.min.js"></script>
         <script src="../assets/js/plugins.js"></script>
         <script src="../assets/js/main.js"></script>
+        <script src="../assets/js/lib/chosen/chosen.jquery.min.js"></script>
+
 
 
     </body>

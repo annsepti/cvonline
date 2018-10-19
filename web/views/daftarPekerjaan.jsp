@@ -16,15 +16,15 @@
         <link rel="apple-touch-icon" href="apple-icon.png">
         <link rel="shortcut icon" href="favicon.ico">
 
-        <link rel="stylesheet" href="assets/css/normalize.css">
-        <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-        <link rel="stylesheet" href="assets/css/font-awesome.min.css">
-        <link rel="stylesheet" href="assets/css/themify-icons.css">
-        <link rel="stylesheet" href="assets/css/flag-icon.min.css">
-        <link rel="stylesheet" href="assets/css/cs-skin-elastic.css">
+        <link rel="stylesheet" href="../assets/css/normalize.css">
+        <link rel="stylesheet" href="../css/bootstrap.min.css">
+        <link rel="stylesheet" href="../css/font-awesome.min.css">
+        <link rel="stylesheet" href="../assets/css/themify-icons.css">
+        <link rel="stylesheet" href="../assets/css/flag-icon.min.css">
+        <link rel="stylesheet" href="../assets/css/cs-skin-elastic.css">
         <!-- <link rel="stylesheet" href="assets/css/bootstrap-select.less"> -->
-        <link rel="stylesheet" href="assets/scss/style.css">
-        <link rel="stylesheet" href="assets/css/lib/chosen/chosen.min.css">
+        <link rel="stylesheet" href="../assets/scss/style.css">
+        <link rel="stylesheet" href="../assets/css/lib/chosen/chosen.min.css">
 
         <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800' rel='stylesheet' type='text/css'>
 
@@ -41,8 +41,8 @@
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-menu" aria-controls="main-menu" aria-expanded="false" aria-label="Toggle navigation">
                         <i class="fa fa-bars"></i>
                     </button>
-                    <a class="navbar-brand" href="a-cv.html"><img src="images/logo.png" alt="Logo"></a>
-                    <a class="navbar-brand hidden" href="a-cv.html"><img src="images/logo2.png" alt="Logo"></a>
+                    <a class="navbar-brand" href="a-cv.html"><img src="../images/cv-online-logo.png" alt="Logo"></a>
+                    <a class="navbar-brand hidden" href="a-cv.html"><img src="../images/cv-online-logo2.png" alt="Logo"></a>
                 </div>
 
                 <div id="main-menu" class="main-menu collapse navbar-collapse">
@@ -274,27 +274,17 @@
                                                 </div>
                                             </div>
                                         </div>
-
-
-
-
                                     </div>
-
-
                                 </div><!-- .animated -->
                             </div><!-- .content -->
-
-
                         </div><!-- /#right-panel -->
-
                         <!-- Right Panel -->
 
-
-                        <script src="assets/js/vendor/jquery-2.1.4.min.js"></script>
-                        <script src="assets/js/popper.min.js"></script>
-                        <script src="assets/js/plugins.js"></script>
-                        <script src="assets/js/main.js"></script>
-                        <script src="assets/js/lib/chosen/chosen.jquery.min.js"></script>
+                        <script src="../assets/js/vendor/jquery-2.1.4.min.js"></script>
+                        <script src="../assets/js/popper.min.js"></script>
+                        <script src="../assets/js/plugins.js"></script>
+                        <script src="../assets/js/main.js"></script>
+                        <script src="../assets/js/lib/chosen/chosen.jquery.min.js"></script>
 
                         <script>
                             jQuery(document).ready(function () {
