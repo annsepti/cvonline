@@ -46,7 +46,7 @@
                         <form>
                             <div class="form-group">
                                 <label>Name</label>
-                                <input type="email" class="form-control" placeholder="Full Name">
+                                <input type="text" class="form-control" placeholder="Full Name">
                             </div>
                             <div class="form-group">
                                 <label>Email address</label>
@@ -58,7 +58,7 @@
                             </div>
                             <button type="submit" class="btn btn-primary btn-flat m-b-30 m-t-30">Register</button>
                             <div class="register-link m-t-15 text-center">
-                                <p>Already have account ? <a href="#"> Sign in</a></p>
+                                <p>Already have account ? <a href="login.jsp"> Sign in</a></p>
                             </div>
                         </form>
                     </div>

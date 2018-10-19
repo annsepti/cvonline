@@ -63,17 +63,17 @@ public class Keahlian implements Serializable {
         this.idKeahlian = idKeahlian;
     }
 
+    public Keahlian(Integer idKeahlian, String deskripsi) {
+        this.idKeahlian = idKeahlian;
+        this.deskripsi = deskripsi;
+    }
+
     public Keahlian(Integer idKeahlian, String sertifikat, Date tglSertifikat, String deskripsi, Kandidat idKandidat) {
         this.idKeahlian = idKeahlian;
         this.sertifikat = sertifikat;
         this.tglSertifikat = tglSertifikat;
         this.deskripsi = deskripsi;
         this.idKandidat = idKandidat;
-    }
-    
-    public Keahlian(Integer idKeahlian, String deskripsi) {
-        this.idKeahlian = idKeahlian;
-        this.deskripsi = deskripsi;
     }
 
     public Integer getIdKeahlian() {

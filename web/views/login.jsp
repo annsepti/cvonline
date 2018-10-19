@@ -52,8 +52,10 @@
                                 <input type="password" class="form-control" placeholder="Password">
                             </div>
                             <button type="submit" class="btn btn-success btn-flat m-b-30 m-t-30">Sign in</button>
+                            
+                            
                             <div class="register-link m-t-15 text-center">
-                                <p>Don't have account ? <a href="#"> Sign Up Here</a></p>
+                                <p>Don't have account ? <a href="register.jsp"> Sign Up Here</a></p>
                             </div>
                         </form>
                     </div>
@@ -61,6 +63,7 @@
             </div>
         </div>
 
+        
 
         <script src="../assets/js/vendor/jquery-2.1.4.min.js"></script>
         <script src="../assets/js/popper.min.js"></script>
