@@ -50,17 +50,19 @@ public class LoginServlet extends HttpServlet {
             InterfaceController<Karyawan> ick = new GeneralController<>(HibernateUtil.getSessionFactory(), Karyawan.class);
             
             List<Kandidat> kandidats = (List<Kandidat>) ic.getByLoginKandidat(username, password);
-            if(kandidats.size() > 0){
+            if(kandidats != null){
                 session.setAttribute("dataKandidat", kandidats);
                 dis = request.getRequestDispatcher("/views/cv.jsp");
             }
             else{
                 Karyawan karyawan = (Karyawan) ick.getByLoginKaryawan(username, password);
                 session.setAttribute("dataKaryawan", karyawan);
-                if(karyawan.getRole().equals("1")) dis = request.getRequestDispatcher("/views/hr.jsp");
-                else dis = request.getRequestDispatcher("/views/manager.jsp");
+                if(karyawan.getRole().equals("1")) 
+                    dis = request.getRequestDispatcher("./views/hr.jsp");
+                else 
+                    dis = request.getRequestDispatcher("./views/manager.jsp");
             }
-            dis.include(request, response);
+            dis.forward(request, response);
         }
     }
 

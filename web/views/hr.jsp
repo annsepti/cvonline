@@ -41,8 +41,8 @@
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-menu" aria-controls="main-menu" aria-expanded="false" aria-label="Toggle navigation">
                         <i class="fa fa-bars"></i>
                     </button>
-                    <a class="navbar-brand" href="a-hrd.html"><img src="images/cv-online-logo.png" alt="Logo"></a>
-                    <a class="navbar-brand hidden" href="a-hrd.html"><img src="images/logo2.png" alt="Logo"></a>
+                    <a class="navbar-brand" href="a-hrd.html"><img src="../images/cv-online-logo.png" alt="Logo"></a>
+                    <a class="navbar-brand hidden" href="a-hrd.html"><img src="../images/logo2.png" alt="Logo"></a>
                 </div>
 
                 <div id="main-menu" class="main-menu collapse navbar-collapse">
@@ -91,7 +91,7 @@
                     <div class="col-sm-5">
                         <div class="user-area dropdown float-right">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <img class="user-avatar rounded-circle" src="images/user.png" alt="User Avatar">
+                                <img class="user-avatar rounded-circle" src="../images/user.png" alt="User Avatar">
                             </a>
 
                             <div class="user-menu dropdown-menu">
@@ -131,7 +131,7 @@
                                 </div>
                                 <div class="card-body">
                                     <div class="mx-auto d-block">
-                                        <img class="rounded-circle mx-auto d-block" src="images/admin.jpg" alt="Card image cap">
+                                        <img class="rounded-circle mx-auto d-block" src="../images/admin.jpg" alt="Card image cap">
                                         <h5 class="text-sm-center mt-2 mb-1">Steven Lee</h5>
                                         <div class="location text-sm-center"><i class="fa fa-map-marker"></i> California, United States</div>
                                     </div>
@@ -161,7 +161,9 @@
 
         <script>
             jQuery(document).ready(function () {
-                jQuery(".standardSelect").chosen({
+                jQuery(".standble_search_threshold: 10,
+                    no_results_text: "Oops, nothing found!",
+                    width: "100%"ardSelect").chosen({
                     disable_search_threshold: 10,
                     no_results_text: "Oops, nothing found!",
                     width: "100%"

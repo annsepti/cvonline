@@ -69,8 +69,10 @@ public class GeneralController<T> implements InterfaceController<T>{
 
     @Override
     public T getByLoginKaryawan(String username, String password) {
-        Karyawan karyawan = new Karyawan(username, password);
-        return (T) iDAO.getByLoginKaryawan(karyawan);
+        List<Karyawan> karyawans =  (List<Karyawan>) search("username", username);
+        Karyawan karyawan = karyawans.get(0);
+        if(!karyawan.getPassword().equals(password)) karyawan = null;
+        return (T) karyawan;
     }
     
 }
