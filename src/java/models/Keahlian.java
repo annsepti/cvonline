@@ -59,6 +59,13 @@ public class Keahlian implements Serializable {
         this.idKeahlian = idKeahlian;
     }
 
+    public Keahlian(Integer idKeahlian, String sertifikat, Date tglSertifikat, Kandidat idKandidat) {
+        this.idKeahlian = idKeahlian;
+        this.sertifikat = sertifikat;
+        this.tglSertifikat = tglSertifikat;
+        this.idKandidat = idKandidat;
+    }
+ 
     public Integer getIdKeahlian() {
         return idKeahlian;
     }
