@@ -100,6 +100,24 @@ public class Pengalamankerja implements Serializable {
         this.tglAkhir = tglAkhir;
     }
 
+    public Pengalamankerja(Integer idPengalamankerja, String namaPt, String bidang, String alamat, String telepon, Date tglAwal, Date tglAkhir, String posisi, Integer gaji, String jenisGaji, String proyek, String namaAtasan, String alasan, String uraianJabatan, Kandidat idKandidat) {
+        this.idPengalamankerja = idPengalamankerja;
+        this.namaPt = namaPt;
+        this.bidang = bidang;
+        this.alamat = alamat;
+        this.telepon = telepon;
+        this.tglAwal = tglAwal;
+        this.tglAkhir = tglAkhir;
+        this.posisi = posisi;
+        this.gaji = gaji;
+        this.jenisGaji = jenisGaji;
+        this.proyek = proyek;
+        this.namaAtasan = namaAtasan;
+        this.alasan = alasan;
+        this.uraianJabatan = uraianJabatan;
+        this.idKandidat = idKandidat;
+    }
+
     public Integer getIdPengalamankerja() {
         return idPengalamankerja;
     }
