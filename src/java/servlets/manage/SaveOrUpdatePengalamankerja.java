@@ -9,6 +9,7 @@ import controllers.GeneralController;
 import controllers.InterfaceController;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.Date;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -16,16 +17,16 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
-import models.Bahasa;
 import models.Kandidat;
+import models.Pengalamankerja;
 import tools.HibernateUtil;
 
 /**
  *
  * @author Nande
  */
-@WebServlet(name = "SaveOrUpdateBahasa", urlPatterns = {"/soubahasa"})
-public class SaveOrUpdateBahasa extends HttpServlet {
+@WebServlet(name = "SaveOrUpdatePengalamankerja", urlPatterns = {"/soupengalamankerja"})
+public class SaveOrUpdatePengalamankerja extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -39,22 +40,31 @@ public class SaveOrUpdateBahasa extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
+        String id = request.getParameter("id");
+        String namaPt = request.getParameter("namapt");
+        String bidang = request.getParameter("bidang");
+        String alamat = request.getParameter("alamat");
+        String telepon = request.getParameter("telepon");
+        Date tglMulai = new Date(request.getParameter("tglmulai"));
+        Date tglSelesai = new Date(request.getParameter("tglselesai"));
+        String posisi = request.getParameter("posisi");
+        String gaji = request.getParameter("gaji");
+        String jenisGaji = request.getParameter("jenisgaji");
+        String proyek = request.getParameter("proyek");
+        String namaAtasan = request.getParameter("namaatasan");
+        String alasan = request.getParameter("alasan");
+        String uraianJabatan = request.getParameter("uraianjabatan");
+        String namaKandidat = request.getParameter("namakandidat");
         HttpSession session = request.getSession();
         RequestDispatcher dis = null;
-        String id = request.getParameter("id");
-        String bahasa = request.getParameter("bahasa");
-        String speaking = request.getParameter("speaking");
-        String reading = request.getParameter("reading");
-        String writing = request.getParameter("writing");
-        String namaKandidat = request.getParameter("namakandidat");
         try (PrintWriter out = response.getWriter()) {
             /* TODO output your page here. You may use following sample code. */
-            InterfaceController<Bahasa> ic = new GeneralController<>(HibernateUtil.getSessionFactory(), Bahasa.class);
+            InterfaceController<Pengalamankerja> icp = new GeneralController<>(HibernateUtil.getSessionFactory(), Pengalamankerja.class);
             InterfaceController<Kandidat> icka = new GeneralController<>(HibernateUtil.getSessionFactory(), Kandidat.class);
             Kandidat kandidat = new Kandidat(icka.search("namaKandidat", namaKandidat).get(0).getIdKandidat());
-            Bahasa b = new Bahasa(new Integer(id), bahasa, speaking, reading, writing, kandidat);
+            Pengalamankerja pengalaman = new Pengalamankerja(new Integer(id), namaPt, bidang, alamat, telepon, tglMulai, tglSelesai, posisi, new Integer(gaji), jenisGaji, proyek, namaAtasan, alasan, uraianJabatan, kandidat);
             String message = "Gagal dongs";
-            if(ic.saveOrUpdate(b)) message = "Sukses dongs";
+            if(icp.saveOrUpdate(pengalaman)) message = "Sukses dongs";
             session.setAttribute("message", message);
             dis = request.getRequestDispatcher("??");
             dis.forward(request, response);

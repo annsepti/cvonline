@@ -24,10 +24,5 @@ public interface InterfaceController<T> {
     public List<T> search(String category, String key);
 
     public T getById(Object id);
-//    public Object getLastId();
-//    public Object getByLogin(Object model);
-//    public int addNewEmployee(Employee employee, Employee hr)throws SQLException;
-//    public List<Employee> getByManagerId(Object object);
-//    public int changePassword(String username, String password) throws SQLException;
-//    public Object getTempById(Object id);
+    public T getByLogin(String username, String password);
 }

@@ -16,16 +16,16 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
-import models.Bahasa;
 import models.Kandidat;
+import models.Penghargaan;
 import tools.HibernateUtil;
 
 /**
  *
  * @author Nande
  */
-@WebServlet(name = "SaveOrUpdateBahasa", urlPatterns = {"/soubahasa"})
-public class SaveOrUpdateBahasa extends HttpServlet {
+@WebServlet(name = "SaveOrUpdatePenghargaan", urlPatterns = {"/soupenghargaan"})
+public class SaveOrUpdatePenghargaan extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -39,22 +39,19 @@ public class SaveOrUpdateBahasa extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
+        String id = request.getParameter("id");
+        String namaPenghargaan = request.getParameter("namapenghargaan");
+        String namaKandidat = request.getParameter("namakandidat");
         HttpSession session = request.getSession();
         RequestDispatcher dis = null;
-        String id = request.getParameter("id");
-        String bahasa = request.getParameter("bahasa");
-        String speaking = request.getParameter("speaking");
-        String reading = request.getParameter("reading");
-        String writing = request.getParameter("writing");
-        String namaKandidat = request.getParameter("namakandidat");
         try (PrintWriter out = response.getWriter()) {
             /* TODO output your page here. You may use following sample code. */
-            InterfaceController<Bahasa> ic = new GeneralController<>(HibernateUtil.getSessionFactory(), Bahasa.class);
+            InterfaceController<Penghargaan> icp = new GeneralController<>(HibernateUtil.getSessionFactory(), Penghargaan.class);
             InterfaceController<Kandidat> icka = new GeneralController<>(HibernateUtil.getSessionFactory(), Kandidat.class);
             Kandidat kandidat = new Kandidat(icka.search("namaKandidat", namaKandidat).get(0).getIdKandidat());
-            Bahasa b = new Bahasa(new Integer(id), bahasa, speaking, reading, writing, kandidat);
+            Penghargaan penghargaan = new Penghargaan(new Integer(id), namaPenghargaan, kandidat);
             String message = "Gagal dongs";
-            if(ic.saveOrUpdate(b)) message = "Sukses dongs";
+            if(icp.saveOrUpdate(penghargaan)) message = "Sukses dongs";
             session.setAttribute("message", message);
             dis = request.getRequestDispatcher("??");
             dis.forward(request, response);

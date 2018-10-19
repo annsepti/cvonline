@@ -9,7 +9,7 @@ import daos.GeneralDAO;
 import daos.InterfaceDAO;
 import java.util.ArrayList;
 import java.util.List;
-import models.Bahasa;
+import models.Kandidat;
 import org.hibernate.SessionFactory;
 
 /**
@@ -59,41 +59,11 @@ public class GeneralController<T> implements InterfaceController<T>{
     public T getById(Object id) {
         return (T) iDAO.getById(id);
     }
+
+    @Override
+    public T getByLogin(String username, String password) {
+        Kandidat kandidat = new Kandidat(username, password);
+        return (T) iDAO.getByLogin(iDAO.getByLogin(kandidat));
+    }
     
-   
 }
-// @Override
-//    public List<T> getAll(){
-//    return this.castToT(iDAO.getAll());
-//}
-//
-//    private List<T> castToT(List<Object> allData) {
-//    List<T> datas = new ArrayList<>();
-//    for(Object object : allData){
-//        T t = (T) object;
-//        datas.add(t);
-//    }
-//    return datas;
-//    }
-//   
-//    @Override
-//    public List<T> search(String category, String key){
-//        return this.castToT(iDAO.search(category, key));
-//    }
-//    
-//    @Override
-//    public T getById(String id){
-//        return (T) iDAO.getById(id);
-//    }
-//
-//    @Override
-//    public boolean saveOrUpdate(Object t) {
-//        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-//    }
-//
-//
-//    @Override
-//    public boolean delete(Object t) {
-//        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-//    }
-//

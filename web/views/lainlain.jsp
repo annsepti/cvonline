@@ -1,27 +1,30 @@
-<!doctype html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang=""> <!--<![endif]-->
+<%-- 
+    Document   : lainlainForm
+    Created on : Oct 19, 2018, 12:44:07 AM
+    Author     : USER
+--%>
+
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
     <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>CV Online MII</title>
         <meta name="description" content="Sufee Admin - HTML5 Admin Template">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <link rel="apple-touch-icon" href="apple-icon.png">
-        <link rel="shortcut icon" href="favicon.ico">
+        <link rel="shortcut icon" href="../favicon.ico">
 
-        <link rel="stylesheet" href="assets/css/normalize.css">
-        <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-        <link rel="stylesheet" href="assets/css/font-awesome.min.css">
-        <link rel="stylesheet" href="assets/css/themify-icons.css">
-        <link rel="stylesheet" href="assets/css/flag-icon.min.css">
-        <link rel="stylesheet" href="assets/css/cs-skin-elastic.css">
+        <link rel="stylesheet" href="../assets/css/normalize.css">
+        <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+        <link rel="stylesheet" href="../assets/css/font-awesome.min.css">
+        <link rel="stylesheet" href="../assets/css/themify-icons.css">
+        <link rel="stylesheet" href="../assets/css/flag-icon.min.css">
+        <link rel="stylesheet" href="../assets/css/cs-skin-elastic.css">
         <!-- <link rel="stylesheet" href="assets/css/bootstrap-select.less"> -->
-        <link rel="stylesheet" href="assets/scss/style.css">
-        <link rel="stylesheet" href="assets/css/lib/chosen/chosen.min.css">
+        <link rel="stylesheet" href="../assets/scss/style.css">
+        <link rel="stylesheet" href="../assets/css/lib/chosen/chosen.min.css">
 
         <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800' rel='stylesheet' type='text/css'>
 
@@ -38,7 +41,7 @@
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-menu" aria-controls="main-menu" aria-expanded="false" aria-label="Toggle navigation">
                         <i class="fa fa-bars"></i>
                     </button>
-                    <a class="navbar-brand" href="a-cv.html"><img src="images/logo.png" alt="Logo"></a>
+                    <a class="navbar-brand" href="./"><img src="images/cv-online-logo.png" alt="Logo"></a>
                     <a class="navbar-brand hidden" href="a-cv.html"><img src="images/logo2.png" alt="Logo"></a>
                 </div>
 
@@ -50,15 +53,15 @@
                         <h3 class="menu-title">CURRICULUM VITAE</h3><!-- /.menu-title -->
                         <li class="menu-item-has-children dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-laptop"></i>Data CV</a>
-                        <ul class="sub-menu children dropdown-menu">
-                            <li><i class="fa fa-user"></i><a href="a-datapribadi.html">Data Pribadi</a></li>
-                            <li><i class="fa fa-heart"></i><a href="a-keluarga.html">Keluarga</a></li>
-                            <li><i class="fa fa-bookmark"></i><a href="a-pendidikanformal.html">Pendidikan Formal</a></li>
-                            <li><i class="fa fa-bookmark-o"></i><a href="a-pendidikannonformal.html">Pendidikan Non Formal</a></li>
-                            <li><i class="fa fa-building-o"></i><a href="a-pengalamankerja.html">Pengalaman Kerja</a></li>
-                            <li><i class="fa fa-group"></i><a href="a-referensi.html">Referensi</a></li>
-                            <li><i class="fa fa-asterisk"></i><a href="a-lainlain.html">Lain-lain</a></li>
-                        </ul>
+                            <ul class="sub-menu children dropdown-menu">
+                                <li><i class="fa fa-user"></i><a href="a-datapribadi.html">Data Pribadi</a></li>
+                                <li><i class="fa fa-heart"></i><a href="a-keluarga.html">Keluarga</a></li>
+                                <li><i class="fa fa-bookmark"></i><a href="a-pendidikanformal.html">Pendidikan Formal</a></li>
+                                <li><i class="fa fa-bookmark-o"></i><a href="a-pendidikannonformal.html">Pendidikan Non Formal</a></li>
+                                <li><i class="fa fa-building-o"></i><a href="a-pengalamankerja.html">Pengalaman Kerja</a></li>
+                                <li><i class="fa fa-group"></i><a href="a-referensi.html">Referensi</a></li>
+                                <li><i class="fa fa-asterisk"></i><a href="a-lainlain.html">Lain-lain</a></li>
+                            </ul>
                         </li>
                         <li class="menu-item-has-children dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-folder-open-o "></i>Lihat CV</a>
@@ -139,7 +142,7 @@
                             <ol class="breadcrumb text-right">
                                 <li><a href="#">Beranda</a></li>
                                 <li><a href="#">Curriculum Vitae</a></li>
-                                <li class="active">Pengalaman Kerja</li>
+                                <li class="active">Referensi</li>
                             </ol>
                         </div>
                     </div>
@@ -154,34 +157,23 @@
                         <div class="col-xs-6 col-sm-12">
                             <div class="card">
                                 <div class="card-header">
-                                    <strong>Pengalaman Organisasi</strong> <small>  </small>
+                                    <strong>Pendidikan</strong> <small>  </small>
                                 </div>
                                 <div class="card-body card-block">
                                     <div class="row form-group">
-                                        <div class="col col-md-3"><label for="text-input" class=" form-control-label">Nama Organisasi</label></div>
-                                        <div class="col-12 col-md-9"><input type="text" id="text-input" name="text-input" placeholder="" class="form-control"></div>
-                                    </div>
-                                </div>
-                                <div class="card-footer">
-                                    <button type="submit" class="btn btn-primary btn-sm">
-                                      <i class="fa fa-dot-circle-o"></i> Simpan
-                                    </button>
-                                    <button type="reset" class="btn btn-danger btn-sm">
-                                      <i class="fa fa-ban"></i> Reset
-                                    </button>
-                                </div>
-                            </div>
-                            <div class="card">
-                                <div class="card-header">
-                                    <strong>Pengalaman Kerja Profesional</strong> <small> Dimulai dengan pekerjaan saat ini hingga pekerjaan pertama anda</small>
-                                </div>
-                                <div class="card-body card-block">
-                                    <div class="row form-group">
-                                        <div class="col col-md-3"><label for="text-input" class=" form-control-label">Nama Perusahaan</label></div>
+                                        <div class="col col-md-3"><label for="text-input" class=" form-control-label">Nama</label></div>
                                         <div class="col-12 col-md-9"><input type="text" id="text-input" name="text-input" placeholder="" class="form-control"></div>
                                     </div>
                                     <div class="row form-group">
-                                        <div class="col col-md-3"><label for="text-input" class=" form-control-label">Bidang</label></div>
+                                        <div class="col col-md-3"><label for="text-input" class=" form-control-label">No HP</label></div>
+                                        <div class="col-12 col-md-9"><input type="text" id="text-input" name="text-input" placeholder="" class="form-control"></div>
+                                    </div>
+                                    <div class="row form-group">
+                                        <div class="col col-md-3"><label for="text-input" class=" form-control-label">Email</label></div>
+                                        <div class="col-12 col-md-9"><input type="text" id="text-input" name="text-input" placeholder="" class="form-control"></div>
+                                    </div>
+                                    <div class="row form-group">
+                                        <div class="col col-md-3"><label for="text-input" class=" form-control-label">Lama Kenal</label></div>
                                         <div class="col-12 col-md-9"><input type="text" id="text-input" name="text-input" placeholder="" class="form-control"></div>
                                     </div>
                                     <div class="row form-group">
@@ -189,57 +181,24 @@
                                         <div class="col-12 col-md-9"><textarea name="textarea-input" id="textarea-input" rows="9" placeholder="" class="form-control"></textarea></div>
                                     </div>
                                     <div class="row form-group">
-                                        <div class="col col-md-3"><label for="text-input" class=" form-control-label">Telepon</label></div>
-                                        <div class="col-12 col-md-9"><input type="text" id="text-input" name="text-input" placeholder="" class="form-control"></div>
-                                    </div>
-                                    <div class="row form-group">
-                                        <div class="col col-md-3"><label for="text-input" class=" form-control-label">Tanggal Masuk</label></div>
-                                        <div class="col-12 col-md-9"><input type="text" id="text-input" name="text-input" placeholder="" class="form-control"><small class="form-text text-muted">Format DD/MM/YYY</small></div>
-                                    </div>
-                                    <div class="row form-group">
-                                        <div class="col col-md-3"><label for="text-input" class=" form-control-label">Tanggal Keluar</label></div>
-                                        <div class="col-12 col-md-9"><input type="text" id="text-input" name="text-input" placeholder="" class="form-control"><small class="form-text text-muted">Format DD/MM/YYY</small></div>
-                                    </div>
-                                    <div class="row form-group">
-                                        <div class="col col-md-3"><label for="text-input" class=" form-control-label">Posisi</label></div>
-                                        <div class="col-12 col-md-9"><input type="text" id="text-input" name="text-input" placeholder="" class="form-control"></div>
-                                    </div>
-                                    <div class="row form-group">
-                                        <div class="col col-md-3"><label class=" form-control-label">Gaji</label></div><br>
-                                        <div class="col-12 col-md-4"><input type="text" id="text-input" name="text-input" placeholder="" class="form-control"></div>
-                                        <div class="col col-md-5">
+                                        <div class="col col-md-4"><label class=" form-control-label">Konfirmasi untuk dapat dihubungi?</label></div>
+                                        <div class="col col-md-8">
                                             <div class="form-check">
-                                                <div class="radio">
-                                                    <label for="radio1" class="form-check-label ">
-                                                        <input type="radio" id="radio1" name="radios" value="option1" class="form-check-input">Gross
+                                                <div class="checkbox">
+                                                    <label for="checkbox1" class="form-check-label ">
+                                                        <input type="checkbox" id="checkbox1" name="checkbox1" value="option1" class="form-check-input">Ya
                                                     </label>
-                                                </div>
-                                                <div class="radio">
-                                                    <label for="radio2" class="form-check-label ">
-                                                        <input type="radio" id="radio2" name="radios" value="option2" class="form-check-input">Net
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="row form-group">
-                                        <div class="col col-md-3"><label for="textarea-input" class=" form-control-label">Proyek</label></div>
-                                        <div class="col-12 col-md-9"><textarea name="textarea-input" id="textarea-input" rows="9" placeholder="" class="form-control"></textarea><small class="form-text text-muted">Proyek yang pernah ditangani</small></div>
-                                    </div>
-                                    <div class="row form-group">
-                                        <div class="col col-md-3"><label for="text-input" class=" form-control-label">Nama Atasan</label></div>
-                                        <div class="col-12 col-md-9"><input type="text" id="text-input" name="text-input" placeholder="" class="form-control"></div>
-                                    </div>
-                                    <div class="row form-group">
-                                        <div class="col col-md-3"><label for="textarea-input" class=" form-control-label">Alasan keluar</label></div>
-                                        <div class="col-12 col-md-9"><textarea name="textarea-input" id="textarea-input" rows="9" placeholder="" class="form-control"></textarea></div>
-                                    </div>
                                 </div>
                                 <div class="card-footer">
                                     <button type="submit" class="btn btn-primary btn-sm">
-                                      <i class="fa fa-dot-circle-o"></i> Simpan
+                                        <i class="fa fa-dot-circle-o"></i> Simpan
                                     </button>
                                     <button type="reset" class="btn btn-danger btn-sm">
-                                      <i class="fa fa-ban"></i> Reset
+                                        <i class="fa fa-ban"></i> Reset
                                     </button>
                                 </div>
                             </div>
@@ -260,11 +219,12 @@
         <!-- Right Panel -->
 
 
-        <script src="assets/js/vendor/jquery-2.1.4.min.js"></script>
-        <script src="assets/js/popper.min.js"></script>
-        <script src="assets/js/plugins.js"></script>
-        <script src="assets/js/main.js"></script>
-        <script src="assets/js/lib/chosen/chosen.jquery.min.js"></script>
+        <script src="../assets/js/vendor/jquery-2.1.4.min.js"></script>
+        <script src="../assets/js/popper.min.js"></script>
+        <script src="../assets/js/plugins.js"></script>
+        <script src="../assets/js/main.js"></script>
+        <script src="../assets/js/lib/chosen/chosen.jquery.min.js"></script>
+
 
         <script>
             jQuery(document).ready(function () {

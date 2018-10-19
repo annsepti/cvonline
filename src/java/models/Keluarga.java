@@ -71,6 +71,17 @@ public class Keluarga implements Serializable {
         this.idKeluarga = idKeluarga;
     }
 
+    public Keluarga(Integer idKeluarga, String hubungan, String namaKeluarga, String jenisKelamin, Date tglLahir, String pendidikan, String pekerjaan, Kandidat idKandidat) {
+        this.idKeluarga = idKeluarga;
+        this.hubungan = hubungan;
+        this.namaKeluarga = namaKeluarga;
+        this.jenisKelamin = jenisKelamin;
+        this.tglLahir = tglLahir;
+        this.pendidikan = pendidikan;
+        this.pekerjaan = pekerjaan;
+        this.idKandidat = idKandidat;
+    }
+
     public Integer getIdKeluarga() {
         return idKeluarga;
     }

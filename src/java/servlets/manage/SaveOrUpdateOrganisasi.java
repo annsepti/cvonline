@@ -16,16 +16,16 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
-import models.Bahasa;
 import models.Kandidat;
+import models.Organisasi;
 import tools.HibernateUtil;
 
 /**
  *
  * @author Nande
  */
-@WebServlet(name = "SaveOrUpdateBahasa", urlPatterns = {"/soubahasa"})
-public class SaveOrUpdateBahasa extends HttpServlet {
+@WebServlet(name = "SaveOrUpdateOrganisasi", urlPatterns = {"/souorganisasi"})
+public class SaveOrUpdateOrganisasi extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -42,19 +42,17 @@ public class SaveOrUpdateBahasa extends HttpServlet {
         HttpSession session = request.getSession();
         RequestDispatcher dis = null;
         String id = request.getParameter("id");
-        String bahasa = request.getParameter("bahasa");
-        String speaking = request.getParameter("speaking");
-        String reading = request.getParameter("reading");
-        String writing = request.getParameter("writing");
+        String namaOrganisasi = request.getParameter("namaposisi");
         String namaKandidat = request.getParameter("namakandidat");
+        
         try (PrintWriter out = response.getWriter()) {
             /* TODO output your page here. You may use following sample code. */
-            InterfaceController<Bahasa> ic = new GeneralController<>(HibernateUtil.getSessionFactory(), Bahasa.class);
+            InterfaceController<Organisasi> ico = new GeneralController<>(HibernateUtil.getSessionFactory(), Organisasi.class);
             InterfaceController<Kandidat> icka = new GeneralController<>(HibernateUtil.getSessionFactory(), Kandidat.class);
             Kandidat kandidat = new Kandidat(icka.search("namaKandidat", namaKandidat).get(0).getIdKandidat());
-            Bahasa b = new Bahasa(new Integer(id), bahasa, speaking, reading, writing, kandidat);
+            Organisasi organisasi = new Organisasi(new Integer(id), namaOrganisasi, kandidat);
             String message = "Gagal dongs";
-            if(ic.saveOrUpdate(b)) message = "Sukses dongs";
+            if(ico.saveOrUpdate(organisasi)) message = "Sukses dongs";
             session.setAttribute("message", message);
             dis = request.getRequestDispatcher("??");
             dis.forward(request, response);

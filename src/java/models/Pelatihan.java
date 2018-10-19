@@ -65,6 +65,15 @@ public class Pelatihan implements Serializable {
         this.idPelatihan = idPelatihan;
     }
 
+    public Pelatihan(Integer idPelatihan, String lembaga, String namaPelatihan, Date tglPelatihan, String sertifikat, Kandidat idKandidat) {
+        this.idPelatihan = idPelatihan;
+        this.lembaga = lembaga;
+        this.namaPelatihan = namaPelatihan;
+        this.tglPelatihan = tglPelatihan;
+        this.sertifikat = sertifikat;
+        this.idKandidat = idKandidat;
+    }
+
     public Integer getIdPelatihan() {
         return idPelatihan;
     }

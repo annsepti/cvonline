@@ -1,27 +1,30 @@
-<!doctype html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang=""> <!--<![endif]-->
+<%-- 
+    Document   : hrLowongan
+    Created on : Oct 19, 2018, 12:35:43 AM
+    Author     : USER
+--%>
+
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
     <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Sufee Admin - HTML5 Admin Template</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>CV Online MII</title>
         <meta name="description" content="Sufee Admin - HTML5 Admin Template">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <link rel="apple-touch-icon" href="apple-icon.png">
-        <link rel="shortcut icon" href="favicon.ico">
+        <link rel="shortcut icon" href="../favicon.ico">
 
-        <link rel="stylesheet" href="assets/css/normalize.css">
-        <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-        <link rel="stylesheet" href="assets/css/font-awesome.min.css">
-        <link rel="stylesheet" href="assets/css/themify-icons.css">
-        <link rel="stylesheet" href="assets/css/flag-icon.min.css">
-        <link rel="stylesheet" href="assets/css/cs-skin-elastic.css">
-        <link rel="stylesheet" href="assets/css/lib/datatable/dataTables.bootstrap.min.css">
+        <link rel="stylesheet" href="../assets/css/normalize.css">
+        <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+        <link rel="stylesheet" href="../assets/css/font-awesome.min.css">
+        <link rel="stylesheet" href="../assets/css/themify-icons.css">
+        <link rel="stylesheet" href="../assets/css/flag-icon.min.css">
+        <link rel="stylesheet" href="../assets/css/cs-skin-elastic.css">
         <!-- <link rel="stylesheet" href="assets/css/bootstrap-select.less"> -->
-        <link rel="stylesheet" href="assets/scss/style.css">
+        <link rel="stylesheet" href="../assets/scss/style.css">
+        <link rel="stylesheet" href="../assets/css/lib/chosen/chosen.min.css">
 
         <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800' rel='stylesheet' type='text/css'>
 
@@ -38,24 +41,28 @@
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-menu" aria-controls="main-menu" aria-expanded="false" aria-label="Toggle navigation">
                         <i class="fa fa-bars"></i>
                     </button>
-                    <a class="navbar-brand" href="a-hrd.html"><img src="images/logo.png" alt="Logo"></a>
+                    <a class="navbar-brand" href="a-hrd.html"><img src="images/cv-online-logo.png" alt="Logo"></a>
                     <a class="navbar-brand hidden" href="a-hrd.html"><img src="images/logo2.png" alt="Logo"></a>
                 </div>
 
                 <div id="main-menu" class="main-menu collapse navbar-collapse">
                     <ul class="nav navbar-nav">
                         <li class="active">
-                            <a href="a-manager.html"> <i class="menu-icon fa fa-dashboard"></i>BERANDA </a>
+                            <a href="a-hrd.html"> <i class="menu-icon fa fa-dashboard"></i>BERANDA </a>
                         </li>
                         <h3 class="menu-title">KANDIDAT</h3><!-- /.menu-title -->
                         <li>
-                            <a href="a-managerkandidat.html" > <i class="menu-icon fa fa-suitcase"></i>Daftar Kandidat</a>
+                            <a href="a-hrdkandidat.html" > <i class="menu-icon fa fa-suitcase"></i>Daftar Kandidat</a>
+
+                        </li>
+                        <h3 class="menu-title">PEKERJAAN</h3><!-- /.menu-title -->
+                        <li>
+                            <a href="a-hrdlowongan.html"> <i class="menu-icon fa fa-tasks"></i>Daftar Pekerjaan</a>
                         </li>
                     </ul>
                 </div><!-- /.navbar-collapse -->
             </nav>
         </aside><!-- /#left-panel -->
-
         <!-- Left Panel -->
 
         <!-- Right Panel -->
@@ -103,7 +110,7 @@
                 <div class="col-sm-4">
                     <div class="page-header float-left">
                         <div class="page-title">
-                            <h1>Data Kandidat</h1>
+                            <h1>Data Pekerjaan</h1>
                         </div>
                     </div>
                 </div>
@@ -487,23 +494,23 @@
         <!-- Right Panel -->
 
 
-        <script src="assets/js/vendor/jquery-2.1.4.min.js"></script>
-        <script src="assets/js/popper.min.js"></script>
-        <script src="assets/js/plugins.js"></script>
-        <script src="assets/js/main.js"></script>
+        <script src="../assets/js/vendor/jquery-2.1.4.min.js"></script>
+        <script src="../assets/js/popper.min.js"></script>
+        <script src="../assets/js/plugins.js"></script>
+        <script src="../assets/js/main.js"></script>
+        <script src="../assets/js/lib/chosen/chosen.jquery.min.js"></script>
 
-
-        <script src="assets/js/lib/data-table/datatables.min.js"></script>
-        <script src="assets/js/lib/data-table/dataTables.bootstrap.min.js"></script>
-        <script src="assets/js/lib/data-table/dataTables.buttons.min.js"></script>
-        <script src="assets/js/lib/data-table/buttons.bootstrap.min.js"></script>
-        <script src="assets/js/lib/data-table/jszip.min.js"></script>
-        <script src="assets/js/lib/data-table/pdfmake.min.js"></script>
-        <script src="assets/js/lib/data-table/vfs_fonts.js"></script>
-        <script src="assets/js/lib/data-table/buttons.html5.min.js"></script>
-        <script src="assets/js/lib/data-table/buttons.print.min.js"></script>
-        <script src="assets/js/lib/data-table/buttons.colVis.min.js"></script>
-        <script src="assets/js/lib/data-table/datatables-init.js"></script>
+        <script src="../assets/js/lib/data-table/datatables.min.js"></script>
+        <script src="../assets/js/lib/data-table/dataTables.bootstrap.min.js"></script>
+        <script src="../assets/js/lib/data-table/dataTables.buttons.min.js"></script>
+        <script src="../assets/js/lib/data-table/buttons.bootstrap.min.js"></script>
+        <script src="../assets/js/lib/data-table/jszip.min.js"></script>
+        <script src="../assets/js/lib/data-table/pdfmake.min.js"></script>
+        <script src="../assets/js/lib/data-table/vfs_fonts.js"></script>
+        <script src="../assets/js/lib/data-table/buttons.html5.min.js"></script>
+        <script src="../assets/js/lib/data-table/buttons.print.min.js"></script>
+        <script src="../assets/js/lib/data-table/buttons.colVis.min.js"></script>
+        <script src="../assets/js/lib/data-table/datatables-init.js"></script>
 
 
         <script type="text/javascript">
