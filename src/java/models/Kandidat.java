@@ -27,7 +27,7 @@ import javax.xml.bind.annotation.XmlTransient;
 
 /**
  *
- * @author Nande
+ * @author 680183
  */
 @Entity
 @Table(name = "kandidat")
@@ -109,6 +109,12 @@ public class Kandidat implements Serializable {
     private String uploadCv;
     @OneToMany(mappedBy = "idKandidat", fetch = FetchType.LAZY)
     private List<Keahlian> keahlianList;
+    @OneToMany(mappedBy = "idKandidat", fetch = FetchType.LAZY)
+    private List<Keluarga> keluargaList;
+    @OneToMany(mappedBy = "idKandidat", fetch = FetchType.LAZY)
+    private List<Pelatihan> pelatihanList;
+    @OneToMany(mappedBy = "idKandidat", fetch = FetchType.LAZY)
+    private List<Penghargaan> penghargaanList;
 
     public Kandidat() {
     }
@@ -330,6 +336,33 @@ public class Kandidat implements Serializable {
 
     public void setKeahlianList(List<Keahlian> keahlianList) {
         this.keahlianList = keahlianList;
+    }
+
+    @XmlTransient
+    public List<Keluarga> getKeluargaList() {
+        return keluargaList;
+    }
+
+    public void setKeluargaList(List<Keluarga> keluargaList) {
+        this.keluargaList = keluargaList;
+    }
+
+    @XmlTransient
+    public List<Pelatihan> getPelatihanList() {
+        return pelatihanList;
+    }
+
+    public void setPelatihanList(List<Pelatihan> pelatihanList) {
+        this.pelatihanList = pelatihanList;
+    }
+
+    @XmlTransient
+    public List<Penghargaan> getPenghargaanList() {
+        return penghargaanList;
+    }
+
+    public void setPenghargaanList(List<Penghargaan> penghargaanList) {
+        this.penghargaanList = penghargaanList;
     }
 
     @Override

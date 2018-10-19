@@ -19,7 +19,7 @@ import javax.xml.bind.annotation.XmlRootElement;
 
 /**
  *
- * @author Nande
+ * @author 680183
  */
 @Entity
 @Table(name = "karyawan")
@@ -30,7 +30,8 @@ import javax.xml.bind.annotation.XmlRootElement;
     , @NamedQuery(name = "Karyawan.findByNamaKaryawan", query = "SELECT k FROM Karyawan k WHERE k.namaKaryawan = :namaKaryawan")
     , @NamedQuery(name = "Karyawan.findByNoHp", query = "SELECT k FROM Karyawan k WHERE k.noHp = :noHp")
     , @NamedQuery(name = "Karyawan.findByUsername", query = "SELECT k FROM Karyawan k WHERE k.username = :username")
-    , @NamedQuery(name = "Karyawan.findByPassword", query = "SELECT k FROM Karyawan k WHERE k.password = :password")})
+    , @NamedQuery(name = "Karyawan.findByPassword", query = "SELECT k FROM Karyawan k WHERE k.password = :password")
+    , @NamedQuery(name = "Karyawan.findByRole", query = "SELECT k FROM Karyawan k WHERE k.role = :role")})
 public class Karyawan implements Serializable {
 
     private static final long serialVersionUID = 1L;
@@ -43,10 +44,15 @@ public class Karyawan implements Serializable {
     private String namaKaryawan;
     @Column(name = "no_hp")
     private String noHp;
+    @Basic(optional = false)
     @Column(name = "username")
     private String username;
+    @Basic(optional = false)
     @Column(name = "password")
     private String password;
+    @Basic(optional = false)
+    @Column(name = "Role")
+    private String role;
 
     public Karyawan() {
     }
@@ -55,12 +61,13 @@ public class Karyawan implements Serializable {
         this.idKaryawan = idKaryawan;
     }
 
-    public Karyawan(Integer idKaryawan, String namaKaryawan, String noHp, String username, String password) {
+    public Karyawan(Integer idKaryawan, String namaKaryawan, String noHp, String username, String password, String role) {
         this.idKaryawan = idKaryawan;
         this.namaKaryawan = namaKaryawan;
         this.noHp = noHp;
         this.username = username;
         this.password = password;
+        this.role = role;
     }
 
     public Integer getIdKaryawan() {
@@ -101,6 +108,14 @@ public class Karyawan implements Serializable {
 
     public void setPassword(String password) {
         this.password = password;
+    }
+
+    public String getRole() {
+        return role;
+    }
+
+    public void setRole(String role) {
+        this.role = role;
     }
 
     @Override

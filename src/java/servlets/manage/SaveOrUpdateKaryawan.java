@@ -45,10 +45,11 @@ public class SaveOrUpdateKaryawan extends HttpServlet {
         String nope = request.getParameter("nope");
         String username = request.getParameter("username");
         String password = request.getParameter("password");
+        String role = request.getParameter("role");
         try (PrintWriter out = response.getWriter()) {
             /* TODO output your page here. You may use following sample code. */
             InterfaceController<Karyawan> ick = new GeneralController<>(HibernateUtil.getSessionFactory(), Karyawan.class);
-            Karyawan k = new Karyawan(new Integer(id), nama, nope, username, password);
+            Karyawan k = new Karyawan(new Integer(id), nama, nope, username, password, role);
             String message = "Gagal dongs";
             if(ick.saveOrUpdate(k)) message = "Sukses dongs";
             session.setAttribute("message", message);

@@ -55,13 +55,6 @@ public class Lain implements Serializable {
         this.idLain = idLain;
     }
 
-    public Lain(Integer idLain, String jawaban, Kandidat idKandidat, Pertanyaan idPertanyaan) {
-        this.idLain = idLain;
-        this.jawaban = jawaban;
-        this.idKandidat = idKandidat;
-        this.idPertanyaan = idPertanyaan;
-    }
-
     public Integer getIdLain() {
         return idLain;
     }

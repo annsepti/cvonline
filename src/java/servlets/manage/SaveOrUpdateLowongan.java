@@ -9,6 +9,7 @@ import controllers.GeneralController;
 import controllers.InterfaceController;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.Date;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -44,14 +45,13 @@ public class SaveOrUpdateLowongan extends HttpServlet {
         String id = request.getParameter("id");
         String namaPosisi = request.getParameter("namaposisi");
         String syarat = request.getParameter("syarat");
-//        String namaKandidat = request.getParameter("namakandidat");
+        Date batas = new Date(request.getParameter("batas"));
         
         try (PrintWriter out = response.getWriter()) {
             /* TODO output your page here. You may use following sample code. */
             InterfaceController<Lowongan> icl = new GeneralController<>(HibernateUtil.getSessionFactory(), Lowongan.class);
             InterfaceController<Kandidat> icka = new GeneralController<>(HibernateUtil.getSessionFactory(), Kandidat.class);
-//            Kandidat kandidat = new Kandidat(icka.search("namaKandidat", namaKandidat).get(0).getIdKandidat());
-            Lowongan lowongan = new Lowongan(new Integer(id), namaPosisi, syarat);
+            Lowongan lowongan = new Lowongan(new Integer(id), namaPosisi, syarat, batas);
             String message = "Gagal dongs";
             if(icl.saveOrUpdate(lowongan)) message = "Sukses dongs";
             session.setAttribute("message", message);

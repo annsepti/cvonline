@@ -46,7 +46,7 @@ public class LowonganServlet extends HttpServlet {
             
             InterfaceController<Lowongan> ic = new GeneralController<>(HibernateUtil.getSessionFactory(), Lowongan.class);
             session.setAttribute("dataLowongan", ic.getAll());
-            dis = request.getRequestDispatcher("/views/??.jsp");
+            dis = request.getRequestDispatcher("/views/lowongan.jsp");
             dis.include(request, response);
             
         }
