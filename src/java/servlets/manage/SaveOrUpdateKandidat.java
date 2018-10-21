@@ -55,7 +55,7 @@ public class SaveOrUpdateKandidat extends HttpServlet {
         String namaKerabat = request.getParameter("namakerabat");
         String tempatLahir = request.getParameter("tempatlahir");
         String tglLahir = request.getParameter("tgllahir");
-        Date date = tools.stringToDate(tools.formatDateString(tglLahir));
+        Date date = new Date(tglLahir);
         String nik = request.getParameter("nik");
         String alamatKtp = request.getParameter("alamatktp");
         String alamatSkrg = request.getParameter("alamatskrg");
@@ -85,7 +85,7 @@ public class SaveOrUpdateKandidat extends HttpServlet {
             if (isSave) {
                 int idBaru = ic.getNewId();
                 Kandidat kandidatSave = new Kandidat(idBaru, namaKandidat, email, date, username);
-                kandidat.setPassword(tools.generatePassword(kandidatSave));
+                kandidatSave.setPassword(tools.generatePassword(kandidatSave));
                 if (ic.saveOrUpdate(kandidatSave)) {
                     message = "Sukses dongs";
                     tools.sendMessage(kandidatSave, 1);

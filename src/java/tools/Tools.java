@@ -108,13 +108,13 @@ public class Tools {
      * @throws ParseException penangkap error
      */
     public Date stringToDate(String sdate) throws ParseException {
-        SimpleDateFormat formater = new SimpleDateFormat("yyyy-mm-dd");
+        SimpleDateFormat formater = new SimpleDateFormat("yyyy/mm/dd");
         return formater.parse(sdate);
     }
 
     public String formatDateString(String sdate) {
         String[] sdates = sdate.split("/");
-        sdate = sdates[2] + "-" + sdates[0] + "-" + sdates[1];
+        sdate = sdates[2] + "/" + sdates[0] + "/" + sdates[1];
         return sdate;
     }
 
