@@ -37,25 +37,24 @@
             <div class="container">
                 <div class="login-content">
                     <div class="login-logo">
-                        <a href="index.html">
-                            <img class="align-content" src="../images/cv-online-logo.png" alt="">
+                        <a href="../home.jsp">
+                            <img class="align-content" src="../images/mii-logo.png" alt="">
                         </a>
                     </div>
                     <div class="login-form">
-                        <form name="login" action="../login" >
+                        <form name="login" action="../login">
                             <div class="form-group">
-                                <label>Email address</label>
+                                <center><h1>Kandidat Masuk</h1></center>
+                                <br>
+
                                 <input type="email" class="form-control" placeholder="Email" name="username">
+                                <br>
+                                <input type="password" class="form-control" placeholder="Kata Sandi" name="password">
                             </div>
-                            <div class="form-group">
-                                <label>Password</label>
-                                <input type="password" class="form-control" placeholder="Password" name="password">
-                            </div>
-                            <button type="submit" class="btn btn-success btn-flat m-b-30 m-t-30">Sign in</button>
-                            
-                            
+                            <button type="submit" class="btn btn-success btn-flat m-b-30 m-t-30">Masuk</button>
+
                             <div class="register-link m-t-15 text-center">
-                                <p>Don't have account ? <a href="register.jsp"> Sign Up Here</a></p>
+                                <p>Kandidat Baru ? <a href="register.jsp"> Daftar Sekarang Juga...</a></p>
                             </div>
                         </form>
                     </div>
@@ -63,7 +62,7 @@
             </div>
         </div>
 
-        
+
 
         <script src="../assets/js/vendor/jquery-2.1.4.min.js"></script>
         <script src="../assets/js/popper.min.js"></script>

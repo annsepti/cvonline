@@ -38,27 +38,24 @@
             <div class="container">
                 <div class="login-content">
                     <div class="login-logo">
-                        <a href="index.html">
-                            <img class="align-content" src="images/cv-online-logo.png" alt="">
+                        <a href="../home.jsp">
+                            <img class="align-content" src="../images/mii-logo.png" alt="">
                         </a>
                     </div>
                     <div class="login-form">
                         <form>
                             <div class="form-group">
-                                <label>Name</label>
-                                <input type="text" class="form-control" placeholder="Full Name">
-                            </div>
-                            <div class="form-group">
-                                <label>Email address</label>
+                                <center><h1>Kandidat Daftar</h1></center>
+                                <br>
+                                <input type="text" class="form-control" placeholder="Nama Lengkap">
+                                <br>
                                 <input type="email" class="form-control" placeholder="Email">
+                                <br>
+                                <input type="password" class="form-control" placeholder="No HP/Telepon">
                             </div>
-                            <div class="form-group">
-                                <label>Phone Number</label>
-                                <input type="password" class="form-control" placeholder="Phone">
-                            </div>
-                            <button type="submit" class="btn btn-primary btn-flat m-b-30 m-t-30">Register</button>
+                            <button type="submit" class="btn btn-primary btn-flat m-b-30 m-t-30">Daftar</button>
                             <div class="register-link m-t-15 text-center">
-                                <p>Already have account ? <a href="login.jsp"> Sign in</a></p>
+                                <p>Sudah menjadi Kandidat ? <a href="login.jsp"> Masuk </a></p>
                             </div>
                         </form>
                     </div>

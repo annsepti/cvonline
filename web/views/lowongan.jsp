@@ -41,8 +41,8 @@
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-menu" aria-controls="main-menu" aria-expanded="false" aria-label="Toggle navigation">
                         <i class="fa fa-bars"></i>
                     </button>
-                    <a class="navbar-brand" href="a-cv.html"><img src="images/cv-online-logo.png" alt="Logo"></a>
-                    <a class="navbar-brand hidden" href="a-cv.html"><img src="images/logo2.png" alt="Logo"></a>
+                    <a class="navbar-brand" href="a-cv.html"><img src="../images/cv-online-logo.png" alt="Logo"></a>
+                    <a class="navbar-brand hidden" href="a-cv.html"><img src="../images/logo2.png" alt="Logo"></a>
                 </div>
 
                 <div id="main-menu" class="main-menu collapse navbar-collapse">
@@ -112,7 +112,7 @@
                     <div class="col-sm-5">
                         <div class="user-area dropdown float-right">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <img class="user-avatar rounded-circle" src="images/user.png" alt="User Avatar">
+                                <img class="user-avatar rounded-circle" src="../images/user.png" alt="User Avatar">
                             </a>
 
                             <div class="user-menu dropdown-menu">

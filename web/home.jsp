@@ -54,40 +54,37 @@
             <header id="header" class="header">
 
                 <div class="header-menu">
-
-                    <div class="col-sm-8" align="right">
-                        <a class="navbar-brand" href="home.jsp"><img src="images/cv-online-logo.png" alt="Logo"></a>
-
+                    <div class="col-sm-6">
+                        <div class="page-header float-left">
+                            <div class="page-title">
+                                <a href="home.jsp"> BERANDA </a> |
+                                <a href="#"> LOWONGAN </a> |
+                                <a href="#"> HUBUNGI KAMI </a>
+                            </div>
+                        </div>
                     </div>
-
                 </div>
 
             </header><!-- /header -->
             <!-- Header-->
 
             <div class="breadcrumbs">
-                <div class="col-sm-6" align="center">
-                    <div class="page-header float-left">
-                        <div class="page-title">
-                            <a href="home.jsp">HOME</a> | 
-                            <a href="#">TENTANG KAMI</a> | 
-                            <a href="#">HUBUNGI KAMI</a>
-
-                        </div>
-                    </div>
+                <div class="col-sm-10">
+                    <a class="navbar-brand" href="home.jsp"><img src="images/mii-logo.png" width="70px" alt="Logo"></a>
                 </div>
-                <div class="col-sm-6" align="right">
-                    <div class="user-area dropdown float-right">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <a class="nav-link" href="views/login.jsp"><i class="fa fa-sign-in"></i>Login</a>
+                <div class="col-sm-2">
+                    <button type="button" class="btn btn-secondary mb-1" data-toggle="modal" data-target="#loginModal">
+                        Masuk
+                    </button>
+                    <button type="button" class="btn btn-secondary mb-1" data-toggle="modal" data-target="#registerModal">
+                        Daftar
+                    </button>
 
-                    </div>
                 </div>
             </div>
             <div class="content mt-3">
                 <div class="animated fadeIn">
                     <div class="row">
-
                         <div class="col-md-12">
                             <div class="card">
                                 <div class="card-header">
@@ -104,7 +101,7 @@
                                             </tr>
                                         </thead>
                                         <tbody>
-                                            <% for(Lowongan l : datas){%> 
+                                            <% for (Lowongan l : datas) {%> 
                                             <tr>
                                                 <td><%= l.getIdLowongan()%></td>
                                                 <td><%= l.getNamaPosisi()%></td>
@@ -118,16 +115,84 @@
                                 </div>
                             </div>
                         </div>
-
-
                     </div>
                 </div><!-- .animated -->
             </div><!-- .content -->
 
+            <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="staticModalLabel" aria-hidden="true" data-backdrop="static">
+                <div class="modal-dialog" role="document">
+                    <form name="login" action="views/login.jsp" >
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="staticModalLabel">Kandidat Masuk</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true" title="Close">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <!--Div Login-->
+                                <div class="login-form">
+                                    <div class="form-group">
+
+                                        <input type="email" class="form-control" placeholder="Email" name="username">
+                                        <br>
+                                        <input type="password" class="form-control" placeholder="Kata Sandi" name="password">
+
+                                    </div>
+                                    <button type="submit" class="btn btn-success btn-flat m-b-30 m-t-30">Masuk</button>
+                                    <!--Div Daftar-->
+                                    <div class="register-link m-t-15 text-center" id="masuk">
+                                        <p>Kandidat Baru ? <a href="views/register.jsp"> Daftar Sekarang Juga...</a></p>
+<!--                                        Kandidat Baru ? 
+                                        <a class="link-align link-drop sign-up-drop" id="masukBtn" 
+                                           href="#" data-toggle="modal" data-target="#registerModal"
+                                           onclick="$('#loginModal').modal('close');"> Daftar Sekarang Juga... </a>-->
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="modal fade" id="registerModal" tabindex="-1" role="dialog" aria-labelledby="staticModalLabel" aria-hidden="true" data-backdrop="static">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="staticModalLabel">Kandidat Daftar</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="login-form">
+                                <form name="register" action="views/register.jsp" >
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" placeholder="Nama Lengkap">
+                                        <br>
+                                        <input type="email" class="form-control" placeholder="Email">
+                                        <br>
+                                        <input type="password" class="form-control" placeholder="No HP/Telepon">
+                                    </div>
+                                    <button type="submit" class="btn btn-primary btn-flat m-b-30 m-t-30">Daftar</button>
+                                    <div class="register-link m-t-15 text-center">
+                                        <p>Sudah menjadi Kandidat ? <a href="views/login.jsp"> Masuk </a></p>
+                                        <!--Sudah menjadi Kandidat ?
+                                            <a class="link-align link-drop sign-up-drop" id="registerBtn" 
+                                            href="#" data-toggle="modal" data-target="#loginModal"
+                                            onclick="$('#registerModal').modal('hide');return false;"> Masuk </a>-->
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
         </div><!-- /#right-panel -->
 
         <!-- Right Panel -->
+
 
 
         <script src="assets/js/vendor/jquery-2.1.4.min.js"></script>
@@ -150,9 +215,9 @@
 
 
         <script type="text/javascript">
-            $(document).ready(function () {
-                $('#bootstrap-data-table-export').DataTable();
-            });
+                                               $(document).ready(function () {
+                                                   $('#bootstrap-data-table-export').DataTable();
+                                               });
         </script>
 
 
