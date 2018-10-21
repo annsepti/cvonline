@@ -172,7 +172,7 @@
                                     <form name="register" action="views/register.jsp" >
                                         <div class="form-group">
                                             <% InterfaceController<Kandidat> ick = new GeneralController<Kandidat>(HibernateUtil.getSessionFactory(), Kandidat.class);  %>
-                                            <input type="text" class="form-control" readonly="readonly" value="<%= ick.getNewId()  %>" name="idkandidat">
+                                            <input type="text" class="form-control" readonly="readonly" hidden="hidden" value="<%= ick.getNewId()  %>" name="idkandidat">
                                             <br>
                                             <input type="text" class="form-control" placeholder="Nama Lengkap" name="namakandidat">
                                             <br>

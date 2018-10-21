@@ -9,8 +9,6 @@ import java.io.Serializable;
 import javax.persistence.Basic;
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.NamedQueries;
 import javax.persistence.NamedQuery;
@@ -36,7 +34,6 @@ public class Karyawan implements Serializable {
 
     private static final long serialVersionUID = 1L;
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Basic(optional = false)
     @Column(name = "id_karyawan")
     private Integer idKaryawan;
@@ -66,17 +63,17 @@ public class Karyawan implements Serializable {
         this.password = password;
     }
 
-    public Karyawan(Integer idKaryawan, String username, String password, String role) {
+    public Karyawan(Integer idKaryawan, String namaKaryawan, String noHp, String username, String password, String role) {
         this.idKaryawan = idKaryawan;
+        this.namaKaryawan = namaKaryawan;
+        this.noHp = noHp;
         this.username = username;
         this.password = password;
         this.role = role;
     }
 
-    public Karyawan(Integer idKaryawan, String namaKaryawan, String noHp, String username, String password, String role) {
+    public Karyawan(Integer idKaryawan, String username, String password, String role) {
         this.idKaryawan = idKaryawan;
-        this.namaKaryawan = namaKaryawan;
-        this.noHp = noHp;
         this.username = username;
         this.password = password;
         this.role = role;

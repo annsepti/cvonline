@@ -12,8 +12,6 @@ import javax.persistence.Basic;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Lob;
 import javax.persistence.NamedQueries;
@@ -59,7 +57,6 @@ public class Kandidat implements Serializable {
 
     private static final long serialVersionUID = 1L;
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Basic(optional = false)
     @Column(name = "id_kandidat")
     private Integer idKandidat;
@@ -135,6 +132,14 @@ public class Kandidat implements Serializable {
 
     public Kandidat(Integer idKandidat) {
         this.idKandidat = idKandidat;
+    }
+
+    public Kandidat(Integer idKandidat, String namaKandidat, String email, Date tglLahir, String username) {
+        this.idKandidat = idKandidat;
+        this.namaKandidat = namaKandidat;
+        this.email = email;
+        this.tglLahir = tglLahir;
+        this.username = username;
     }
 
     public Kandidat(String username, String password) {

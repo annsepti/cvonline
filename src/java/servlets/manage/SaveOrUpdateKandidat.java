@@ -83,22 +83,23 @@ public class SaveOrUpdateKandidat extends HttpServlet {
 
             session.setAttribute("message", message);
             if (isSave) {
-                kandidat.setUsername(username);
-                kandidat.setPassword(tools.generatePassword(kandidat));
-                if (ic.saveOrUpdate(kandidat)) {
+                int idBaru = ic.getNewId();
+                Kandidat kandidatSave = new Kandidat(idBaru, namaKandidat, email, date, username);
+                kandidat.setPassword(tools.generatePassword(kandidatSave));
+                if (ic.saveOrUpdate(kandidatSave)) {
                     message = "Sukses dongs";
-                    tools.sendMessage(kandidat, 1);
+                    tools.sendMessage(kandidatSave, 1);
                 }
                 out.print("alert(Silahkan buka email anda untuk melanjutkan!)");
-                dis = request.getRequestDispatcher("./home.jsp");
+                response.sendRedirect("./home.jsp");
             } else {
                 if (ic.saveOrUpdate(kandidat)) {
                     message = "Sukses dongs";
                     //kirim email di sini gaes
                 }
                 dis = request.getRequestDispatcher("#");
+                dis.forward(request, response);
             }
-            dis.forward(request, response);
         }
     }
 
