@@ -47,6 +47,7 @@ public class FunctionDAO {
             this.transaction.commit();
         } catch (Exception e) {
             e.printStackTrace();
+            String msg = e.getMessage();
             if (transaction != null) {
                 transaction.rollback();
             }

@@ -9,7 +9,10 @@ import controllers.GeneralController;
 import controllers.InterfaceController;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.text.ParseException;
 import java.util.Date;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -19,6 +22,7 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import models.Kandidat;
 import tools.HibernateUtil;
+import tools.Tools;
 
 /**
  *
@@ -37,8 +41,9 @@ public class SaveOrUpdateKandidat extends HttpServlet {
      * @throws IOException if an I/O error occurs
      */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
+            throws ServletException, IOException, ParseException {
         response.setContentType("text/html;charset=UTF-8");
+        Tools tools = new Tools();
         HttpSession session = request.getSession();
         RequestDispatcher dis = null;
         String idKandidat = request.getParameter("idkandidat");
@@ -50,7 +55,7 @@ public class SaveOrUpdateKandidat extends HttpServlet {
         String namaKerabat = request.getParameter("namakerabat");
         String tempatLahir = request.getParameter("tempatlahir");
         String tglLahir = request.getParameter("tgllahir");
-        Date date = new Date(tglLahir);
+        Date date = tools.stringToDate(tools.formatDateString(tglLahir));
         String nik = request.getParameter("nik");
         String alamatKtp = request.getParameter("alamatktp");
         String alamatSkrg = request.getParameter("alamatskrg");
@@ -66,17 +71,33 @@ public class SaveOrUpdateKandidat extends HttpServlet {
         try (PrintWriter out = response.getWriter()) {
             /* TODO output your page here. You may use following sample code. */
             InterfaceController<Kandidat> ic = new GeneralController<>(HibernateUtil.getSessionFactory(), Kandidat.class);
-            Kandidat kandidat = new Kandidat(new Integer(idKandidat), namaKandidat, email, nope
-                    , notelp, nopeKerabat, namaKerabat, tempatLahir, date , nik, alamatKtp
-                    , alamatSkrg, npwp, agama, jenisKelamin, statusNikah, username, password
-                    , new byte[100], statusKandidat, statusLamaran, cv);
+            Kandidat kandidat = new Kandidat(new Integer(idKandidat), namaKandidat, email, nope,
+                    notelp, nopeKerabat, namaKerabat, tempatLahir, date, nik, alamatKtp,
+                    alamatSkrg, npwp, agama, jenisKelamin, statusNikah, username, password,
+                    new byte[100], statusKandidat, statusLamaran, cv);
             String message = "Gagal dongs";
-            if(ic.saveOrUpdate(kandidat)) {
-                 message = "Sukses dongs";
-                 //kirim email di sini gaes
+            boolean isSave = true;
+            if (ic.getById(kandidat.getIdKandidat()) != null) {
+                isSave = false;
             }
+
             session.setAttribute("message", message);
-            dis = request.getRequestDispatcher("#");
+            if (isSave) {
+                kandidat.setUsername(username);
+                kandidat.setPassword(tools.generatePassword(kandidat));
+                if (ic.saveOrUpdate(kandidat)) {
+                    message = "Sukses dongs";
+                    tools.sendMessage(kandidat, 1);
+                }
+                out.print("alert(Silahkan buka email anda untuk melanjutkan!)");
+                dis = request.getRequestDispatcher("./home.jsp");
+            } else {
+                if (ic.saveOrUpdate(kandidat)) {
+                    message = "Sukses dongs";
+                    //kirim email di sini gaes
+                }
+                dis = request.getRequestDispatcher("#");
+            }
             dis.forward(request, response);
         }
     }
@@ -93,7 +114,11 @@ public class SaveOrUpdateKandidat extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        processRequest(request, response);
+        try {
+            processRequest(request, response);
+        } catch (ParseException ex) {
+            Logger.getLogger(SaveOrUpdateKandidat.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }
 
     /**
@@ -107,7 +132,11 @@ public class SaveOrUpdateKandidat extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        processRequest(request, response);
+        try {
+            processRequest(request, response);
+        } catch (ParseException ex) {
+            Logger.getLogger(SaveOrUpdateKandidat.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }
 
     /**

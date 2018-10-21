@@ -37,7 +37,7 @@ public class GeneralController<T> implements InterfaceController<T>{
     
     @Override
     public boolean saveOrUpdate(T t) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        return iDAO.saveOrUpdate(t);
     }
 
     @Override
@@ -73,6 +73,12 @@ public class GeneralController<T> implements InterfaceController<T>{
         Karyawan karyawan = karyawans.get(0);
         if(!karyawan.getPassword().equals(password)) karyawan = null;
         return (T) karyawan;
+    }
+
+    @Override
+    public int getNewId() {
+        Kandidat k =  (Kandidat) iDAO.getLastId();
+        return k.getIdKandidat() + 1;
     }
     
 }
