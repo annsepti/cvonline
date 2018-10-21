@@ -74,7 +74,7 @@
                         <h3 class="menu-title">LOWONGAN</h3><!-- /.menu-title -->
 
                         <li>
-                            <a href="a-lowongan.html" > <i class="menu-icon fa fa-suitcase"></i>Lihat Lowongan Tersedia</a>
+                            <a href="../lowongan" > <i class="menu-icon fa fa-suitcase"></i>Lihat Lowongan Tersedia</a>
 
                         </li>
                         <li>
