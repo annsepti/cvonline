@@ -52,12 +52,12 @@
                         </li>
                         <h3 class="menu-title">KANDIDAT</h3><!-- /.menu-title -->
                         <li>
-                            <a href="a-hrdkandidat.html" > <i class="menu-icon fa fa-suitcase"></i>Daftar Kandidat</a>
+                            <a href="./kandidat" > <i class="menu-icon fa fa-suitcase"></i>Daftar Kandidat</a>
 
                         </li>
                         <h3 class="menu-title">PEKERJAAN</h3><!-- /.menu-title -->
                         <li>
-                            <a href="a-hrdlowongan.html"> <i class="menu-icon fa fa-tasks"></i>Daftar Pekerjaan</a>
+                            <a href="./hrlowongan"> <i class="menu-icon fa fa-tasks"></i>Daftar Pekerjaan</a>
                         </li>
                     </ul>
                 </div><!-- /.navbar-collapse -->
@@ -131,7 +131,7 @@
                                 </div>
                                 <div class="card-body">
                                     <div class="mx-auto d-block">
-                                        <img class="rounded-circle mx-auto d-block" src="../images/admin.jpg" alt="Card image cap">
+                                        <img class="rounded-circle mx-auto d-block" src="images/admin.jpg" alt="Card image cap">
                                         <h5 class="text-sm-center mt-2 mb-1">Steven Lee</h5>
                                         <div class="location text-sm-center"><i class="fa fa-map-marker"></i> California, United States</div>
                                     </div>

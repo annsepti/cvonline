@@ -87,8 +87,8 @@
             <div class="content mt-3">
                 <div class="animated fadeIn">
                     <div class="row">
-
-                        <div class="col-md-12">
+                        <div class="col-md-2"></div>
+                        <div class="col-md-8">
                             <div class="card">
                                 <div class="card-header">
                                     <strong class="card-title">Daftar Lowongan</strong>
@@ -118,7 +118,7 @@
                                 </div>
                             </div>
                         </div>
-
+                        <div class="col-md-2"></div>
 
                     </div>
                 </div><!-- .animated -->

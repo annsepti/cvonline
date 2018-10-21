@@ -23,8 +23,8 @@ import tools.HibernateUtil;
  *
  * @author Nande
  */
-@WebServlet(name = "LowonganServlet", urlPatterns = {"/lowongan"})
-public class LowonganServlet extends HttpServlet {
+@WebServlet(name = "HrLowonganServlet", urlPatterns = {"/hrlowongan"})
+public class HrLowonganServlet extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -44,7 +44,7 @@ public class LowonganServlet extends HttpServlet {
             
             InterfaceController<Lowongan> ic = new GeneralController<>(HibernateUtil.getSessionFactory(), Lowongan.class);
             session.setAttribute("dataLowongan", ic.getAll());
-            dis = request.getRequestDispatcher("/views/lowongan.jsp");
+            dis = request.getRequestDispatcher("/views/hrlowongan.jsp");
             dis.include(request, response);
             
         }
