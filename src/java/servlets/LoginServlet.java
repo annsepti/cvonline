@@ -49,7 +49,7 @@ public class LoginServlet extends HttpServlet {
             InterfaceController<Kandidat> ic = new GeneralController<>(HibernateUtil.getSessionFactory(), Kandidat.class);
             InterfaceController<Karyawan> ick = new GeneralController<>(HibernateUtil.getSessionFactory(), Karyawan.class);
             
-            Kandidat kandidats = (Kandidat) ic.getByLoginKandidat(username, password);
+            Kandidat kandidats = ic.getByLoginKandidat(username, password);
             if(kandidats != null){
                 session.setAttribute("dataKandidat", kandidats);
                 dis = request.getRequestDispatcher("/views/cv.jsp");

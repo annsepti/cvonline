@@ -47,7 +47,7 @@
 
         <!-- <script type="text/javascript" src="https://cdn.jsdelivr.net/html5shiv/3.7.3/html5shiv.min.js"></script> -->
         <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-        <!--<link rel="stylesheet" href="/resources/demos/style.css">-->
+        <link rel="stylesheet" href="/resources/demos/style.css">
     </head>
     <body>
 
@@ -151,7 +151,7 @@
         </section>
         <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="staticModalLabel" aria-hidden="true" data-backdrop="static">
             <div class="modal-dialog" role="document">
-                <form name="login" action="./login" method="POST">
+                <form name="loginfrm" action="./login" method="POST">
                     <div class="modal-content">
                         <div class="modal-header">
                             <h5 class="modal-title" id="staticModalLabel">Kandidat Masuk</h5>
@@ -197,26 +197,24 @@
                         </div>
                         <div class="modal-body">
                             <div class="login-form">
-                                <form name="register" action="views/register.jsp" >
-                                    <div class="form-group">
-                                        <% InterfaceController<Kandidat> ick = new GeneralController<Kandidat>(HibernateUtil.getSessionFactory(), Kandidat.class);%>
-                                        <input type="text" class="form-control" readonly="readonly" hidden="hidden" value="<%= ick.getNewId()%>" name="idkandidat">
-                                        <br>
-                                        <input type="text" class="form-control" placeholder="Nama Lengkap" name="namakandidat">
-                                        <br>
-                                        <input type="email" class="form-control" placeholder="Email" name="email">
-                                        <br>
-                                        <input type="text" class="form-control" placeholder="Tanggal Lahir" id="datepicker" name="tgllahir">
-                                    </div>
-                                    <button type="submit" class="btn btn-primary btn-flat m-b-30 m-t-30">Daftar</button>
-                                    <div class="register-link m-t-15 text-center">
-                                        <p>Sudah menjadi Kandidat ? <a href="views/login.jsp"> Masuk </a></p>
-                                        <!--Sudah menjadi Kandidat ?
-                                            <a class="link-align link-drop sign-up-drop" id="registerBtn" 
-                                            href="#" data-toggle="modal" data-target="#loginModal"
-                                            onclick="$('#registerModal').modal('hide');return false;"> Masuk </a>-->
-                                    </div>
-                                </form>
+                                <div class="form-group">
+                                    <% InterfaceController<Kandidat> ick = new GeneralController<Kandidat>(HibernateUtil.getSessionFactory(), Kandidat.class);%>
+                                    <input type="text" class="form-control" readonly="readonly" hidden="hidden" value="<%= ick.getNewId()%>" name="idkandidat">
+                                    <br>
+                                    <input type="text" class="form-control" placeholder="Nama Lengkap" name="namakandidat">
+                                    <br>
+                                    <input type="email" class="form-control" placeholder="Email" name="email">
+                                    <br>
+                                    <input type="text" class="form-control" placeholder="Tanggal Lahir" id="datepicker" name="tgllahir">
+                                </div>
+                                <button type="submit" class="btn btn-primary btn-flat m-b-30 m-t-30">Daftar</button>
+                                <div class="register-link m-t-15 text-center">
+                                    <p>Sudah menjadi Kandidat ? <a href="views/login.jsp"> Masuk </a></p>
+                                    <!--Sudah menjadi Kandidat ?
+                                        <a class="link-align link-drop sign-up-drop" id="registerBtn" 
+                                        href="#" data-toggle="modal" data-target="#loginModal"
+                                        onclick="$('#registerModal').modal('hide');return false;"> Masuk </a>-->
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -296,16 +294,16 @@
 
 
         <script type="text/javascript">
-            $(document).ready(function () {
-                $('#bootstrap-data-table-export').DataTable();
-            });
+                            $(document).ready(function () {
+                                $('#bootstrap-data-table-export').DataTable();
+                            });
         </script>
         <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
         <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
         <script>
-            $(function () {
-                $("#datepicker").datepicker();
-            });
+                            $(function () {
+                                $("#datepicker").datepicker();
+                            });
         </script>
         <script src="home/js/jquery-3.2.1.min.js"></script>
         <script src="home/js/popper.js"></script>

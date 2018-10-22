@@ -91,7 +91,7 @@ public class SaveOrUpdateKandidat extends HttpServlet {
                     tools.sendMessage(kandidatSave, 1);
                 }
                 out.print("alert(Silahkan buka email anda untuk melanjutkan!)");
-                response.sendRedirect("./home.jsp");
+                response.sendRedirect("./index.jsp");
             } else {
                 if (ic.saveOrUpdate(kandidat)) {
                     message = "Sukses dongs";
