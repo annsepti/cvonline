@@ -21,7 +21,7 @@
                 <div id="main-menu" class="main-menu collapse navbar-collapse">
                     <ul class="nav navbar-nav">
                         <li class="active">
-                            <a href="a-hrd.html"> <i class="menu-icon fa fa-dashboard"></i>BERANDA </a>
+                            <a href="hr.jsp"> <i class="menu-icon fa fa-dashboard"></i>BERANDA </a>
                         </li>
                         <h3 class="menu-title">KANDIDAT</h3><!-- /.menu-title -->
                         <li>

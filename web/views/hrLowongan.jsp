@@ -14,6 +14,7 @@
 <!DOCTYPE html>
 <html>
     <%@include file="hrHeader.jsp" %>
+    <link rel="s tylesheet" href="../assets/css/lib/datatable/dataTables.bootstrap.min.css">
     <body>
         <!-- Left Panel -->
         <% InterfaceController<Lowongan> ic = new GeneralController<Lowongan>(HibernateUtil.getSessionFactory(), Lowongan.class);
@@ -22,9 +23,9 @@
             if (message != null) {
                 out.println(message);
             }%>
-<%@include file="hrAside.jsp" %>
+        <%@include file="hrAside.jsp" %>
         <div id="right-panel" class="right-panel">
-<%@include file="hrHeader2.jsp" %>
+            <%@include file="hrHeader2.jsp" %>
             <div class="breadcrumbs">
                 <div class="col-sm-4">
                     <div class="page-header float-left">
@@ -54,7 +55,7 @@
                                             </tr>
                                         </thead>
                                         <tbody>
-                                             <% for (Lowongan l : datas) {%> 
+                                            <% for (Lowongan l : datas) {%> 
                                             <tr>
                                                 <td><a class="menu-icon fa fa-edit" href=""></a> |
                                                     <a class="menu-icon fa fa-trash" href=""></a></td>
@@ -79,24 +80,17 @@
 
         <!-- Right Panel -->
 
-
-        <script src="assets/js/vendor/jquery-2.1.4.min.js"></script>
-        <script src="assets/js/popper.min.js"></script>
-        <script src="assets/js/plugins.js"></script>
-        <script src="assets/js/main.js"></script>
-        <script src="assets/js/lib/chosen/chosen.jquery.min.js"></script>
-
-        <script src="assets/js/lib/data-table/datatables.min.js"></script>
-        <script src="assets/js/lib/data-table/dataTables.bootstrap.min.js"></script>
-        <script src="assets/js/lib/data-table/dataTables.buttons.min.js"></script>
-        <script src="assets/js/lib/data-table/buttons.bootstrap.min.js"></script>
-        <script src="assets/js/lib/data-table/jszip.min.js"></script>
-        <script src="assets/js/lib/data-table/pdfmake.min.js"></script>
-        <script src="assets/js/lib/data-table/vfs_fonts.js"></script>
-        <script src="assets/js/lib/data-table/buttons.html5.min.js"></script>
-        <script src="assets/js/lib/data-table/buttons.print.min.js"></script>
-        <script src="assets/js/lib/data-table/buttons.colVis.min.js"></script>
-        <script src="assets/js/lib/data-table/datatables-init.js"></script>
+        <script src="../assets/js/lib/data-table/datatables.min.js"></script>
+        <script src="../assets/js/lib/data-table/dataTables.bootstrap.min.js"></script>
+        <script src="../assets/js/lib/data-table/dataTables.buttons.min.js"></script>
+        <script src="../assets/js/lib/data-table/buttons.bootstrap.min.js"></script>
+        <script src="../assets/js/lib/data-table/jszip.min.js"></script>
+        <script src="../assets/js/lib/data-table/pdfmake.min.js"></script>
+        <script src="../assets/js/lib/data-table/vfs_fonts.js"></script>
+        <script src="../assets/js/lib/data-table/buttons.html5.min.js"></script>
+        <script src="../assets/js/lib/data-table/buttons.print.min.js"></script>
+        <script src="../assets/js/lib/data-table/buttons.colVis.min.js"></script>
+        <script src="../assets/js/lib/data-table/datatables-init.js"></script>
 
 
         <script type="text/javascript">
@@ -104,7 +98,21 @@
                 $('#bootstrap-data-table-export').DataTable();
             });
         </script>
+        <script src="../assets/js/vendor/jquery-2.1.4.min.js"></script>
+        <script src="../assets/js/popper.min.js"></script>
+        <script src="../assets/js/plugins.js"></script>
+        <script src="../assets/js/main.js"></script>
+        <script src="../assets/js/lib/chosen/chosen.jquery.min.js"></script>
 
+        <script>
+            jQuery(document).ready(function () {
+                jQuery(".standardSelect").chosen({
+                    disable_search_threshold: 10,
+                    no_results_text: "Oops, nothing found!",
+                    width: "100%"
+                });
+            });
+        </script>
 
     </body>
 </html>

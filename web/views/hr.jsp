@@ -7,6 +7,7 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <html>
     <%@include file="hrHeader.jsp" %>
+    <link rel="s tylesheet" href="../assets/css/lib/datatable/dataTables.bootstrap.min.css">
     <body>
         <%@include file="hrAside.jsp" %>
         <div id="right-panel" class="right-panel">
@@ -48,6 +49,20 @@
                 </div><!-- .animated -->
             </div>
         </div>
-        <%@include file="hrFooter.jsp" %>
+            <script src="../assets/js/vendor/jquery-2.1.4.min.js"></script>
+        <script src="../assets/js/popper.min.js"></script>
+        <script src="../assets/js/plugins.js"></script>
+        <script src="../assets/js/main.js"></script>
+        <script src="../assets/js/lib/chosen/chosen.jquery.min.js"></script>
+
+        <script>
+            jQuery(document).ready(function () {
+                jQuery(".standardSelect").chosen({
+                    disable_search_threshold: 10,
+                    no_results_text: "Oops, nothing found!",
+                    width: "100%"
+                });
+            });
+        </script>
     </body>
 </html>
