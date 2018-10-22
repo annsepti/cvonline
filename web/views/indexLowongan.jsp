@@ -63,7 +63,7 @@
             <div class="banner_inner d-flex align-items-center">
 				<div class="container">
 					<div class="banner_content">
-						<h2>Tentang Kami</h2>
+						<h2>Lowongan</h2>
 						<div class="page_link">
 							<a href="../index.jsp">Beranda</a>
 							<a href="indexLowongan.jsp">Lowongan</a>
