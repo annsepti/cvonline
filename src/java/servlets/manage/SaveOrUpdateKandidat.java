@@ -64,17 +64,22 @@ public class SaveOrUpdateKandidat extends HttpServlet {
         String jenisKelamin = request.getParameter("jeniskelamin");
         String statusNikah = request.getParameter("statusnikah");
         String username = email;
-        String password = idKandidat + tglLahir;
+        String password = request.getParameter("password");
         String statusKandidat = request.getParameter("statuskandidat");
         String statusLamaran = request.getParameter("statuslamaran");
         String cv = request.getParameter("cv");
         try (PrintWriter out = response.getWriter()) {
             /* TODO output your page here. You may use following sample code. */
             InterfaceController<Kandidat> ic = new GeneralController<>(HibernateUtil.getSessionFactory(), Kandidat.class);
-            Kandidat kandidat = new Kandidat(new Integer(idKandidat), namaKandidat, email, nope,
-                    notelp, nopeKerabat, namaKerabat, tempatLahir, date, nik, alamatKtp,
-                    alamatSkrg, npwp, agama, jenisKelamin, statusNikah,
-                    new byte[100], cv);
+//            Kandidat kandidat = new Kandidat(new Integer(idKandidat), namaKandidat, email, nope,
+//                    notelp, nopeKerabat, namaKerabat, tempatLahir, date, nik, alamatKtp,
+//                    alamatSkrg, npwp, agama, jenisKelamin, statusNikah,
+//                    new byte[100], cv);
+            
+            Kandidat kandidat = new Kandidat(new Integer(idKandidat), namaKandidat, email, nope, 
+                    notelp, nopeKerabat, namaKerabat, tempatLahir, date, nik, alamatKtp, 
+                    alamatSkrg, npwp, agama, jenisKelamin, statusNikah, username, password, 
+                    new byte[100], statusKandidat, statusLamaran, cv);
             String message = "Gagal dongs";
             boolean isSave = true;
             if (ic.getById(kandidat.getIdKandidat()) != null) {
@@ -97,8 +102,7 @@ public class SaveOrUpdateKandidat extends HttpServlet {
                     message = "Sukses dongs";
                     //kirim email di sini gaes
                 }
-                dis = request.getRequestDispatcher("#");
-                dis.forward(request, response);
+                response.sendRedirect("./login?username=" + kandidat.getUsername() + "&password=" + kandidat.getPassword());
             }
         }
     }

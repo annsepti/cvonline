@@ -4,6 +4,7 @@
     Author     : USER
 --%>
 
+<%@page import="java.lang.String"%>
 <%@page import="models.Kandidat"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -41,12 +42,15 @@
 
                         <div class="col-xs-6 col-sm-12">
                             <div class="card">
-                                <form action="./soukandidat" name="edit">
+                                <form action="./soukandidat" name="edit" method="POST">
                                     <div class="card-header">
                                         <strong>Profil</strong> <small>  </small>
                                     </div>
                                     <div class="card-body card-block">
-                                        <input name="idkandidat" value="<%= kandidat.getIdKandidat() %>" hidden="hidden">
+                                        <input name="idkandidat" value="<%= kandidat.getIdKandidat()%>" hidden="hidden">
+                                        <input name="password" value="<%= kandidat.getPassword()%>" hidden="hidden">
+                                        <input name="email" value="<%= kandidat.getEmail()%>" hidden="hidden">
+                                        
                                         <div class="row form-group">
                                             <div class="col col-md-3"><label for="text-input" class=" form-control-label">Nama</label></div>
                                             <div class="col-12 col-md-9"><input type="text" id="text-input" name="namakandidat" placeholder="" class="form-control" value="<%= kandidat.getNamaKandidat()%>"><small class="form-text text-muted">Nama lengkap sesuai KTP</small></div>
@@ -56,8 +60,13 @@
                                             <div class="col-12 col-md-9"><input type="text" id="text-input" name="tempatlahir" placeholder="" class="form-control" value="<%= kandidat.getTempatLahir()%>"></div>
                                         </div>
                                         <div class="row form-group">
+                                            <% 
+                                                String date = kandidat.getTglLahir().toString();
+                                                String[] dates = date.split("-");
+                                                date = dates[0] + "/" + dates[1] +"/" + dates[2];
+                                            %>
                                             <div class="col col-md-3"><label for="text-input" class=" form-control-label">Tanggal Lahir</label></div>
-                                            <div class="col-12 col-md-9"><input type="text" id="text-input" name="tgllahir" placeholder="" class="form-control" value="<%= kandidat.getTglLahir()%>"><small class="form-text text-muted">Format DD/MM/YYY</small></div>
+                                            <div class="col-12 col-md-9"><input type="text" id="text-input" name="tgllahir" placeholder="" class="form-control" value="<%= date%>"><small class="form-text text-muted">Format DD/MM/YYY</small></div>
                                         </div>
                                         <div class="row form-group">
                                             <div class="col col-md-3"><label for="text-input" class=" form-control-label">NIK (No. KTP)</label></div>
@@ -69,12 +78,12 @@
                                                 <div class="form-check">
                                                     <div class="radio">
                                                         <label for="radio1" class="form-check-label ">
-                                                            <input type="radio" id="radio1" name="jeniskelamin" value="<%= kandidat.getJenisKelamin()%>" class="form-check-input">laki
+                                                            <input type="radio" id="radio1" name="jeniskelamin" <% if (kandidat.getJenisKelamin().equals("laki")) {%> checked="true" <%}%>  class="form-check-input" value="laki">laki
                                                         </label>
                                                     </div>
                                                     <div class="radio">
                                                         <label for="radio2" class="form-check-label ">
-                                                            <input type="radio" id="radio2" name="jeniskelamin" value="<%= kandidat.getJenisKelamin()%>" class="form-check-input">perempuan
+                                                            <input type="radio" id="radio2" name="jeniskelamin"  <% if (kandidat.getJenisKelamin().equals("perempuan")) {%> checked="true" <%}%> class="form-check-input" value="perempuan">perempuan
                                                             </div>
                                                             </div>
                                                             </div>
@@ -84,9 +93,9 @@
                                                                 <div class="col-12 col-md-9">
                                                                     <select name="statusnikah" id="select" class="form-control">
                                                                         <option value="0">Silahkan Pilih</option>
-                                                                        <option value="1">Belum Menikah</option>
-                                                                        <option value="2">Sudah Menikah</option>
-                                                                        <option value="3">Single Parent</option>
+                                                                        <option value="1" <% if (kandidat.getStatusNikah().equals("belum menikah")) {%> selected="selected" <%}%> >belum menikah</option>
+                                                                        <option value="2" <% if (kandidat.getStatusNikah().equals("menikah")) {%> selected="selected" <%}%>>Sudah Menikah</option>
+                                                                        <option value="3" <% if (kandidat.getStatusNikah().equals("single parent")) {%> selected="selected" <%}%>>Single Parent</option>
                                                                     </select>
                                                                 </div>
                                                             </div>
@@ -95,12 +104,12 @@
                                                                 <div class="col-12 col-md-9">
                                                                     <select name="agama" id="select" class="form-control">
                                                                         <option value="0">Silahkan Pilih</option>
-                                                                        <option value="1">Islam</option>
-                                                                        <option value="2">Kristen</option>
-                                                                        <option value="3">Katolik</option>
-                                                                        <option value="1">Budha</option>
-                                                                        <option value="2">Hindu</option>
-                                                                        <option value="3">Lainnya</option>
+                                                                        <option value="1" <% if (kandidat.getAgama().equals("islam")) {%> selected="selected" <%}%> >islam</option>
+                                                                        <option value="2" <% if (kandidat.getAgama().equals("kristen")) {%> selected="selected" <%}%>>kristen</option>
+                                                                        <option value="3" <% if (kandidat.getAgama().equals("katolik")) {%> selected="selected" <%}%>>katolik</option>
+                                                                        <option value="1" <% if (kandidat.getAgama().equals("budha")) {%> selected="selected" <%}%>>budha</option>
+                                                                        <option value="2" <% if (kandidat.getAgama().equals("hindu")) {%> selected="selected" <%}%>>hindu</option>
+                                                                        <option value="3" <% if (kandidat.getAgama().equals("lainnya")) {%> selected="selected" <%}%>>lainnya</option>
                                                                     </select>
                                                                 </div>
                                                             </div>
@@ -132,40 +141,25 @@
 
                                                             </div>
                                                             <div class="row form-group">
-                                                                <div class="col col-md-3"><label for="select" class=" form-control-label">Pendidikan Terakhir</label></div><br>
-                                                                <div class="col-12 col-md-9">
-                                                                    <select name="select" id="select" class="form-control">
-                                                                        <option value="0">Silahkan Pilih</option>
-                                                                        <option value="1">S3</option>
-                                                                        <option value="2">S2</option>
-                                                                        <option value="3">S1</option>
-                                                                        <option value="1">D4</option>
-                                                                        <option value="2">D3</option>
-                                                                        <option value="3">D2</option>
-                                                                        <option value="1">D1</option>
-                                                                    </select>
-                                                                </div>
-                                                            </div>
-                                                            <div class="row form-group">
-                                                                <div class="col col-md-3"><label for="file-input" class=" form-control-label">Unggah Foto</label></div>
+                                                                <div class="col col-md-3"><label for="file-input" class=" form-control-label">   Unggah Foto</label></div>
                                                                 <div class="col-12 col-md-9"><input type="file" id="file-input" name="foto" class="form-control-file"></div>
                                                             </div>
-                                                    </div>
-                                                    <div class="card-footer">
-                                                        <button type="submit" class="btn btn-primary btn-sm">
-                                                            <i class="fa fa-dot-circle-o"></i> Simpan
-                                                        </button>
-                                                        <button type="reset" class="btn btn-danger btn-sm">
-                                                            <i class="fa fa-ban"></i> Reset
-                                                        </button>
+                                                            <div class="card-footer">
+                                                                <button type="submit" class="btn btn-primary btn-sm">
+                                                                    <i class="fa fa-dot-circle-o"></i> Simpan
+                                                                </button>
+                                                                <button type="reset" class="btn btn-danger btn-sm">
+                                                                    <i class="fa fa-ban"></i> Reset
+                                                                </button>
+                                                            </div>
+
                                                     </div>
                                                     </form>
                                                 </div>
                                             </div>
-                                        </div>
-                                    </div><!-- .animated -->
+                                        </div><!-- .animated -->
+                                    </div>
                             </div>
-                        </div>
-                        <%@include file="footer.jsp" %>
-                        </body>
-                        </html>
+                            <%@include file="footer.jsp" %>
+                            </body>
+                            </html>
