@@ -17,84 +17,14 @@
     <body>
         <!-- Left Panel -->
         <% InterfaceController<Lowongan> ic = new GeneralController<Lowongan>(HibernateUtil.getSessionFactory(), Lowongan.class);
-            List<Lowongan> datas = (List<Lowongan>) session.getAttribute("dataLowongan");
+            List<Lowongan> datas = ic.getAll();
             String message = (String) session.getAttribute("PESAN");
             if (message != null) {
                 out.println(message);
             }%>
-
-        <aside id="left-panel" class="left-panel">
-            <nav class="navbar navbar-expand-sm navbar-default">
-
-                <div class="navbar-header">
-                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-menu" aria-controls="main-menu" aria-expanded="false" aria-label="Toggle navigation">
-                        <i class="fa fa-bars"></i>
-                    </button>
-                    <a class="navbar-brand" href="a-hrd.html"><img src="images/cv-online-logo.png" alt="Logo"></a>
-                    <a class="navbar-brand hidden" href="a-hrd.html"><img src="images/logo2.png" alt="Logo"></a>
-                </div>
-
-                <div id="main-menu" class="main-menu collapse navbar-collapse">
-                    <ul class="nav navbar-nav">
-                        <li class="active">
-                            <a href="a-hrd.html"> <i class="menu-icon fa fa-dashboard"></i>BERANDA </a>
-                        </li>
-                        <h3 class="menu-title">KANDIDAT</h3><!-- /.menu-title -->
-                        <li>
-                            <a href="a-hrdkandidat.html" > <i class="menu-icon fa fa-suitcase"></i>Daftar Kandidat</a>
-
-                        </li>
-                        <h3 class="menu-title">PEKERJAAN</h3><!-- /.menu-title -->
-                        <li>
-                            <a href="a-hrdlowongan.html"> <i class="menu-icon fa fa-tasks"></i>Daftar Pekerjaan</a>
-                        </li>
-                    </ul>
-                </div><!-- /.navbar-collapse -->
-            </nav>
-        </aside><!-- /#left-panel -->
-        <!-- Left Panel -->
-
-        <!-- Right Panel -->
-
+<%@include file="hrAside.jsp" %>
         <div id="right-panel" class="right-panel">
-
-            <!-- Header-->
-            <header id="header" class="header">
-
-                <div class="header-menu">
-
-                    <div class="col-sm-7">
-                        <a id="menuToggle" class="menutoggle pull-left"><i class="fa fa fa-tasks"></i></a>
-                        <div class="header-left">
-                            <button class="search-trigger"><i class="fa fa-search"></i></button>
-                            <div class="form-inline">
-                                <form class="search-form">
-                                    <input class="form-control mr-sm-2" type="text" placeholder="Search ..." aria-label="Search">
-                                    <button class="search-close" type="submit"><i class="fa fa-close"></i></button>
-                                </form>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-sm-5">
-                        <div class="user-area dropdown float-right">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <img class="user-avatar rounded-circle" src="images/user.png" alt="User Avatar">
-                            </a>
-
-                            <div class="user-menu dropdown-menu">
-                                <a class="nav-link" href="a-ubahpassword.html"><i class="fa fa -cog"></i>Settings</a>
-
-                                <a class="nav-link" href=""><i class="fa fa-power -off"></i>Logout</a>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-
-            </header><!-- /header -->
-            <!-- Header-->
-
+<%@include file="hrHeader2.jsp" %>
             <div class="breadcrumbs">
                 <div class="col-sm-4">
                     <div class="page-header float-left">
@@ -124,15 +54,15 @@
                                             </tr>
                                         </thead>
                                         <tbody>
-                                             <% for (Lowongan lowongan : datas) {%> 
+                                             <% for (Lowongan l : datas) {%> 
                                             <tr>
-                                                <td><a class="menu-icon fa fa-edit" href="./editBahasa?id=<%= lowongan.getIdLowongan()%>"></a> |
-                                                    <a class="menu-icon fa fa-trash" href="./deleteBahasa?id=<%= lowongan.getIdLowongan()%>"></a></td>
-                                                <td><%= lowongan.getNamaPosisi()%></td>
-                                                <td><%= lowongan.getSyarat()%></td>
-                                                <td><%= lowongan.getBatasAkhir()%></td>
+                                                <td><a class="menu-icon fa fa-edit" href=""></a> |
+                                                    <a class="menu-icon fa fa-trash" href=""></a></td>
+                                                <td><%= l.getNamaPosisi()%></td>
+                                                <td><%= l.getSyarat()%></td>
+                                                <td><%= l.getBatasAkhir()%></td>
                                             </tr>
-                                            <% }%>
+                                            <%}%>
                                         </tbody>
                                     </table>
                                 </div>

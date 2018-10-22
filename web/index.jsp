@@ -128,7 +128,7 @@
                     </div>
                 </div>
                 <div class="col-lg-6 p0">
-                    <div class="mission_text">
+                    <div class="mission_t   ext">
                         <h4>Profesionalitas</h4>
                         <p>Sebuah sikap, perilaku, dan tindakan yang menunjukkan pengetahuan, kompetensi, dan keterampilan unggul yang terus dikembangkan untuk menghadapi tantangan dan membawa kesuksesan bagi perusahaan.</p>
                     </div>
@@ -276,11 +276,7 @@
         </footer>
         <!--================ End footer Area  =================-->
 
-
-
-
-
-      <script src="assets/js/vendor/jquery-2.1.4.min.js"></script>
+        <script src="assets/js/vendor/jquery-2.1.4.min.js"></script>
         <script src="assets/js/popper.min.js"></script>
         <script src="assets/js/plugins.js"></script>
         <script src="assets/js/main.js"></script>
