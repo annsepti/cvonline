@@ -21,7 +21,7 @@
                 
                     
                         <li class="active">
-                            <a href="a-cv.html"> <i class="menu-icon fa fa-dashboard"></i>BERANDA </a>
+                            <a href="cv.jsp"> <i class="menu-icon fa fa-dashboard"></i>BERANDA </a>
                         </li>
                         <h3 class="menu-title">CURRICULUM VITAE</h3><!-- /.menu-title -->
                         <li class="menu-item-has-children dropdown">
