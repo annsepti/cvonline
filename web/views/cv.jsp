@@ -4,13 +4,17 @@
     Author     : USER
 --%>
 
+<%@page import="models.Kandidat"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
     <%@include file="header.jsp" %>
     <body>
-        <%@include file="aside.jsp" %>
-
+        <%--<%@include file="aside.jsp" %>--%>
+        <% Kandidat kandidat = (Kandidat) session.getAttribute("dataKandidat"); %>
+        <jsp:include page="aside.jsp">
+            <jsp:param name="id" value="<%= kandidat.getIdKandidat() %>"></jsp:param>
+        </jsp:include>
         <div id="right-panel" class="right-panel">
             <%@include file="header2.jsp" %>
             <div class="breadcrumbs">
@@ -34,7 +38,7 @@
                                 </div>
                                 <div class="card-body">
                                     <div class="mx-auto d-block">
-                                        <img class="rounded-circle mx-auto d-block" src="../images/admin.jpg" alt="Card image cap">
+                                        <img class="rounded-circle mx-auto d-block" src="images/admin.jpg" alt="Card image cap">
                                         <h5 class="text-sm-center mt-2 mb-1">Steven Lee</h5>
                                         <div class="location text-sm-center"><i class="fa fa-map-marker"></i> California, United States</div>
                                     </div>
