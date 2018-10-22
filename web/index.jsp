@@ -44,10 +44,8 @@
 
 
         <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800' rel='stylesheet' type='text/css'>
-
-        <!-- <script type="text/javascript" src="https://cdn.jsdelivr.net/html5shiv/3.7.3/html5shiv.min.js"></script> -->
         <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-        <link rel="stylesheet" href="/resources/demos/style.css">
+        <link rel="stylesheet" href="/resources/demos/style.css">   
     </head>
     <body>
 
@@ -280,31 +278,6 @@
         <script src="assets/js/main.js"></script>
         <script src="assets/js/lib/chosen/chosen.jquery.min.js"></script>
 
-        <script src="assets/js/lib/data-table/datatables.min.js"></script>
-        <script src="assets/js/lib/data-table/dataTables.bootstrap.min.js"></script>
-        <script src="assets/js/lib/data-table/dataTables.buttons.min.js"></script>
-        <script src="assets/js/lib/data-table/buttons.bootstrap.min.js"></script>
-        <script src="assets/js/lib/data-table/jszip.min.js"></script>
-        <script src="assets/js/lib/data-table/pdfmake.min.js"></script>
-        <script src="assets/js/lib/data-table/vfs_fonts.js"></script>
-        <script src="assets/js/lib/data-table/buttons.html5.min.js"></script>
-        <script src="assets/js/lib/data-table/buttons.print.min.js"></script>
-        <script src="assets/js/lib/data-table/buttons.colVis.min.js"></script>
-        <script src="assets/js/lib/data-table/datatables-init.js"></script>
-
-
-        <script type="text/javascript">
-                            $(document).ready(function () {
-                                $('#bootstrap-data-table-export').DataTable();
-                            });
-        </script>
-        <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-        <script>
-                            $(function () {
-                                $("#datepicker").datepicker();
-                            });
-        </script>
         <script src="home/js/jquery-3.2.1.min.js"></script>
         <script src="home/js/popper.js"></script>
         <script src="home/js/bootstrap.min.js"></script>
@@ -321,5 +294,12 @@
         <script src="home/vendors/popup/jquery.magnific-popup.min.js"></script>
         <script src="home/vendors/swiper/js/swiper.min.js"></script>
         <script src="home/js/theme.js"></script>
+        <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+        <script>
+                            $(function () {
+                                $("#datepicker").datepicker();
+                            });
+        </script>
     </body>
 </html>
