@@ -96,7 +96,7 @@ public class Tools {
      * @return date
      */
     public String dateToString(Date date) {
-        SimpleDateFormat formater = new SimpleDateFormat("yyyy-mm-dd");
+        SimpleDateFormat formater = new SimpleDateFormat("yyyy-MM-dd");
         return formater.format(date);
     }
 
