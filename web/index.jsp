@@ -280,9 +280,7 @@
 
 
 
-        <!-- Optional JavaScript -->
-        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-        <script src="assets/js/vendor/jquery-2.1.4.min.js"></script>
+      <script src="assets/js/vendor/jquery-2.1.4.min.js"></script>
         <script src="assets/js/popper.min.js"></script>
         <script src="assets/js/plugins.js"></script>
         <script src="assets/js/main.js"></script>
@@ -302,16 +300,16 @@
 
 
         <script type="text/javascript">
-                        $(document).ready(function () {
-                            $('#bootstrap-data-table-export').DataTable();
-                        });
+            $(document).ready(function () {
+                $('#bootstrap-data-table-export').DataTable();
+            });
         </script>
         <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
         <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
         <script>
-                        $(function () {
-                            $("#datepicker").datepicker();
-                        });
+            $(function () {
+                $("#datepicker").datepicker();
+            });
         </script>
         <script src="home/js/jquery-3.2.1.min.js"></script>
         <script src="home/js/popper.js"></script>

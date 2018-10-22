@@ -4,6 +4,10 @@
     Author     : 680183
 --%>
 
+<%@page import="java.util.List"%>
+<%@page import="java.util.List"%>
+<%@page import="models.Lowongan"%>
+<%@page import="models.Lowongan"%>
 <%@page import="models.Kandidat"%>
 <%@page import="tools.HibernateUtil"%>
 <%@page import="tools.HibernateUtil"%>
@@ -33,7 +37,12 @@
        
     </head>
     <body>
-
+        <% InterfaceController<Lowongan> ic = new GeneralController<Lowongan>(HibernateUtil.getSessionFactory(), Lowongan.class);
+            List<Lowongan> datas = ic.getAll();
+            String message = (String) session.getAttribute("PESAN");
+            if (message != null) {
+                out.println(message);
+            }%>
         <!--================Header Menu Area =================-->
         <header class="header_area">
             <div class="main_menu">
@@ -72,6 +81,42 @@
 				</div>
             </div>
         </section>
+        <div class="content mt-3">
+                <div class="animated fadeIn">
+                    <div class="row">
+                        <div class="col-md-2"></div>
+                        <div class="col-md-8">
+                            <div class="card">
+                                <div class="card-header">
+                                    <strong class="card-title">Daftar Lowongan Pekerjaan</strong>
+                                </div>
+                                <div class="card-body">
+                                    <table id="bootstrap-data-table" class="table table-striped table-bordered">
+                                        <thead>
+                                            <tr>
+                                                <th>Nama Posisi</th>
+                                                <th>Syarat</th>
+                                                <th>Batas Akhir</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <% for (Lowongan l : datas) {%> 
+                                            <tr>
+                                                <td><%= l.getNamaPosisi()%></td>
+                                                <td><%= l.getSyarat()%></td>
+                                                <td><%= l.getBatasAkhir()%></td>
+                                            </tr>
+                                            <%}%>
+
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-2"></div>
+                    </div>
+                </div><!-- .animated -->
+            </div><!-- .content -->
         <!--================Home Banner Area =================-->
         
         <!--================End Home Banner Area =================-->
