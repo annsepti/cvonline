@@ -147,7 +147,18 @@ public class Kandidat implements Serializable {
         this.password = password;
     }
 
-    public Kandidat(Integer idKandidat, String namaKandidat, String email, String noHp, String noTelp, String noTelpkerabat, String namaKerabat, String tempatLahir, Date tglLahir, String nik, String alamatKtp, String alamatSekarang, String npwp, String agama, String jenisKelamin, String statusNikah, String username, String password, byte[] foto, String statusKandidat, String statusLamaran, String uploadCv) {
+    public Kandidat(Integer idKandidat, String statusKandidat) {
+        this.idKandidat = idKandidat;
+        this.statusKandidat = statusKandidat;
+    }
+
+    public Kandidat(Integer idKandidat, String username, String password) {
+        this.idKandidat = idKandidat;
+        this.username = username;
+        this.password = password;
+    }
+
+    public Kandidat(Integer idKandidat, String namaKandidat, String email, String noHp, String noTelp, String noTelpkerabat, String namaKerabat, String tempatLahir, Date tglLahir, String nik, String alamatKtp, String alamatSekarang, String npwp, String agama, String jenisKelamin, String statusNikah, byte[] foto, String uploadCv) {
         this.idKandidat = idKandidat;
         this.namaKandidat = namaKandidat;
         this.email = email;
@@ -164,11 +175,7 @@ public class Kandidat implements Serializable {
         this.agama = agama;
         this.jenisKelamin = jenisKelamin;
         this.statusNikah = statusNikah;
-        this.username = username;
-        this.password = password;
         this.foto = foto;
-        this.statusKandidat = statusKandidat;
-        this.statusLamaran = statusLamaran;
         this.uploadCv = uploadCv;
     }
 

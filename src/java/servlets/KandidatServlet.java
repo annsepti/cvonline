@@ -40,15 +40,20 @@ public class KandidatServlet extends HttpServlet {
         response.setContentType("text/html;charset=UTF-8");
         HttpSession session = request.getSession();
         RequestDispatcher dis = null;
+        String idKandidat = request.getParameter("idKandidat");
         try (PrintWriter out = response.getWriter()) {
             /* TODO output your page here. You may use following sample code. */
-            out.print("<font color=\"red\">nyoba direct</font>");
             
             InterfaceController<Kandidat> ic = new GeneralController<>(HibernateUtil.getSessionFactory(), Kandidat.class);
-            session.setAttribute("dataKandidat", ic.getAll());
-            dis = request.getRequestDispatcher("/views/??.jsp");
+            if(idKandidat.isEmpty()){
+                session.setAttribute("dataKandidat", ic.getAll());
+                dis = request.getRequestDispatcher("/views/??.jsp");
+            } else{
+                Kandidat kandidat = ic.getById(idKandidat);
+                session.setAttribute("dataKandidat", kandidat);
+                dis = request.getRequestDispatcher("/views/dataPribadi.jsp");
+            }
             dis.include(request, response);
-            
         }
     }
 

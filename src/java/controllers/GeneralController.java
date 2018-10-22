@@ -58,7 +58,7 @@ public class GeneralController<T> implements InterfaceController<T>{
 
     @Override
     public T getById(Object id) {
-        return (T) iDAO.getById(id);
+        return (T) iDAO.getById(new Integer(id+""));
     }
 
     @Override

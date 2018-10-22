@@ -73,8 +73,8 @@ public class SaveOrUpdateKandidat extends HttpServlet {
             InterfaceController<Kandidat> ic = new GeneralController<>(HibernateUtil.getSessionFactory(), Kandidat.class);
             Kandidat kandidat = new Kandidat(new Integer(idKandidat), namaKandidat, email, nope,
                     notelp, nopeKerabat, namaKerabat, tempatLahir, date, nik, alamatKtp,
-                    alamatSkrg, npwp, agama, jenisKelamin, statusNikah, username, password,
-                    new byte[100], statusKandidat, statusLamaran, cv);
+                    alamatSkrg, npwp, agama, jenisKelamin, statusNikah,
+                    new byte[100], cv);
             String message = "Gagal dongs";
             boolean isSave = true;
             if (ic.getById(kandidat.getIdKandidat()) != null) {
