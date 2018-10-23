@@ -66,7 +66,7 @@
                                                 date = dates[0] + "/" + dates[1] +"/" + dates[2];
                                             %>
                                             <div class="col col-md-3"><label for="text-input" class=" form-control-label">Tanggal Lahir</label></div>
-                                            <div class="col-12 col-md-9"><input type="text" id="text-input" name="tgllahir" placeholder="" class="form-control" value="<%= date%>"><small class="form-text text-muted">Format DD/MM/YYY</small></div>
+                                            <div class="col-12 col-md-9"><input type="text" id="text-input" name="tgllahir" placeholder="" class="form-control" value="<%= date%>"><small class="form-text text-muted">Format YYYY/MM/DD</small></div>
                                         </div>
                                         <div class="row form-group">
                                             <div class="col col-md-3"><label for="text-input" class=" form-control-label">NIK (No. KTP)</label></div>
@@ -93,7 +93,7 @@
                                                                 <div class="col-12 col-md-9">
                                                                     <select name="statusnikah" id="select" class="form-control">
                                                                         <option value="0">Silahkan Pilih</option>
-                                                                        <option value="1" <% if (kandidat.getStatusNikah().equals("belum menikah")) {%> selected="selected" <%}%> >belum menikah</option>
+                                                                        <option value="1" <% if (kandidat.getStatusNikah().equals("belum menikah")) {%> selected="selected" <%}%> >Belum menikah</option>
                                                                         <option value="2" <% if (kandidat.getStatusNikah().equals("menikah")) {%> selected="selected" <%}%>>Sudah Menikah</option>
                                                                         <option value="3" <% if (kandidat.getStatusNikah().equals("single parent")) {%> selected="selected" <%}%>>Single Parent</option>
                                                                     </select>
@@ -104,40 +104,40 @@
                                                                 <div class="col-12 col-md-9">
                                                                     <select name="agama" id="select" class="form-control">
                                                                         <option value="0">Silahkan Pilih</option>
-                                                                        <option value="1" <% if (kandidat.getAgama().equals("islam")) {%> selected="selected" <%}%> >islam</option>
-                                                                        <option value="2" <% if (kandidat.getAgama().equals("kristen")) {%> selected="selected" <%}%>>kristen</option>
-                                                                        <option value="3" <% if (kandidat.getAgama().equals("katolik")) {%> selected="selected" <%}%>>katolik</option>
-                                                                        <option value="1" <% if (kandidat.getAgama().equals("budha")) {%> selected="selected" <%}%>>budha</option>
-                                                                        <option value="2" <% if (kandidat.getAgama().equals("hindu")) {%> selected="selected" <%}%>>hindu</option>
-                                                                        <option value="3" <% if (kandidat.getAgama().equals("lainnya")) {%> selected="selected" <%}%>>lainnya</option>
+                                                                        <option value="1" <% if (kandidat.getAgama().equals("islam")) {%> selected="selected" <%}%> >Islam</option>
+                                                                        <option value="2" <% if (kandidat.getAgama().equals("kristen")) {%> selected="selected" <%}%>>Kristen</option>
+                                                                        <option value="3" <% if (kandidat.getAgama().equals("katolik")) {%> selected="selected" <%}%>>Katolik</option>
+                                                                        <option value="1" <% if (kandidat.getAgama().equals("budha")) {%> selected="selected" <%}%>>Budha</option>
+                                                                        <option value="2" <% if (kandidat.getAgama().equals("hindu")) {%> selected="selected" <%}%>>Hindu</option>
+                                                                        <option value="3" <% if (kandidat.getAgama().equals("lainnya")) {%> selected="selected" <%}%>>Lainnya</option>
                                                                     </select>
                                                                 </div>
                                                             </div>
                                                             <div class="row form-group">
                                                                 <div class="col col-md-3"><label for="textarea-input" class=" form-control-label">Alamat Sesuai KTP</label></div>
-                                                                <div class="col-12 col-md-9"><textarea name="textarea-input" id="textarea-input" rows="9" placeholder="" class="form-control" name="alamatktp" value="<%= kandidat.getAlamatKtp()%>"></textarea></div>
+                                                                <div class="col-12 col-md-9"><textarea name="alamatktp" id="textarea-input" rows="9" placeholder="" class="form-control" name="alamatktp" ><%= kandidat.getAlamatKtp()%></textarea></div>
                                                             </div>
                                                             <div class="row form-group">
                                                                 <div class="col col-md-3"><label for="textarea-input" class=" form-control-label">Alamat Sekarang</label></div>
-                                                                <div class="col-12 col-md-9"><textarea name="textarea-input" id="textarea-input" rows="9" placeholder="" class="form-control" name="alamatskrg" value="<%= kandidat.getAlamatSekarang()%>"></textarea></div>
+                                                                <div class="col-12 col-md-9"><textarea name="alamatskrg" id="textarea-input" rows="9" placeholder="" class="form-control" name="alamatskrg" ><%= kandidat.getAlamatSekarang()%></textarea></div>
                                                             </div>
                                                             <div class="row form-group">
                                                                 <div class="col col-md-3"><label for="text-input" class=" form-control-label">NPWP</label></div>
-                                                                <div class="col-12 col-md-9"><input type="text" id="text-input" name="text-input" placeholder="" class="form-control" name="npwp" value="<%= kandidat.getNpwp()%>" ></div>
+                                                                <div class="col-12 col-md-9"><input type="text" id="text-input" name="npwp" placeholder="" class="form-control" name="npwp" value="<%= kandidat.getNpwp()%>" ></div>
                                                             </div>
                                                             <div class="row form-group">
                                                                 <div class="col col-md-3"><label for="text-input" class=" form-control-label">Ponsel</label></div>
-                                                                <div class="col-12 col-md-9"><input type="text" id="text-input" name="text-input" placeholder="" class="form-control" name="nope" value="<%= kandidat.getNoHp()%>" ></div>
+                                                                <div class="col-12 col-md-9"><input type="text" id="text-input" name="nope" placeholder="" class="form-control" name="nope" value="<%= kandidat.getNoHp()%>" ></div>
                                                             </div>
                                                             <div class="row form-group">
                                                                 <div class="col col-md-3"><label for="text-input" class=" form-control-label">Telepon Rumah</label></div>
-                                                                <div class="col-12 col-md-9"><input type="text" id="text-input" name="text-input" placeholder="" class="form-control" name="notelp" value="<%= kandidat.getNoTelp()%>" ></div>
+                                                                <div class="col-12 col-md-9"><input type="text" id="text-input" name="notelp" placeholder="" class="form-control" name="notelp" value="<%= kandidat.getNoTelp()%>" ></div>
                                                             </div>
                                                             <div class="row form-group">
                                                                 <div class="col col-md-3"><label for="text-input" class=" form-control-label">Telepon Kerabat</label></div>
-                                                                <div class="col-12 col-md-4"><input type="text" id="text-input" name="text-input" placeholder="" class="form-control" name="nopekerabat" value="<%= kandidat.getNoTelpkerabat()%>" ></div>
+                                                                <div class="col-12 col-md-4"><input type="text" id="text-input" name="nopekerabat" placeholder="" class="form-control" name="nopekerabat" value="<%= kandidat.getNoTelpkerabat()%>" ></div>
                                                                 <div class="col col-md-2"><label for="text-input" class=" form-control-label">Atas Nama</label></div>
-                                                                <div class="col-12 col-md-3"><input type="text" id="text-input" name="text-input" placeholder="" class="form-control" name="namakerabat" value="<%= kandidat.getNamaKerabat()%>" ></div>
+                                                                <div class="col-12 col-md-3"><input type="text" id="text-input" name="namakerabat" placeholder="" class="form-control" name="namakerabat" value="<%= kandidat.getNamaKerabat()%>" ></div>
 
                                                             </div>
                                                             <div class="row form-group">

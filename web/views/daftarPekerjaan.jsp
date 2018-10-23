@@ -103,29 +103,29 @@
                                                         </div>
                                                         <div class="row form-group">
                                                             <div class="col col-md-3"><label for="textarea-input" class=" form-control-label">Alamat Sesuai KTP</label></div>
-                                                            <div class="col-12 col-md-9"><textarea name="textarea-input" id="textarea-input" rows="9" placeholder="" class="form-control"></textarea></div>
+                                                                <div class="col-12 col-md-9"><textarea name="alamatktp" id="textarea-input" rows="9" placeholder="" class="form-control"></textarea></div>
                                                         </div>
                                                         <div class="row form-group">
                                                             <div class="col col-md-3"><label for="textarea-input" class=" form-control-label">Alamat Sekarang</label></div>
-                                                            <div class="col-12 col-md-9"><textarea name="textarea-input" id="textarea-input" rows="9" placeholder="" class="form-control"></textarea></div>
+                                                            <div class="col-12 col-md-9"><textarea name="alamatskrg" id="textarea-input" rows="9" placeholder="" class="form-control"></textarea></div>
                                                         </div>
                                                         <div class="row form-group">
                                                             <div class="col col-md-3"><label for="text-input" class=" form-control-label">NPWP</label></div>
-                                                            <div class="col-12 col-md-9"><input type="text" id="text-input" name="text-input" placeholder="" class="form-control"></div>
+                                                            <div class="col-12 col-md-9"><input type="text" id="text-input" name="npwp" placeholder="" class="form-control"></div>
                                                         </div>
                                                         <div class="row form-group">
                                                             <div class="col col-md-3"><label for="text-input" class=" form-control-label">Ponsel</label></div>
-                                                            <div class="col-12 col-md-9"><input type="text" id="text-input" name="text-input" placeholder="" class="form-control"></div>
+                                                            <div class="col-12 col-md-9"><input type="text" id="text-input" name="nope" placeholder="" class="form-control"></div>
                                                         </div>
                                                         <div class="row form-group">
                                                             <div class="col col-md-3"><label for="text-input" class=" form-control-label">Telepon Rumah</label></div>
-                                                            <div class="col-12 col-md-9"><input type="text" id="text-input" name="text-input" placeholder="" class="form-control"></div>
+                                                            <div class="col-12 col-md-9"><input type="text" id="text-input" name="notelp" placeholder="" class="form-control"></div>
                                                         </div>
                                                         <div class="row form-group">
                                                             <div class="col col-md-3"><label for="text-input" class=" form-control-label">Telepon Kerabat</label></div>
-                                                            <div class="col-12 col-md-4"><input type="text" id="text-input" name="text-input" placeholder="" class="form-control"></div>
+                                                            <div class="col-12 col-md-4"><input type="text" id="text-input" name="nopekerabat" placeholder="" class="form-control"></div>
                                                             <div class="col col-md-2"><label for="text-input" class=" form-control-label">Atas Nama</label></div>
-                                                            <div class="col-12 col-md-3"><input type="text" id="text-input" name="text-input" placeholder="" class="form-control"></div>
+                                                            <div class="col-12 col-md-3"><input type="text" id="text-input" name="namakerabat" placeholder="" class="form-control"></div>
 
                                                         </div>
                                                         <div class="row form-group">
