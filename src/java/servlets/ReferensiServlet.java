@@ -39,16 +39,21 @@ public class ReferensiServlet extends HttpServlet {
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
         HttpSession session = request.getSession();
+        String idKandidat = request.getParameter("idKandidat");
         RequestDispatcher dis = null;
         try (PrintWriter out = response.getWriter()) {
             /* TODO output your page here. You may use following sample code. */
-            out.print("<font color=\"red\">nyoba direct</font>");
-            
             InterfaceController<Referensi> ic = new GeneralController<>(HibernateUtil.getSessionFactory(), Referensi.class);
-            session.setAttribute("dataReferensi", ic.getAll());
-            dis = request.getRequestDispatcher("/views/??.jsp");
+            if (idKandidat.isEmpty()) {
+                session.setAttribute("dataReferensi", ic.getAll());
+                dis = request.getRequestDispatcher("/views/??.jsp");
+            } else {
+                Referensi referensi = ic.getById(idKandidat);
+                session.setAttribute("dataReferensi", referensi);
+                dis = request.getRequestDispatcher("/views/referensi.jsp");
+            }
             dis.include(request, response);
-            
+
         }
     }
 

@@ -40,15 +40,21 @@ public class PengalamankerjaServlet extends HttpServlet {
         response.setContentType("text/html;charset=UTF-8");
         HttpSession session = request.getSession();
         RequestDispatcher dis = null;
+        String idKandidat = request.getParameter("idKandidat");
         try (PrintWriter out = response.getWriter()) {
             /* TODO output your page here. You may use following sample code. */
-            out.print("<font color=\"red\">nyoba direct</font>");
             
             InterfaceController<Pengalamankerja> ic = new GeneralController<>(HibernateUtil.getSessionFactory(), Pengalamankerja.class);
-            session.setAttribute("dataPengalaman", ic.getAll());
-            dis = request.getRequestDispatcher("/views/??.jsp");
-            dis.include(request, response);
-            
+            if(idKandidat.isEmpty()){
+                session.setAttribute("dataPengalaman", ic.getAll());
+                dis = request.getRequestDispatcher("/views/??.jsp");
+            } else{
+                Pengalamankerja pengalamankerja = ic.getById(idKandidat);
+                session.setAttribute("dataPengalaman", pengalamankerja);
+                dis = request.getRequestDispatcher("/views/pengalamanKerja.jsp");
+            }
+            dis.include(request, response); 
+                        
         }
     }
 

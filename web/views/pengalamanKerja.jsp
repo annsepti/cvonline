@@ -4,12 +4,16 @@
     Author     : USER
 --%>
 
+<%@page import="models.Kandidat"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
     <%@include file="header.jsp" %>
     <body>
-        <%@include file="aside.jsp" %>
+        <% Kandidat kandidat = (Kandidat) session.getAttribute("dataKandidat"); %>
+        <jsp:include page="aside.jsp">
+            <jsp:param name="id" value="<%= kandidat.getIdKandidat()%>"></jsp:param>
+        </jsp:include>
         <div id="right-panel" class="right-panel">
             <%@include file="header2.jsp" %>
             <div class="breadcrumbs">
@@ -185,147 +189,147 @@
                                                         <i class="fa fa-ban"></i> Reset
                                                     </button>
                                                 </div>
-                                <div class="card-body card-block">
-                                    <div class="row form-group">
-                                        <div class="col col-md-3"><label for="text-input" class=" form-control-label">Nama Perusahaan</label></div>
-                                        <div class="col-12 col-md-9"><input type="text" id="text-input" name="text-input" placeholder="" class="form-control"></div>
-                                    </div>
-                                    <div class="row form-group">
-                                        <div class="col col-md-3"><label for="text-input" class=" form-control-label">Bidang</label></div>
-                                        <div class="col-12 col-md-9"><input type="text" id="text-input" name="text-input" placeholder="" class="form-control"></div>
-                                    </div>
-                                    <div class="row form-group">
-                                        <div class="col col-md-3"><label for="textarea-input" class=" form-control-label">Alamat</label></div>
-                                        <div class="col-12 col-md-9"><textarea name="textarea-input" id="textarea-input" rows="9" placeholder="" class="form-control"></textarea></div>
-                                    </div>
-                                    <div class="row form-group">
-                                        <div class="col col-md-3"><label for="text-input" class=" form-control-label">Telepon</label></div>
-                                        <div class="col-12 col-md-9"><input type="text" id="text-input" name="text-input" placeholder="" class="form-control"></div>
-                                    </div>
-                                    <div class="row form-group">
-                                        <div class="col col-md-3"><label for="text-input" class=" form-control-label">Tanggal Masuk</label></div>
-                                        <div class="col-12 col-md-9"><input type="text" id="text-input" name="text-input" placeholder="" class="form-control"><small class="form-text text-muted">Format DD/MM/YYY</small></div>
-                                    </div>
-                                    <div class="row form-group">
-                                        <div class="col col-md-3"><label for="text-input" class=" form-control-label">Tanggal Keluar</label></div>
-                                        <div class="col-12 col-md-9"><input type="text" id="text-input" name="text-input" placeholder="" class="form-control"><small class="form-text text-muted">Format DD/MM/YYY</small></div>
-                                    </div>
-                                    <div class="row form-group">
-                                        <div class="col col-md-3"><label for="text-input" class=" form-control-label">Posisi</label></div>
-                                        <div class="col-12 col-md-9"><input type="text" id="text-input" name="text-input" placeholder="" class="form-control"></div>
-                                    </div>
-                                    <div class="row form-group">
-                                        <div class="col col-md-3"><label class=" form-control-label">Gaji</label></div><br>
-                                        <div class="col-12 col-md-4"><input type="text" id="text-input" name="text-input" placeholder="" class="form-control"></div>
-                                        <div class="col col-md-5">
-                                            <div class="form-check">
-                                                <div class="radio">
-                                                    <label for="radio1" class="form-check-label ">
-                                                        <input type="radio" id="radio1" name="radios" value="option1" class="form-check-input">Gross
-                                                    </label>
-                                                </div>
-                                                <div class="radio">
-                                                    <label for="radio2" class="form-check-label ">
-                                                        <input type="radio" id="radio2" name="radios" value="option2" class="form-check-input">Net
-                                                        </div>
-                                                        </div>
-                                                        </div>
-                                                        </div>
-                                                        <div class="row form-group">
-                                                            <div class="col col-md-3"><label for="textarea-input" class=" form-control-label">Proyek</label></div>
-                                                            <div class="col-12 col-md-9"><textarea name="textarea-input" id="textarea-input" rows="9" placeholder="" class="form-control"></textarea><small class="form-text text-muted">Proyek yang pernah ditangani</small></div>
-                                                        </div>
-                                                        <div class="row form-group">
-                                                            <div class="col col-md-3"><label for="text-input" class=" form-control-label">Nama Atasan</label></div>
-                                                            <div class="col-12 col-md-9"><input type="text" id="text-input" name="text-input" placeholder="" class="form-control"></div>
-                                                        </div>
-                                                        <div class="row form-group">
-                                                            <div class="col col-md-3"><label for="textarea-input" class=" form-control-label">Alasan keluar</label></div>
-                                                            <div class="col-12 col-md-9"><textarea name="textarea-input" id="textarea-input" rows="9" placeholder="" class="form-control"></textarea></div>
-                                                        </div>
-                                                </div>
-                                                <div class="card-footer">
-                                                    <button type="submit" class="btn btn-primary btn-sm">
-                                                        <i class="fa fa-dot-circle-o"></i> Simpan
-                                                    </button>
-                                                    <button type="reset" class="btn btn-danger btn-sm">
-                                                        <i class="fa fa-ban"></i> Reset
-                                                    </button>
-                                                </div>
-                                <div class="card-body card-block">
-                                    <div class="row form-group">
-                                        <div class="col col-md-3"><label for="text-input" class=" form-control-label">Nama Perusahaan</label></div>
-                                        <div class="col-12 col-md-9"><input type="text" id="text-input" name="text-input" placeholder="" class="form-control"></div>
-                                    </div>
-                                    <div class="row form-group">
-                                        <div class="col col-md-3"><label for="text-input" class=" form-control-label">Bidang</label></div>
-                                        <div class="col-12 col-md-9"><input type="text" id="text-input" name="text-input" placeholder="" class="form-control"></div>
-                                    </div>
-                                    <div class="row form-group">
-                                        <div class="col col-md-3"><label for="textarea-input" class=" form-control-label">Alamat</label></div>
-                                        <div class="col-12 col-md-9"><textarea name="textarea-input" id="textarea-input" rows="9" placeholder="" class="form-control"></textarea></div>
-                                    </div>
-                                    <div class="row form-group">
-                                        <div class="col col-md-3"><label for="text-input" class=" form-control-label">Telepon</label></div>
-                                        <div class="col-12 col-md-9"><input type="text" id="text-input" name="text-input" placeholder="" class="form-control"></div>
-                                    </div>
-                                    <div class="row form-group">
-                                        <div class="col col-md-3"><label for="text-input" class=" form-control-label">Tanggal Masuk</label></div>
-                                        <div class="col-12 col-md-9"><input type="text" id="text-input" name="text-input" placeholder="" class="form-control"><small class="form-text text-muted">Format DD/MM/YYY</small></div>
-                                    </div>
-                                    <div class="row form-group">
-                                        <div class="col col-md-3"><label for="text-input" class=" form-control-label">Tanggal Keluar</label></div>
-                                        <div class="col-12 col-md-9"><input type="text" id="text-input" name="text-input" placeholder="" class="form-control"><small class="form-text text-muted">Format DD/MM/YYY</small></div>
-                                    </div>
-                                    <div class="row form-group">
-                                        <div class="col col-md-3"><label for="text-input" class=" form-control-label">Posisi</label></div>
-                                        <div class="col-12 col-md-9"><input type="text" id="text-input" name="text-input" placeholder="" class="form-control"></div>
-                                    </div>
-                                    <div class="row form-group">
-                                        <div class="col col-md-3"><label class=" form-control-label">Gaji</label></div><br>
-                                        <div class="col-12 col-md-4"><input type="text" id="text-input" name="text-input" placeholder="" class="form-control"></div>
-                                        <div class="col col-md-5">
-                                            <div class="form-check">
-                                                <div class="radio">
-                                                    <label for="radio1" class="form-check-label ">
-                                                        <input type="radio" id="radio1" name="radios" value="option1" class="form-check-input">Gross
-                                                    </label>
-                                                </div>
-                                                <div class="radio">
-                                                    <label for="radio2" class="form-check-label ">
-                                                        <input type="radio" id="radio2" name="radios" value="option2" class="form-check-input">Net
-                                                        </div>
-                                                        </div>
-                                                        </div>
-                                                        </div>
-                                                        <div class="row form-group">
-                                                            <div class="col col-md-3"><label for="textarea-input" class=" form-control-label">Proyek</label></div>
-                                                            <div class="col-12 col-md-9"><textarea name="textarea-input" id="textarea-input" rows="9" placeholder="" class="form-control"></textarea><small class="form-text text-muted">Proyek yang pernah ditangani</small></div>
-                                                        </div>
-                                                        <div class="row form-group">
-                                                            <div class="col col-md-3"><label for="text-input" class=" form-control-label">Nama Atasan</label></div>
-                                                            <div class="col-12 col-md-9"><input type="text" id="text-input" name="text-input" placeholder="" class="form-control"></div>
-                                                        </div>
-                                                        <div class="row form-group">
-                                                            <div class="col col-md-3"><label for="textarea-input" class=" form-control-label">Alasan keluar</label></div>
-                                                            <div class="col-12 col-md-9"><textarea name="textarea-input" id="textarea-input" rows="9" placeholder="" class="form-control"></textarea></div>
-                                                        </div>
-                                                </div>
-                                                <div class="card-footer">
-                                                    <button type="submit" class="btn btn-primary btn-sm">
-                                                        <i class="fa fa-dot-circle-o"></i> Simpan
-                                                    </button>
-                                                    <button type="reset" class="btn btn-danger btn-sm">
-                                                        <i class="fa fa-ban"></i> Reset
-                                                    </button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div><!-- .animated -->
-                            </div><!-- .content -->
-                        </div><!-- /#right-panel -->
-                        <%@include file="footer.jsp" %>
-                        </body>
-                        </html>
+                                                <div class="card-body card-block">
+                                                    <div class="row form-group">
+                                                        <div class="col col-md-3"><label for="text-input" class=" form-control-label">Nama Perusahaan</label></div>
+                                                        <div class="col-12 col-md-9"><input type="text" id="text-input" name="text-input" placeholder="" class="form-control"></div>
+                                                    </div>
+                                                    <div class="row form-group">
+                                                        <div class="col col-md-3"><label for="text-input" class=" form-control-label">Bidang</label></div>
+                                                        <div class="col-12 col-md-9"><input type="text" id="text-input" name="text-input" placeholder="" class="form-control"></div>
+                                                    </div>
+                                                    <div class="row form-group">
+                                                        <div class="col col-md-3"><label for="textarea-input" class=" form-control-label">Alamat</label></div>
+                                                        <div class="col-12 col-md-9"><textarea name="textarea-input" id="textarea-input" rows="9" placeholder="" class="form-control"></textarea></div>
+                                                    </div>
+                                                    <div class="row form-group">
+                                                        <div class="col col-md-3"><label for="text-input" class=" form-control-label">Telepon</label></div>
+                                                        <div class="col-12 col-md-9"><input type="text" id="text-input" name="text-input" placeholder="" class="form-control"></div>
+                                                    </div>
+                                                    <div class="row form-group">
+                                                        <div class="col col-md-3"><label for="text-input" class=" form-control-label">Tanggal Masuk</label></div>
+                                                        <div class="col-12 col-md-9"><input type="text" id="text-input" name="text-input" placeholder="" class="form-control"><small class="form-text text-muted">Format DD/MM/YYY</small></div>
+                                                    </div>
+                                                    <div class="row form-group">
+                                                        <div class="col col-md-3"><label for="text-input" class=" form-control-label">Tanggal Keluar</label></div>
+                                                        <div class="col-12 col-md-9"><input type="text" id="text-input" name="text-input" placeholder="" class="form-control"><small class="form-text text-muted">Format DD/MM/YYY</small></div>
+                                                    </div>
+                                                    <div class="row form-group">
+                                                        <div class="col col-md-3"><label for="text-input" class=" form-control-label">Posisi</label></div>
+                                                        <div class="col-12 col-md-9"><input type="text" id="text-input" name="text-input" placeholder="" class="form-control"></div>
+                                                    </div>
+                                                    <div class="row form-group">
+                                                        <div class="col col-md-3"><label class=" form-control-label">Gaji</label></div><br>
+                                                        <div class="col-12 col-md-4"><input type="text" id="text-input" name="text-input" placeholder="" class="form-control"></div>
+                                                        <div class="col col-md-5">
+                                                            <div class="form-check">
+                                                                <div class="radio">
+                                                                    <label for="radio1" class="form-check-label ">
+                                                                        <input type="radio" id="radio1" name="radios" value="option1" class="form-check-input">Gross
+                                                                    </label>
+                                                                </div>
+                                                                <div class="radio">
+                                                                    <label for="radio2" class="form-check-label ">
+                                                                        <input type="radio" id="radio2" name="radios" value="option2" class="form-check-input">Net
+                                                                        </div>
+                                                                        </div>
+                                                                        </div>
+                                                                        </div>
+                                                                        <div class="row form-group">
+                                                                            <div class="col col-md-3"><label for="textarea-input" class=" form-control-label">Proyek</label></div>
+                                                                            <div class="col-12 col-md-9"><textarea name="textarea-input" id="textarea-input" rows="9" placeholder="" class="form-control"></textarea><small class="form-text text-muted">Proyek yang pernah ditangani</small></div>
+                                                                        </div>
+                                                                        <div class="row form-group">
+                                                                            <div class="col col-md-3"><label for="text-input" class=" form-control-label">Nama Atasan</label></div>
+                                                                            <div class="col-12 col-md-9"><input type="text" id="text-input" name="text-input" placeholder="" class="form-control"></div>
+                                                                        </div>
+                                                                        <div class="row form-group">
+                                                                            <div class="col col-md-3"><label for="textarea-input" class=" form-control-label">Alasan keluar</label></div>
+                                                                            <div class="col-12 col-md-9"><textarea name="textarea-input" id="textarea-input" rows="9" placeholder="" class="form-control"></textarea></div>
+                                                                        </div>
+                                                                </div>
+                                                                <div class="card-footer">
+                                                                    <button type="submit" class="btn btn-primary btn-sm">
+                                                                        <i class="fa fa-dot-circle-o"></i> Simpan
+                                                                    </button>
+                                                                    <button type="reset" class="btn btn-danger btn-sm">
+                                                                        <i class="fa fa-ban"></i> Reset
+                                                                    </button>
+                                                                </div>
+                                                                <div class="card-body card-block">
+                                                                    <div class="row form-group">
+                                                                        <div class="col col-md-3"><label for="text-input" class=" form-control-label">Nama Perusahaan</label></div>
+                                                                        <div class="col-12 col-md-9"><input type="text" id="text-input" name="text-input" placeholder="" class="form-control"></div>
+                                                                    </div>
+                                                                    <div class="row form-group">
+                                                                        <div class="col col-md-3"><label for="text-input" class=" form-control-label">Bidang</label></div>
+                                                                        <div class="col-12 col-md-9"><input type="text" id="text-input" name="text-input" placeholder="" class="form-control"></div>
+                                                                    </div>
+                                                                    <div class="row form-group">
+                                                                        <div class="col col-md-3"><label for="textarea-input" class=" form-control-label">Alamat</label></div>
+                                                                        <div class="col-12 col-md-9"><textarea name="textarea-input" id="textarea-input" rows="9" placeholder="" class="form-control"></textarea></div>
+                                                                    </div>
+                                                                    <div class="row form-group">
+                                                                        <div class="col col-md-3"><label for="text-input" class=" form-control-label">Telepon</label></div>
+                                                                        <div class="col-12 col-md-9"><input type="text" id="text-input" name="text-input" placeholder="" class="form-control"></div>
+                                                                    </div>
+                                                                    <div class="row form-group">
+                                                                        <div class="col col-md-3"><label for="text-input" class=" form-control-label">Tanggal Masuk</label></div>
+                                                                        <div class="col-12 col-md-9"><input type="text" id="text-input" name="text-input" placeholder="" class="form-control"><small class="form-text text-muted">Format DD/MM/YYY</small></div>
+                                                                    </div>
+                                                                    <div class="row form-group">
+                                                                        <div class="col col-md-3"><label for="text-input" class=" form-control-label">Tanggal Keluar</label></div>
+                                                                        <div class="col-12 col-md-9"><input type="text" id="text-input" name="text-input" placeholder="" class="form-control"><small class="form-text text-muted">Format DD/MM/YYY</small></div>
+                                                                    </div>
+                                                                    <div class="row form-group">
+                                                                        <div class="col col-md-3"><label for="text-input" class=" form-control-label">Posisi</label></div>
+                                                                        <div class="col-12 col-md-9"><input type="text" id="text-input" name="text-input" placeholder="" class="form-control"></div>
+                                                                    </div>
+                                                                    <div class="row form-group">
+                                                                        <div class="col col-md-3"><label class=" form-control-label">Gaji</label></div><br>
+                                                                        <div class="col-12 col-md-4"><input type="text" id="text-input" name="text-input" placeholder="" class="form-control"></div>
+                                                                        <div class="col col-md-5">
+                                                                            <div class="form-check">
+                                                                                <div class="radio">
+                                                                                    <label for="radio1" class="form-check-label ">
+                                                                                        <input type="radio" id="radio1" name="radios" value="option1" class="form-check-input">Gross
+                                                                                    </label>
+                                                                                </div>
+                                                                                <div class="radio">
+                                                                                    <label for="radio2" class="form-check-label ">
+                                                                                        <input type="radio" id="radio2" name="radios" value="option2" class="form-check-input">Net
+                                                                                        </div>
+                                                                                        </div>
+                                                                                        </div>
+                                                                                        </div>
+                                                                                        <div class="row form-group">
+                                                                                            <div class="col col-md-3"><label for="textarea-input" class=" form-control-label">Proyek</label></div>
+                                                                                            <div class="col-12 col-md-9"><textarea name="textarea-input" id="textarea-input" rows="9" placeholder="" class="form-control"></textarea><small class="form-text text-muted">Proyek yang pernah ditangani</small></div>
+                                                                                        </div>
+                                                                                        <div class="row form-group">
+                                                                                            <div class="col col-md-3"><label for="text-input" class=" form-control-label">Nama Atasan</label></div>
+                                                                                            <div class="col-12 col-md-9"><input type="text" id="text-input" name="text-input" placeholder="" class="form-control"></div>
+                                                                                        </div>
+                                                                                        <div class="row form-group">
+                                                                                            <div class="col col-md-3"><label for="textarea-input" class=" form-control-label">Alasan keluar</label></div>
+                                                                                            <div class="col-12 col-md-9"><textarea name="textarea-input" id="textarea-input" rows="9" placeholder="" class="form-control"></textarea></div>
+                                                                                        </div>
+                                                                                </div>
+                                                                                <div class="card-footer">
+                                                                                    <button type="submit" class="btn btn-primary btn-sm">
+                                                                                        <i class="fa fa-dot-circle-o"></i> Simpan
+                                                                                    </button>
+                                                                                    <button type="reset" class="btn btn-danger btn-sm">
+                                                                                        <i class="fa fa-ban"></i> Reset
+                                                                                    </button>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div><!-- .animated -->
+                                                            </div><!-- .content -->
+                                                        </div><!-- /#right-panel -->
+                                                        <%@include file="footer.jsp" %>
+                                                        </body>
+                                                        </html>
 

@@ -39,13 +39,21 @@ public class LainServlet extends HttpServlet {
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
         HttpSession session = request.getSession();
+        String idKandidat = request.getParameter("idKandidat");
         RequestDispatcher dis = null;
         try (PrintWriter out = response.getWriter()) {
             /* TODO output your page here. You may use following sample code. */
             InterfaceController<Lain> ic = new GeneralController<>(HibernateUtil.getSessionFactory(), Lain.class);
-            session.setAttribute("dataLain", ic.getAll());
-            dis = request.getRequestDispatcher("/views/lihatLain.jsp");
+            if (idKandidat.isEmpty()) {
+                session.setAttribute("dataLainlain", ic.getAll());
+                dis = request.getRequestDispatcher("/views/??.jsp");
+            } else {
+                Lain lain = ic.getById(idKandidat);
+                session.setAttribute("dataLainlain", lain);
+                dis = request.getRequestDispatcher("/views/lainlain.jsp");
+            }
             dis.include(request, response);
+
         }
     }
 

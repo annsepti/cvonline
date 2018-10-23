@@ -14,7 +14,7 @@
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-menu" aria-controls="main-menu" aria-expanded="false" aria-label="Toggle navigation">
                         <i class="fa fa-bars"></i>
                     </button>
-                    <a class="navbar-brand" href="cv.jsp"><img src="images/mii-logo.png" alt="Logo"></a>
+                    <a class="navbar-brand" href="#"><img src="images/mii-logo.png" alt="Logo"></a>
                     <a class="navbar-brand hidden" href="cv.jsp"><img src="images/mii-logo.png" alt="Logo"></a>
                 </div>
 
@@ -31,9 +31,9 @@
                                 <li><i class="fa fa-heart"></i><a href="keluarga.jsp">Keluarga</a></li>
                                 <li><i class="fa fa-bookmark"></i><a href="pendidikanFormal.jsp">Pendidikan Formal</a></li>
                                 <li><i class="fa fa-bookmark-o"></i><a href="pendidikanNonFormal.jsp">Non Formal</a></li>
-                                <li><i class="fa fa-building-o"></i><a href="pengalamanKerja.jsp">Pengalaman Kerja</a></li>
-                                <li><i class="fa fa-group"></i><a href="referensi.jsp">Referensi</a></li>
-                                <li><i class="fa fa-asterisk"></i><a href="lainlain.jsp">Lain-lain</a></li>
+                                <li><i class="fa fa-building-o"></i><a href="./pengalaman?idKandidat=${param.id}">Pengalaman Kerja</a></li>
+                                <li><i class="fa fa-group"></i><a href="./referensi?idKandidat=${param.id}">Referensi</a></li>
+                                <li><i class="fa fa-asterisk"></i><a href="./lain?idKandidat=${param.id}">Lain-lain</a></li>
                             </ul>
                         </li>
                         <% String id = "${param.id}"; %> 
