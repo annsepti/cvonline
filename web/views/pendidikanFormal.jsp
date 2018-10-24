@@ -42,12 +42,11 @@
                             <div class="card">
                                 <div class="card-header">
                                     <strong class="card-title">Data Table</strong>
+                                </div><br>
+                                <div class="col-xs-6 col-sm-5">
+                                <button type="button" class="btn btn-primary btn-sm"><i class="fa fa-pencil"></i>&nbsp; Tambah</button>
                                 </div>
-
                                 <div class="card-body">
-                                        <button type="button" class="btn btn-primary btn-sm"><i class="fa fa-pencil"></i>&nbsp; Tambah</button>
-                                    
-                                    <br>
                                     <table id="bootstrap-data-table" class="table table-striped table-bordered">
                                         <thead>
                                             <tr>
