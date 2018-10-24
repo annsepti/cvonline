@@ -53,9 +53,13 @@
                                         <%
                                             int i = 1;
                                         %>
-                                        <table border="0">
+                                        <div class="col-xs-6 col-sm-2">
+                                            <button type="button" class="btn btn-primary btn-sm"><i class="fa fa-pencil" data-toggle="modal" data-target="#tambahModal"></i>&nbsp; Tambah</button>
+                                        </div>
+                                        <table id="bootstrap-data-table" class="table table-striped table-bordered">
                                             <thead>
                                                 <tr>
+                                                    <th>Aksi</th>
                                                     <th>No</th>
                                                     <th>Hubungan</th>
                                                     <th>Nama Lengkap</th>
@@ -70,8 +74,8 @@
                                                     for (Keluarga keluarga : keluargas) {
                                                 %>
                                                 <tr>
-                                                    <td><a href="#">Edit</a>
-                                                        || <a href="./deleteLain?id=<%= keluarga.getIdKeluarga()%>">Delete</a></td>
+                                                    <td><a href="#">Ubah</a>
+                                                        || <a href="./deleteLain?id=<%= keluarga.getIdKeluarga()%>">Hapus</a></td>
                                                     <td><%= i%></td>
                                                     <td><%= keluarga.getHubungan()%></td>
                                                     <td><%= keluarga.getNamaKeluarga()%></td>
@@ -88,68 +92,73 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-xs-6 col-sm-12">
-                            <div class="card">
-                                <div class="card-header">
-                                    <strong>Keluarga</strong> <small>  </small>
-                                </div>
-                                <div class="card-body card-block">
-                                    <div class="row form-group">
-                                        <div class="col col-md-3"><label for="select" class=" form-control-label">Hubungan</label></div><br>
-                                        <div class="col-12 col-md-9">
-                                            <select name="select" id="select" class="form-control">
-                                                <option value="0">Silahkan Pilih</option>
-                                                <option value="1">Ayah</option>
-                                                <option value="2">Ibu</option>
-                                                <option value="3">Saudara</option>
-                                                <option value="1">Suami</option>
-                                                <option value="2">Istri</option>
-                                                <option value="3">Anak</option>
-                                            </select>
-                                        </div>
+                    </div>
+                    <div class="modal fade" id="tambahModal" tabindex="-1" role="dialog" aria-labelledby="staticModalLabel" aria-hidden="true" data-backdrop="static">
+                        <div class="modal-dialog" role="document">
+                            <form name="loginfrm" action="./login" method="POST">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="staticModalLabel">Kandidat Masuk</h5>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true" title="Close">&times;</span>
+                                        </button>
                                     </div>
-                                    <div class="row form-group">
-                                        <div class="col col-md-3"><label for="text-input" class=" form-control-label">Nama Lengkap</label></div>
-                                        <div class="col-12 col-md-9"><input type="text" id="text-input" name="text-input" placeholder="" class="form-control"></div>
-                                    </div>
-                                    <div class="row form-group">
-                                        <div class="col col-md-3"><label class=" form-control-label">Jenis Kelamin</label></div><br>
-                                        <div class="col col-md-9">
-                                            <div class="form-check">
-                                                <div class="radio">
-                                                    <label for="radio1" class="form-check-label ">
-                                                        <input type="radio" id="radio1" name="radios" value="option1" class="form-check-input">Laki-laki
-                                                    </label>
+                                    <div class="modal-body">
+                                        <!--Div Login-->
+                                        <div class="login-form">
+                                            <div class="card-body card-block">
+                                                <div class="row form-group">
+                                                    <div class="col col-md-3"><label for="select" class=" form-control-label">Hubungan</label></div><br>
+                                                    <div class="col-12 col-md-9">
+                                                        <select name="select" id="select" class="form-control">
+                                                            <option value="0">Silahkan Pilih</option>
+                                                            <option value="1">Ayah</option>
+                                                            <option value="2">Ibu</option>
+                                                            <option value="3">Saudara</option>
+                                                            <option value="1">Suami</option>
+                                                            <option value="2">Istri</option>
+                                                            <option value="3">Anak</option>
+                                                        </select>
+                                                    </div>
                                                 </div>
-                                                <div class="radio">
-                                                    <label for="radio2" class="form-check-label ">
-                                                        <input type="radio" id="radio2" name="radios" value="option2" class="form-check-input">Perempuan
-                                                    </label></div>
+                                                <div class="row form-group">
+                                                    <div class="col col-md-3"><label for="text-input" class=" form-control-label">Nama Lengkap</label></div>
+                                                    <div class="col-12 col-md-9"><input type="text" id="text-input" name="text-input" placeholder="" class="form-control"></div>
+                                                </div>
+                                                <div class="row form-group">
+                                                    <div class="col col-md-3"><label class=" form-control-label">Jenis Kelamin</label></div><br>
+                                                    <div class="col col-md-9">
+                                                        <div class="form-check">
+                                                            <div class="radio">
+                                                                <label for="radio1" class="form-check-label ">
+                                                                    <input type="radio" id="radio1" name="radios" value="option1" class="form-check-input">Laki-laki
+                                                                </label>
+                                                            </div>
+                                                            <div class="radio">
+                                                                <label for="radio2" class="form-check-label ">
+                                                                    <input type="radio" id="radio2" name="radios" value="option2" class="form-check-input">Perempuan
+                                                                </label></div>
+                                                        </div>
+                                                    </div>
+                                                </div> 
+                                                <div class="row form-group">
+                                                    <div class="col col-md-3"><label for="text-input" class=" form-control-label">Tanggal Lahir</label></div>
+                                                    <div class="col-12 col-md-9"><input type="text" id="text-input" name="text-input" placeholder="" class="form-control"><small class="form-text text-muted">Format DD/MM/YYY</small></div>
+                                                </div>
+                                                <div class="row form-group">
+                                                    <div class="col col-md-3"><label for="text-input" class=" form-control-label">Pendidikan</label></div>
+                                                    <div class="col-12 col-md-9"><input type="text" id="text-input" name="text-input" placeholder="" class="form-control"></div>
+                                                </div>
+                                                <div class="row form-group">
+                                                    <div class="col col-md-3"><label for="text-input" class=" form-control-label">Pekerjaan</label></div>
+                                                    <div class="col-12 col-md-9"><input type="text" id="text-input" name="text-input" placeholder="" class="form-control"></div>
+                                                </div>
                                             </div>
+                                            <button type="submit" class="btn btn-success btn-flat m-b-30 m-t-30">Masuk</button>
                                         </div>
-                                    </div> 
-                                    <div class="row form-group">
-                                        <div class="col col-md-3"><label for="text-input" class=" form-control-label">Tanggal Lahir</label></div>
-                                        <div class="col-12 col-md-9"><input type="text" id="text-input" name="text-input" placeholder="" class="form-control"><small class="form-text text-muted">Format DD/MM/YYY</small></div>
-                                    </div>
-                                    <div class="row form-group">
-                                        <div class="col col-md-3"><label for="text-input" class=" form-control-label">Pendidikan</label></div>
-                                        <div class="col-12 col-md-9"><input type="text" id="text-input" name="text-input" placeholder="" class="form-control"></div>
-                                    </div>
-                                    <div class="row form-group">
-                                        <div class="col col-md-3"><label for="text-input" class=" form-control-label">Pekerjaan</label></div>
-                                        <div class="col-12 col-md-9"><input type="text" id="text-input" name="text-input" placeholder="" class="form-control"></div>
                                     </div>
                                 </div>
-                                <div class="card-footer">
-                                    <button type="submit" class="btn btn-primary btn-sm">
-                                        <i class="fa fa-dot-circle-o"></i> Simpan
-                                    </button>
-                                    <button type="reset" class="btn btn-danger btn-sm">
-                                        <i class="fa fa-ban"></i> Reset
-                                    </button>
-                                </div>
-                            </div>
+                            </form>
                         </div>
                     </div>
                 </div><!-- .animated -->

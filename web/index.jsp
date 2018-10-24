@@ -20,7 +20,6 @@
         <title>MII-CV ONLINE</title>
         <!-- Bootstrap CSS -->
         <link rel="stylesheet" href="home/css/bootstrap.css">
-        <link rel="stylesheet" href="home/vendors/linericon/style.css">
         <link rel="stylesheet" href="home/css/font-awesome.min.css">
         <link rel="stylesheet" href="home/vendors/owl-carousel/owl.carousel.min.css">
         <link rel="stylesheet" href="home/vendors/lightbox/simpleLightbox.css">
@@ -45,7 +44,7 @@
 
         <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800' rel='stylesheet' type='text/css'>
         <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-        <link rel="stylesheet" href="/resources/demos/style.css">   
+        <!--<link rel="stylesheet" href="/resources/demos/style.css">-->   
     </head>
     <body>
 
