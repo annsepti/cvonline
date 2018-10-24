@@ -28,5 +28,5 @@ public interface InterfaceController<T> {
     public T getById(Object id);
     public T getByLoginKandidat(String username, String password);
     public T getByLoginKaryawan(String username, String password);
-    public int getNewId();
+    public T getLastId();
 }

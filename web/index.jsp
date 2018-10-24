@@ -148,7 +148,7 @@
         </section>
         <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="staticModalLabel" aria-hidden="true" data-backdrop="static">
             <div class="modal-dialog" role="document">
-                <fo rm name="loginfrm" action="./login" method="POST">
+                <form name="loginfrm" action="./login" method="POST">
                     <div class="modal-content">
                         <div class="modal-header">
                             <h5 class="modal-title" id="staticModalLabel">Kandidat Masuk</h5>
@@ -188,8 +188,11 @@
                         <div class="modal-body">
                             <div class="login-form">
                                 <div class="form-group">
-                                    <% InterfaceController<Kandidat> ick = new GeneralController<Kandidat>(HibernateUtil.getSessionFactory(), Kandidat.class);%>
-                                    <input type="text" class="form-control" readonly="readonly" hidden="hidden" value="<%= ick.getNewId()%>" name="idkandidat">
+                                    <% InterfaceController<Kandidat> ick = new GeneralController<Kandidat>(HibernateUtil.getSessionFactory(), Kandidat.class);
+                                        Kandidat k = ick.getLastId();
+                                        int idBaru = k.getIdKandidat();
+                                    %>
+                                    <input type="text" class="form-control" readonly="readonly" hidden="hidden" value="<%= idBaru %>" name="idkandidat">
                                     <br>
                                     <input type="text" class="form-control" placeholder="Nama Lengkap" name="namakandidat">
                                     <br>
