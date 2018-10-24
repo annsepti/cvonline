@@ -21,7 +21,7 @@
                 <div class="col-sm-4">
                     <div class="page-header float-left">
                         <div class="page-title">
-                            <h1>Beranda</h1>
+                            <h1>Ubah Password</h1>
                         </div>
                     </div>
                 </div>
@@ -34,7 +34,7 @@
                         <div class="col-md-6">
                             <div class="card">
                                 <div class="card-header">
-                                    <strong class="card-title mb-3">Profil Singkat</strong>
+                                    <strong class="card-title mb-3">Ganti Password Baru</strong>
                                 </div>
                                 <div class="card-body">
                                     <div class="mx-auto d-block">

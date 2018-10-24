@@ -4,12 +4,16 @@
     Author     : USER
 --%>
 
+<%@page import="models.Kandidat"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
     <%@include file="header.jsp" %>
     <body>
-        <%@include file="aside.jsp" %>
+        <% Kandidat kandidat = (Kandidat) session.getAttribute("dataKandidat"); %>
+        <jsp:include page="aside.jsp">
+            <jsp:param name="id" value="<%= kandidat.getIdKandidat()%>"></jsp:param>
+        </jsp:include>
         <div id="right-panel" class="right-panel">
             <%@include file="header2.jsp" %>
             <div class="breadcrumbs">
