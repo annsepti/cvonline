@@ -148,7 +148,7 @@
         </section>
         <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="staticModalLabel" aria-hidden="true" data-backdrop="static">
             <div class="modal-dialog" role="document">
-                <fo rm name="loginfrm" action="./login" method="POST">
+                <form name="loginfrm" action="./login" method="POST">
                     <div class="modal-content">
                         <div class="modal-header">
                             <h5 class="modal-title" id="staticModalLabel">Kandidat Masuk</h5>
