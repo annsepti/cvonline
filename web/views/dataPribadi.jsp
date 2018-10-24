@@ -12,7 +12,7 @@
     <%@include file="header.jsp" %>
     <body>
         <%@include file="aside.jsp" %>
-        <div id="right-panel" class="right-panel">r-->
+        <div id="right-panel" class="right-panel">
             <%@include file="header2.jsp" %>
             <div class="breadcrumbs">
                 <div class="col-sm-4">
@@ -160,6 +160,8 @@
                                         </div><!-- .animated -->
                                     </div>
                             </div>
+                            </div>
+                                                                
                             <%@include file="footer.jsp" %>
                             </body>
                             </html>

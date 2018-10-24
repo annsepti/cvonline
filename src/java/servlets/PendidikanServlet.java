@@ -16,6 +16,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
+import models.Kandidat;
 import models.Pendidikan;
 import tools.HibernateUtil;
 
@@ -40,13 +41,18 @@ public class PendidikanServlet extends HttpServlet {
         response.setContentType("text/html;charset=UTF-8");
         HttpSession session = request.getSession();
         RequestDispatcher dis = null;
+        String idKandidat = request.getParameter("idKandidat");
         try (PrintWriter out = response.getWriter()) {
             /* TODO output your page here. You may use following sample code. */
-            out.print("<font color=\"red\">nyoba direct</font>");
-            
             InterfaceController<Pendidikan> ic = new GeneralController<>(HibernateUtil.getSessionFactory(), Pendidikan.class);
-            session.setAttribute("dataPendidikan", ic.getAll());
-            dis = request.getRequestDispatcher("/views/??.jsp");
+            if(idKandidat.isEmpty()){
+                session.setAttribute("data", ic.getAll());
+                dis = request.getRequestDispatcher("/views/??.jsp");
+            } else{
+                Pendidikan kandidat = ic.getById(idKandidat);
+                session.setAttribute("dataKandidatKandidat", kandidat);
+                dis = request.getRequestDispatcher("/views/pendidikanFormal.jsp");
+            }
             dis.include(request, response);
             
         }

@@ -157,5 +157,5 @@ public class Pendidikan implements Serializable {
     public String toString() {
         return "models.Pendidikan[ idPendidikan=" + idPendidikan + " ]";
     }
-    
+
 }

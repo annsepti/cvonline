@@ -42,7 +42,6 @@ public class KeluargaServlet extends HttpServlet {
         RequestDispatcher dis = null;
         try (PrintWriter out = response.getWriter()) {
             /* TODO output your page here. You may use following sample code. */
-            out.print("<font color=\"red\">nyoba direct</font>");
             
             InterfaceController<Keluarga> ic = new GeneralController<>(HibernateUtil.getSessionFactory(), Keluarga.class);
             session.setAttribute("dataKeluarga", ic.getAll());
