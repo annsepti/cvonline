@@ -20,7 +20,6 @@
         <title>MII-CV ONLINE</title>
         <!-- Bootstrap CSS -->
         <link rel="stylesheet" href="home/css/bootstrap.css">
-        <link rel="stylesheet" href="home/vendors/linericon/style.css">
         <link rel="stylesheet" href="home/css/font-awesome.min.css">
         <link rel="stylesheet" href="home/vendors/owl-carousel/owl.carousel.min.css">
         <link rel="stylesheet" href="home/vendors/lightbox/simpleLightbox.css">
@@ -45,7 +44,7 @@
 
         <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800' rel='stylesheet' type='text/css'>
         <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-        <link rel="stylesheet" href="/resources/demos/style.css">   
+        <!--<link rel="stylesheet" href="/resources/demos/style.css">-->   
     </head>
     <body>
 
@@ -149,7 +148,7 @@
         </section>
         <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="staticModalLabel" aria-hidden="true" data-backdrop="static">
             <div class="modal-dialog" role="document">
-                <form name="loginfrm" action="./login" method="POST">
+                <fo rm name="loginfrm" action="./login" method="POST">
                     <div class="modal-content">
                         <div class="modal-header">
                             <h5 class="modal-title" id="staticModalLabel">Kandidat Masuk</h5>
@@ -183,7 +182,7 @@
                         <div class="modal-header">
                             <h5 class="modal-title" id="staticModalLabel">Kandidat Daftar</h5>
                             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
+                                <span aria-hidden="true" title="Close">&times;</span>
                             </button>
                         </div>
                         <div class="modal-body">
