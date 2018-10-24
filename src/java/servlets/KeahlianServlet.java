@@ -16,6 +16,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
+import models.Bahasa;
+import models.Kandidat;
 import models.Keahlian;
 import tools.HibernateUtil;
 
@@ -40,15 +42,18 @@ public class KeahlianServlet extends HttpServlet {
         response.setContentType("text/html;charset=UTF-8");
         HttpSession session = request.getSession();
         RequestDispatcher dis = null;
+        String idKandidat = request.getParameter("idKandidat");
         try (PrintWriter out = response.getWriter()) {
             /* TODO output your page here. You may use following sample code. */
-            out.print("<font color=\"red\">nyoba direct</font>");
-            
-            InterfaceController<Keahlian> ic = new GeneralController<>(HibernateUtil.getSessionFactory(), Keahlian.class);
-            session.setAttribute("dataKeahlian", ic.getAll());
-            dis = request.getRequestDispatcher("/views/??.jsp");
+            InterfaceController<Kandidat> ic = new GeneralController<>(HibernateUtil.getSessionFactory(), Kandidat.class);
+            Kandidat kandidat=ic.getById(idKandidat);
+            session.setAttribute("dataKandidat", kandidat);
+            InterfaceController<Keahlian> ick = new GeneralController<>(HibernateUtil.getSessionFactory(), Keahlian.class);
+            session.setAttribute("dataKeahlian", ick.search("idKandidat", kandidat));
+            InterfaceController<Bahasa> icb = new GeneralController<>(HibernateUtil.getSessionFactory(),Bahasa.class);
+            session.setAttribute("dataBahasa", icb.search("idKandidat", kandidat));
+            dis = request.getRequestDispatcher("/views/pedidikanNonFormal.jsp");
             dis.include(request, response);
-            
         }
     }
 

@@ -43,364 +43,67 @@
                                 <div class="card-header">
                                     <strong>Pelatihan</strong> <small>  </small>
                                 </div>
-                                <div class="card-body card-block">
-                                    <div class="row form-group">
-                                        <div class="col col-md-3"><label for="text-input" class=" form-control-label">Lembaga</label></div>
-                                        <div class="col-12 col-md-9"><input type="text" id="text-input" name="text-input" placeholder="" class="form-control"></div>
-                                    </div>
-                                    <div class="row form-group">
-                                        <div class="col col-md-3"><label for="text-input" class=" form-control-label">Nama Pelatihan</label></div>
-                                        <div class="col-12 col-md-9"><input type="text" id="text-input" name="text-input" placeholder="" class="form-control"></div>
-                                    </div>
-                                    <div class="row form-group">
-                                        <div class="col col-md-3"><label class=" form-control-label">Sertifikat</label></div><br>
-                                        <div class="col col-md-9">
-                                            <div class="form-check">
-                                                <div class="radio">
-                                                    <label for="radio1" class="form-check-label ">
-                                                        <input type="radio" id="radio1" name="radios" value="option1" class="form-check-input">Ada
-                                                    </label>
-                                                </div>
-                                                <div class="radio">
-                                                    <label for="radio2" class="form-check-label ">
-                                                        <input type="radio" id="radio2" name="radios" value="option2" class="form-check-input">Tidak Ada
-                                                        </div>
-                                                        </div>
-                                                        </div>
-                                                        </div>
-                                                        <div class="row form-group">
-                                                            <div class="col col-md-3"><label for="text-input" class=" form-control-label">Tanggal</label></div>
-                                                            <div class="col-12 col-md-9"><input type="text" id="text-input" name="text-input" placeholder="DD/MM/YY" class="form-control"></div>
-                                                        </div>
-                                                </div>
-                                                <div class="card-footer">
-                                                    <button type="submit" class="btn btn-primary btn-sm">
-                                                        <i class="fa fa-dot-circle-o"></i> Simpan
-                                                    </button>
-                                                    <button type="reset" class="btn btn-danger btn-sm">
-                                                        <i class="fa fa-ban"></i> Reset
-                                                    </button>
-                                                </div>
-                                            </div>
-                            <div class="card-body card-block">
-                                    <div class="row form-group">
-                                        <div class="col col-md-3"><label for="text-input" class=" form-control-label">Lembaga</label></div>
-                                        <div class="col-12 col-md-9"><input type="text" id="text-input" name="text-input" placeholder="" class="form-control"></div>
-                                    </div>
-                                    <div class="row form-group">
-                                        <div class="col col-md-3"><label for="text-input" class=" form-control-label">Nama Pelatihan</label></div>
-                                        <div class="col-12 col-md-9"><input type="text" id="text-input" name="text-input" placeholder="" class="form-control"></div>
-                                    </div>
-                                    <div class="row form-group">
-                                        <div class="col col-md-3"><label class=" form-control-label">Sertifikat</label></div><br>
-                                        <div class="col col-md-9">
-                                            <div class="form-check">
-                                                <div class="radio">
-                                                    <label for="radio1" class="form-check-label ">
-                                                        <input type="radio" id="radio1" name="radios" value="option1" class="form-check-input">Ada
-                                                    </label>
-                                                </div>
-                                                <div class="radio">
-                                                    <label for="radio2" class="form-check-label ">
-                                                        <input type="radio" id="radio2" name="radios" value="option2" class="form-check-input">Tidak Ada
-                                                        </div>
-                                                        </div>
-                                                        </div>
-                                                        </div>
-                                                        <div class="row form-group">
-                                                            <div class="col col-md-3"><label for="text-input" class=" form-control-label">Tanggal</label></div>
-                                                            <div class="col-12 col-md-9"><input type="text" id="text-input" name="text-input" placeholder="DD/MM/YY" class="form-control"></div>
-                                                        </div>
-                                                </div>
-                                                <div class="card-footer">
-                                                    <button type="submit" class="btn btn-primary btn-sm">
-                                                        <i class="fa fa-dot-circle-o"></i> Simpan
-                                                    </button>
-                                                    <button type="reset" class="btn btn-danger btn-sm">
-                                                        <i class="fa fa-ban"></i> Reset
-                                                    </button>
-                                                </div>
-                            <div class="card-body card-block">
-                                    <div class="row form-group">
-                                        <div class="col col-md-3"><label for="text-input" class=" form-control-label">Lembaga</label></div>
-                                        <div class="col-12 col-md-9"><input type="text" id="text-input" name="text-input" placeholder="" class="form-control"></div>
-                                    </div>
-                                    <div class="row form-group">
-                                        <div class="col col-md-3"><label for="text-input" class=" form-control-label">Nama Pelatihan</label></div>
-                                        <div class="col-12 col-md-9"><input type="text" id="text-input" name="text-input" placeholder="" class="form-control"></div>
-                                    </div>
-                                    <div class="row form-group">
-                                        <div class="col col-md-3"><label class=" form-control-label">Sertifikat</label></div><br>
-                                        <div class="col col-md-9">
-                                            <div class="form-check">
-                                                <div class="radio">
-                                                    <label for="radio1" class="form-check-label ">
-                                                        <input type="radio" id="radio1" name="radios" value="option1" class="form-check-input">Ada
-                                                    </label>
-                                                </div>
-                                                <div class="radio">
-                                                    <label for="radio2" class="form-check-label ">
-                                                        <input type="radio" id="radio2" name="radios" value="option2" class="form-check-input">Tidak Ada
-                                                        </div>
-                                                        </div>
-                                                        </div>
-                                                        </div>
-                                                        <div class="row form-group">
-                                                            <div class="col col-md-3"><label for="text-input" class=" form-control-label">Tanggal</label></div>
-                                                            <div class="col-12 col-md-9"><input type="text" id="text-input" name="text-input" placeholder="DD/MM/YY" class="form-control"></div>
-                                                        </div>
-                                                </div>
-                                                <div class="card-footer">
-                                                    <button type="submit" class="btn btn-primary btn-sm">
-                                                        <i class="fa fa-dot-circle-o"></i> Simpan
-                                                    </button>
-                                                    <button type="reset" class="btn btn-danger btn-sm">
-                                                        <i class="fa fa-ban"></i> Reset
-                                                    </button>
-                                                </div>
-                                            <div class="card">
-                                                <div class="card-header">
-                                                    <strong>Kemampuan Bahasa Asing</strong> <small>  </small>
-                                                </div>
-                                                <div class="card-body card-block">
-                                                    <div class="row form-group">
-                                                        <div class="col col-md-3"><label for="text-input" class=" form-control-label">Bahasa</label></div>
-                                                        <div class="col-12 col-md-9"><input type="text" id="text-input" name="text-input" placeholder="" class="form-control"></div>
-                                                    </div>
-                                                    <div class="row form-group">
-                                                        <div class="col col-md-3"><label for="text-input" class=" form-control-label">Score</label></div>
-                                                        <div class="col-12 col-md-9"><input type="text" id="text-input" name="text-input" placeholder="" class="form-control"></div>
-                                                    </div>
-                                                    <div class="row form-group">
-                                                        <div class="col col-md-1"><label class=" form-control-label">Speaking</label></div><br>
-                                                        <div class="col col-md-3">
-                                                            <div class="form-check">
-                                                                <div class="radio">
-                                                                    <label for="radio1" class="form-check-label ">
-                                                                        <input type="radio" id="radio1" name="radios" value="option1" class="form-check-input">Good
-                                                                    </label>
-                                                                </div>
-                                                                <div class="radio">
-                                                                    <label for="radio2" class="form-check-label ">
-                                                                        <input type="radio" id="radio2" name="radios" value="option2" class="form-check-input">Fair
-                                                                        </div>
-                                                                        <div class="radio">
-                                                                            <label for="radio2" class="form-check-label ">
-                                                                                <input type="radio" id="radio2" name="radios" value="option2" class="form-check-input">Poor
-                                                                                </div>
-                                                                                </div>
-                                                                                </div>
-                                                                                <div class="col col-md-1"><label class=" form-control-label">Reading</label></div><br>
-                                                                                <div class="col col-md-3">
-                                                                                    <div class="form-check">
-                                                                                        <div class="radio">
-                                                                                            <label for="radio1" class="form-check-label ">
-                                                                                                <input type="radio" id="radio1" name="radios" value="option1" class="form-check-input">Good
-                                                                                            </label>
-                                                                                        </div>
-                                                                                        <div class="radio">
-                                                                                            <label for="radio2" class="form-check-label ">
-                                                                                                <input type="radio" id="radio2" name="radios" value="option2" class="form-check-input">Fair
-                                                                                                </div>
-                                                                                                <div class="radio">
-                                                                                                    <label for="radio2" class="form-check-label ">
-                                                                                                        <input type="radio" id="radio2" name="radios" value="option2" class="form-check-input">Poor
-                                                                                                        </div>
-                                                                                                        </div>
-                                                                                                        </div>
-                                                                                                        <div class="col col-md-1"><label class=" form-control-label">Writing</label></div><br>
-                                                                                                        <div class="col col-md-3">
-                                                                                                            <div class="form-check">
-                                                                                                                <div class="radio">
-                                                                                                                    <label for="radio1" class="form-check-label ">
-                                                                                                                        <input type="radio" id="radio1" name="radios" value="option1" class="form-check-input">Good
-                                                                                                                    </label>
-                                                                                                                </div>
-                                                                                                                <div class="radio">
-                                                                                                                    <label for="radio2" class="form-check-label ">
-                                                                                                                        <input type="radio" id="radio2" name="radios" value="option2" class="form-check-input">Fair
-                                                                                                                        </div>
-                                                                                                                        <div class="radio">
-                                                                                                                            <label for="radio2" class="form-check-label ">
-                                                                                                                                <input type="radio" id="radio2" name="radios" value="option2" class="form-check-input">Poor
-                                                                                                                                </div>
-                                                                                                                                </div>
-                                                                                                                                </div>
-                                                                                                                                </div>
+                                <div class="col-xs-6 col-sm-5">
+                                    <button type="button" class="btn btn-primary btn-sm"><i class="fa fa-pencil"></i>&nbsp; Tambah</button>
+                                </div>
+                                <div class="card-body">
+                                    <table id="bootstrap-data-table" class="table table-striped table-bordered">
+                                        <thead>
+                                            <tr>
+                                                <th>Lembaga</th>
+                                                <th>Nama Pelatihan</th>
+                                                <th>Sertifikat</th>
+                                                <th>Tanggal</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>Tiger Nixon</td>
+                                                <td>System Architect</td>
+                                                <td>Tiger Nixon</td>
+                                                <td>System Architect</td>
+                                            </tr>
 
-                                                                                                                                </div>
-                                                                <div class="card-footer">
-                                                                    <button type="submit" class="btn btn-primary btn-sm">
-                                                                        <i class="fa fa-dot-circle-o"></i> Simpan
-                                                                    </button>
-                                                                    <button type="reset" class="btn btn-danger btn-sm">
-                                                                        <i class="fa fa-ban"></i> Reset
-                                                                    </button>
-                                                                </div>
-                                                <div class="card-body card-block">
-                                                    <div class="row form-group">
-                                                        <div class="col col-md-3"><label for="text-input" class=" form-control-label">Bahasa</label></div>
-                                                        <div class="col-12 col-md-9"><input type="text" id="text-input" name="text-input" placeholder="" class="form-control"></div>
-                                                    </div>
-                                                    <div class="row form-group">
-                                                        <div class="col col-md-3"><label for="text-input" class=" form-control-label">Score</label></div>
-                                                        <div class="col-12 col-md-9"><input type="text" id="text-input" name="text-input" placeholder="" class="form-control"></div>
-                                                    </div>
-                                                    <div class="row form-group">
-                                                        <div class="col col-md-1"><label class=" form-control-label">Speaking</label></div><br>
-                                                        <div class="col col-md-3">
-                                                            <div class="form-check">
-                                                                <div class="radio">
-                                                                    <label for="radio1" class="form-check-label ">
-                                                                        <input type="radio" id="radio1" name="radios" value="option1" class="form-check-input">Good
-                                                                    </label>
-                                                                </div>
-                                                                <div class="radio">
-                                                                    <label for="radio2" class="form-check-label ">
-                                                                        <input type="radio" id="radio2" name="radios" value="option2" class="form-check-input">Fair
-                                                                        </div>
-                                                                        <div class="radio">
-                                                                            <label for="radio2" class="form-check-label ">
-                                                                                <input type="radio" id="radio2" name="radios" value="option2" class="form-check-input">Poor
-                                                                                </div>
-                                                                                </div>
-                                                                                </div>
-                                                                                <div class="col col-md-1"><label class=" form-control-label">Reading</label></div><br>
-                                                                                <div class="col col-md-3">
-                                                                                    <div class="form-check">
-                                                                                        <div class="radio">
-                                                                                            <label for="radio1" class="form-check-label ">
-                                                                                                <input type="radio" id="radio1" name="radios" value="option1" class="form-check-input">Good
-                                                                                            </label>
-                                                                                        </div>
-                                                                                        <div class="radio">
-                                                                                            <label for="radio2" class="form-check-label ">
-                                                                                                <input type="radio" id="radio2" name="radios" value="option2" class="form-check-input">Fair
-                                                                                                </div>
-                                                                                                <div class="radio">
-                                                                                                    <label for="radio2" class="form-check-label ">
-                                                                                                        <input type="radio" id="radio2" name="radios" value="option2" class="form-check-input">Poor
-                                                                                                        </div>
-                                                                                                        </div>
-                                                                                                        </div>
-                                                                                                        <div class="col col-md-1"><label class=" form-control-label">Writing</label></div><br>
-                                                                                                        <div class="col col-md-3">
-                                                                                                            <div class="form-check">
-                                                                                                                <div class="radio">
-                                                                                                                    <label for="radio1" class="form-check-label ">
-                                                                                                                        <input type="radio" id="radio1" name="radios" value="option1" class="form-check-input">Good
-                                                                                                                    </label>
-                                                                                                                </div>
-                                                                                                                <div class="radio">
-                                                                                                                    <label for="radio2" class="form-check-label ">
-                                                                                                                        <input type="radio" id="radio2" name="radios" value="option2" class="form-check-input">Fair
-                                                                                                                        </div>
-                                                                                                                        <div class="radio">
-                                                                                                                            <label for="radio2" class="form-check-label ">
-                                                                                                                                <input type="radio" id="radio2" name="radios" value="option2" class="form-check-input">Poor
-                                                                                                                                </div>
-                                                                                                                                </div>
-                                                                                                                                </div>
-                                                                                                                                </div>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="card-header">
+                                    <strong>Pelatihan</strong> <small>  </small>
+                                </div>
+                                <div class="col-xs-6 col-sm-5">
+                                    <button type="button" class="btn btn-primary btn-sm"><i class="fa fa-pencil"></i>&nbsp; Tambah</button>
+                                </div>
+                                <div class="card-body">
+                                    <table id="bootstrap-data-table" class="table table-striped table-bordered">
+                                        <thead>
+                                            <tr>
+                                                <th>Bahasa</th>
+                                                <th>Skor</th>
+                                                <th>Speaking</th>
+                                                <th>Reading</th>
+                                                <th>Writing</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>Tiger Nixon</td>
+                                                <td>System Architect</td>
+                                                <td>Tiger Nixon</td>
+                                                <td>System Architect</td>
+                                                <td>System Architect</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div><!-- .animated -->
+            </div><!-- .content -->
 
-                                                                                                                                </div>
-                                                                <div class="card-footer">
-                                                                    <button type="submit" class="btn btn-primary btn-sm">
-                                                                        <i class="fa fa-dot-circle-o"></i> Simpan
-                                                                    </button>
-                                                                    <button type="reset" class="btn btn-danger btn-sm">
-                                                                        <i class="fa fa-ban"></i> Reset
-                                                                    </button>
-                                                                </div>
-                                                <div class="card-body card-block">
-                                                    <div class="row form-group">
-                                                        <div class="col col-md-3"><label for="text-input" class=" form-control-label">Bahasa</label></div>
-                                                        <div class="col-12 col-md-9"><input type="text" id="text-input" name="text-input" placeholder="" class="form-control"></div>
-                                                    </div>
-                                                    <div class="row form-group">
-                                                        <div class="col col-md-3"><label for="text-input" class=" form-control-label">Score</label></div>
-                                                        <div class="col-12 col-md-9"><input type="text" id="text-input" name="text-input" placeholder="" class="form-control"></div>
-                                                    </div>
-                                                    <div class="row form-group">
-                                                        <div class="col col-md-1"><label class=" form-control-label">Speaking</label></div><br>
-                                                        <div class="col col-md-3">
-                                                            <div class="form-check">
-                                                                <div class="radio">
-                                                                    <label for="radio1" class="form-check-label ">
-                                                                        <input type="radio" id="radio1" name="radios" value="option1" class="form-check-input">Good
-                                                                    </label>
-                                                                </div>
-                                                                <div class="radio">
-                                                                    <label for="radio2" class="form-check-label ">
-                                                                        <input type="radio" id="radio2" name="radios" value="option2" class="form-check-input">Fair
-                                                                        </div>
-                                                                        <div class="radio">
-                                                                            <label for="radio2" class="form-check-label ">
-                                                                                <input type="radio" id="radio2" name="radios" value="option2" class="form-check-input">Poor
-                                                                                </div>
-                                                                                </div>
-                                                                                </div>
-                                                                                <div class="col col-md-1"><label class=" form-control-label">Reading</label></div><br>
-                                                                                <div class="col col-md-3">
-                                                                                    <div class="form-check">
-                                                                                        <div class="radio">
-                                                                                            <label for="radio1" class="form-check-label ">
-                                                                                                <input type="radio" id="radio1" name="radios" value="option1" class="form-check-input">Good
-                                                                                            </label>
-                                                                                        </div>
-                                                                                        <div class="radio">
-                                                                                            <label for="radio2" class="form-check-label ">
-                                                                                                <input type="radio" id="radio2" name="radios" value="option2" class="form-check-input">Fair
-                                                                                                </div>
-                                                                                                <div class="radio">
-                                                                                                    <label for="radio2" class="form-check-label ">
-                                                                                                        <input type="radio" id="radio2" name="radios" value="option2" class="form-check-input">Poor
-                                                                                                        </div>
-                                                                                                        </div>
-                                                                                                        </div>
-                                                                                                        <div class="col col-md-1"><label class=" form-control-label">Writing</label></div><br>
-                                                                                                        <div class="col col-md-3">
-                                                                                                            <div class="form-check">
-                                                                                                                <div class="radio">
-                                                                                                                    <label for="radio1" class="form-check-label ">
-                                                                                                                        <input type="radio" id="radio1" name="radios" value="option1" class="form-check-input">Good
-                                                                                                                    </label>
-                                                                                                                </div>
-                                                                                                                <div class="radio">
-                                                                                                                    <label for="radio2" class="form-check-label ">
-                                                                                                                        <input type="radio" id="radio2" name="radios" value="option2" class="form-check-input">Fair
-                                                                                                                        </div>
-                                                                                                                        <div class="radio">
-                                                                                                                            <label for="radio2" class="form-check-label ">
-                                                                                                                                <input type="radio" id="radio2" name="radios" value="option2" class="form-check-input">Poor
-                                                                                                                                </div>
-                                                                                                                                </div>
-                                                                                                                                </div>
-                                                                                                                                </div>
-
-                                                                                                                                </div>
-                                                                <div class="card-footer">
-                                                                    <button type="submit" class="btn btn-primary btn-sm">
-                                                                        <i class="fa fa-dot-circle-o"></i> Simpan
-                                                                    </button>
-                                                                    <button type="reset" class="btn btn-danger btn-sm">
-                                                                        <i class="fa fa-ban"></i> Reset
-                                                                    </button>
-                                                                </div>
-                                                        </div>
-                                                </div>
-
-
-
-
-                                                                                                            </div>
-
-
-                                                                                                        </div><!-- .animated -->
-                                                                                                </div><!-- .content -->
-
-
-                                                                                        </div><!-- /#right-panel -->
-                                                                                        <%@include file="footer.jsp" %>
-                                                                                        </body>
-                                                                                        </html>
+        </div><!-- /#right-panel -->
+        <%@include file="footer.jsp" %>
+    </body>
+</html>
