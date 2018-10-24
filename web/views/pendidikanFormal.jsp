@@ -32,19 +32,16 @@
                     </div>
                 </div>
             </div>
-
             <div class="content mt-3">
                 <div class="animated fadeIn">
-
                     <div class="row">
-
                         <div class="col-xs-6 col-sm-12">
                             <div class="card">
                                 <div class="card-header">
-                                    <strong class="card-title">Data Table</strong>
+                                    <strong class="card-title">Pendidikan</strong>
                                 </div><br>
                                 <div class="col-xs-6 col-sm-5">
-                                <button type="button" class="btn btn-primary btn-sm"><i class="fa fa-pencil"></i>&nbsp; Tambah</button>
+                                    <button type="button" class="btn btn-primary btn-sm"><i class="fa fa-pencil"></i>&nbsp; Tambah</button>
                                 </div>
                                 <div class="card-body">
                                     <table id="bootstrap-data-table" class="table table-striped table-bordered">
@@ -70,49 +67,26 @@
                             </div>
                             <div class="card">
                                 <div class="card-header">
-                                    <strong>Penghargaan</strong> <small>  </small>
+                                    <strong class="card-title">Penghargaan</strong>
+                                </div><br>
+                                <div class="col-xs-6 col-sm-5">
+                                    <button type="button" class="btn btn-primary btn-sm"><i class="fa fa-pencil"></i>&nbsp; Tambah</button>
                                 </div>
-                                <div class="card-body card-block">
-                                    <div class="row form-group">
-                                        <div class="col col-md-3"><label for="text-input" class=" form-control-label">Nama Penghargaan</label></div>
-                                        <div class="col-12 col-md-9"><input type="text" id="text-input" name="text-input" placeholder="" class="form-control"></div>
-                                    </div>
-                                </div>
-                                <div class="card-footer">
-                                    <button type="submit" class="btn btn-primary btn-sm">
-                                        <i class="fa fa-dot-circle-o"></i> Simpan
-                                    </button>
-                                    <button type="reset" class="btn btn-danger btn-sm">
-                                        <i class="fa fa-ban"></i> Reset
-                                    </button>
-                                </div>
-                                <div class="card-body card-block">
-                                    <div class="row form-group">
-                                        <div class="col col-md-3"><label for="text-input" class=" form-control-label">Nama Penghargaan</label></div>
-                                        <div class="col-12 col-md-9"><input type="text" id="text-input" name="text-input" placeholder="" class="form-control"></div>
-                                    </div>
-                                </div>
-                                <div class="card-footer">
-                                    <button type="submit" class="btn btn-primary btn-sm">
-                                        <i class="fa fa-dot-circle-o"></i> Simpan
-                                    </button>
-                                    <button type="reset" class="btn btn-danger btn-sm">
-                                        <i class="fa fa-ban"></i> Reset
-                                    </button>
-                                </div>
-                                <div class="card-body card-block">
-                                    <div class="row form-group">
-                                        <div class="col col-md-3"><label for="text-input" class=" form-control-label">Nama Penghargaan</label></div>
-                                        <div class="col-12 col-md-9"><input type="text" id="text-input" name="text-input" placeholder="" class="form-control"></div>
-                                    </div>
-                                </div>
-                                <div class="card-footer">
-                                    <button type="submit" class="btn btn-primary btn-sm">
-                                        <i class="fa fa-dot-circle-o"></i> Simpan
-                                    </button>
-                                    <button type="reset" class="btn btn-danger btn-sm">
-                                        <i class="fa fa-ban"></i> Reset
-                                    </button>
+                                <div class="card-body">
+                                    <table id="bootstrap-data-table" class="table table-striped table-bordered">
+                                        <thead>
+                                            <tr>
+                                                <th>No</th>
+                                                <th>Nama Penghargaan</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>Tiger Nixon</td>
+                                                <td>System Architect</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
                                 </div>
                             </div>
                         </div>

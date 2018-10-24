@@ -18,6 +18,7 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import models.Kandidat;
 import models.Pendidikan;
+import models.Penghargaan;
 import tools.HibernateUtil;
 
 /**
@@ -44,17 +45,15 @@ public class PendidikanServlet extends HttpServlet {
         String idKandidat = request.getParameter("idKandidat");
         try (PrintWriter out = response.getWriter()) {
             /* TODO output your page here. You may use following sample code. */
-            InterfaceController<Pendidikan> ic = new GeneralController<>(HibernateUtil.getSessionFactory(), Pendidikan.class);
-            if(idKandidat.isEmpty()){
-                session.setAttribute("data", ic.getAll());
-                dis = request.getRequestDispatcher("/views/??.jsp");
-            } else{
-                Pendidikan kandidat = ic.getById(idKandidat);
-                session.setAttribute("dataKandidatKandidat", kandidat);
-                dis = request.getRequestDispatcher("/views/pendidikanFormal.jsp");
-            }
+            InterfaceController<Kandidat> ic = new GeneralController<>(HibernateUtil.getSessionFactory(), Kandidat.class);
+            Kandidat kandidat = ic.getById(idKandidat);
+            session.setAttribute("dataKandidat", kandidat);
+            InterfaceController<Pendidikan> icp = new GeneralController<>(HibernateUtil.getSessionFactory(), Pendidikan.class);
+            session.setAttribute("dataPendidikan", icp.search("idKandidat", kandidat));
+            InterfaceController<Penghargaan> icpenghargaan = new GeneralController<>(HibernateUtil.getSessionFactory(), Penghargaan.class);
+            session.setAttribute("dataPenghargaan", icpenghargaan.search("idKandidat", kandidat));
+            dis = request.getRequestDispatcher("/views/keluarga.jsp");
             dis.include(request, response);
-            
         }
     }
 

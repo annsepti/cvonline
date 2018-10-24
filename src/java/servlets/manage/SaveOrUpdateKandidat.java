@@ -88,7 +88,8 @@ public class SaveOrUpdateKandidat extends HttpServlet {
 
             session.setAttribute("message", message);
             if (isSave) {
-                int idBaru = ic.getNewId();
+                Kandidat k = ic.getLastId();
+                int idBaru = k.getIdKandidat();
                 Kandidat kandidatSave = new Kandidat(idBaru, namaKandidat, email, date, agama, jenisKelamin, statusNikah, username);
                 kandidatSave.setPassword(tools.generatePassword(kandidatSave));
                 if (ic.saveOrUpdate(kandidatSave)) {

@@ -56,11 +56,14 @@ public class SaveOrUpdateKeluarga extends HttpServlet {
             InterfaceController<Keluarga> icke = new GeneralController<>(HibernateUtil.getSessionFactory(), Keluarga.class);
             InterfaceController<Kandidat> icka = new GeneralController<>(HibernateUtil.getSessionFactory(), Kandidat.class);
             Kandidat kandidat = new Kandidat(icka.search("namaKandidat", namaKandidat).get(0).getIdKandidat());
-            Keluarga keluarga = new Keluarga(new Integer(id), hubungan, namaKeluarga, jenisKelamin, tglLahir, pendidikan, pekerjaan, kandidat);
+            Keluarga k = icke.getLastId();
+            int idBaru = k.getIdKeluarga() + 1;
+            Keluarga keluarga = new Keluarga(idBaru, hubungan, namaKeluarga, jenisKelamin, tglLahir, pendidikan, pekerjaan, kandidat);
             String message = "Gagal dongs";
             if(icke.saveOrUpdate(keluarga)) message = "Sukses dongs";
             session.setAttribute("message", message);
-            dis = request.getRequestDispatcher("??");
+            session.setAttribute("dataKandidat", kandidat);
+            dis = request.getRequestDispatcher("./keluarga?idKandidat=" + kandidat.getIdKandidat());
             dis.forward(request, response);
         }
     }

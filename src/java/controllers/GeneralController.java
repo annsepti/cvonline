@@ -84,9 +84,9 @@ public class GeneralController<T> implements InterfaceController<T>{
     }
 
     @Override
-    public int getNewId() {
-        Kandidat k =  (Kandidat) iDAO.getLastId();
-        return k.getIdKandidat() + 1;
+    public T getLastId() {
+        T t =  (T) iDAO.getLastId();
+        return t;
     }
     
 }
