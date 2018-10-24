@@ -74,8 +74,9 @@
                                                     for (Keluarga keluarga : keluargas) {
                                                 %>
                                                 <tr>
-                                                    <td><a href="#">Ubah</a>
-                                                        || <a href="./deleteLain?id=<%= keluarga.getIdKeluarga()%>">Hapus</a></td>
+                                                    <td>
+                                                        <button type="text" class="fa fa-recycle" data-toggle="modal" data-target="#tambahModal">Ubah</button> |        <button type="text" class="fa fa-trash" href="#?id=<%= keluarga.getIdKeluarga()%>">Hapus</button>
+                                                    </td>
                                                     <td><%= i%></td>
                                                     <td><%= keluarga.getHubungan()%></td>
                                                     <td><%= keluarga.getNamaKeluarga()%></td>
@@ -111,7 +112,7 @@
                             <div class="login-form">
                                 <!--<div class="card-body card-block">-->
                                 <div class="row form-group">
-                                    <input name="namakandidat" hidden="hidden" value="<%= kandidat.getNamaKandidat() %>">
+                                    <input name="namakandidat" hidden="hidden" value="<%= kandidat.getNamaKandidat()%>">
                                     <div class="col col-md-3"><label for="select" class=" form-control-label">Hubungan</label></div><br>
                                     <div class="col-12 col-md-9">
                                         <select name="hubungan" id="select" class="form-control">
@@ -159,7 +160,78 @@
                                     <div class="col-12 col-md-9"><input type="text" id="text-input" name="pekerjaan" placeholder="" class="form-control"></div>
                                 </div>
                                 <!--</div>-->
-                                <button type="submit" class="btn btn-success btn-flat m-b-30 m-t-30">Masuk</button>
+                                <button type="submit" class="btn btn-success btn-flat m-b-30 m-t-30">Simpan</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+        <div class="modal fade" id="ubahModal" tabindex="-1" role="dialog" aria-labelledby="staticModalLabel" aria-hidden="true" data-backdrop="static">
+            <form name="keluarga" action="./soukeluarga" method="POST">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="staticModalLabel">Tambah Keluarga</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true" title="Close">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <!--Div Login-->
+                            <div class="login-form">
+                                <!--<div class="card-body card-block">-->
+                                <div class="row form-group">
+                                    <input name="namakandidat" hidden="hidden" value="<%= kandidat.getNamaKandidat()%>">
+                                    <div class="col col-md-3"><label for="select" class=" form-control-label">Hubungan</label></div><br>
+                                    <div class="col-12 col-md-9">
+                                        <select name="hubungan" id="select" class="form-control">
+                                            <option value="0">Silahkan Pilih</option>
+                                            <option value="1">Ayah</option>
+                                            <option value="2">Ibu</option>
+                                            <option value="3">Saudara</option>
+                                            <option value="1">Suami</option>
+                                            <option value="2">Istri</option>
+                                            <option value="3">Anak</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="row form-group">
+                                    <div class="col col-md-3"><label for="text-input" class=" form-control-label">Nama Lengkap</label></div>
+                                    <div class="col-12 col-md-9"><input type="text" id="text-input" name="namakeluarga" placeholder="" class="form-control"></div>
+                                </div>
+                                <div class="row form-group">
+                                    <div class="col col-md-3"><label class=" form-control-label">Jenis Kelamin</label></div><br>
+                                    <div class="col col-md-9">
+                                        <div class="form-check">
+                                            <div class="radio">
+                                                <label for="radio1" class="form-check-label ">
+                                                    <input type="radio" id="radio1" name="jeniskelamin" value="laki" class="form-check-input">Laki-laki
+                                                </label>
+                                            </div>
+                                            <div class="radio">
+                                                <label for="radio2" class="form-check-label ">
+                                                    <input type="radio" id="radio2" name="jeniskelamin" value="perempuan" class="form-check-input">Perempuan
+                                                </label>
+                                                ~</div>
+                                        </div>
+                                    </div>
+                                </div> 
+                                <div class="row form-group">
+                                    <div class="col col-md-3"><label for="text-input" class=" form-control-label">Tanggal Lahir</label></div>
+                                    <div class="col-12 col-md-9"><input type="text" id="text-input" name="tgllahir" placeholder="" class="form-control"><small class="form-text text-muted">Format DD/MM/YYY</small></div>
+                                </div>
+                                <div class="row form-group">
+                                    <div class="col col-md-3"><label for="text-input" class=" form-control-label">Pendidikan</label></div>
+                                    <div class="col-12 col-md-9"><input type="text" id="text-input" name="pendidikan" placeholder="" class="form-control"></div>
+                                </div>
+                                <div class="row form-group">
+                                    <div class="col col-md-3"><label for="text-input" class=" form-control-label">Pekerjaan</label></div>
+                                    <div class="col-12 col-md-9"><input type="text" id="text-input" name="pekerjaan" placeholder="" class="form-control"></div>
+                                </div>
+                                <!--</div>-->
+                                <button type="submit" class="btn btn-success btn-flat m-b-30 m-t-30">Simpan</button>
                             </div>
                         </div>
                     </div>
