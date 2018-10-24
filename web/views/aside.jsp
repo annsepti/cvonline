@@ -29,7 +29,7 @@
                             <ul class="sub-menu children dropdown-menu">
                                 <li><i class="fa fa-user"></i><a method="POST" href="./kandidat?idKandidat=${param.id}">Data Pribadi</a></li>
                                 <li><i class="fa fa-heart"></i><a href="keluarga.jsp">Keluarga</a></li>
-                                <li><i class="fa fa-bookmark"></i><a href="pendidikanFormal.jsp">Pendidikan Formal</a></li>
+                                <li><i class="fa fa-bookmark"></i><a href="./pendidikan?idKandidat=${param.id}">Pendidikan Formal</a></li>
                                 <li><i class="fa fa-bookmark-o"></i><a href="pendidikanNonFormal.jsp">Non Formal</a></li>
                                 <li><i class="fa fa-building-o"></i><a href="./pengalaman?idKandidat=${param.id}">Pengalaman Kerja</a></li>
                                 <li><i class="fa fa-group"></i><a href="./referensi?idKandidat=${param.id}">Referensi</a></li>
