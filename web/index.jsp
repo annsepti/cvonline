@@ -168,14 +168,7 @@
 
                                 </div>
                                 <button type="submit" class="btn btn-success btn-flat m-b-30 m-t-30">Masuk</button>
-                                <!--Div Daftar-->
-                                <div class="register-link m-t-15 text-center" id="masuk">
-                                    <p>Kandidat Baru ? <a href="views/register.jsp"> Daftar Sekarang Juga...</a></p>
-                                    <!--                                        Kandidat Baru ? 
-                                                                            <a class="link-align link-drop sign-up-drop" id="masukBtn" 
-                                                                               href="#" data-toggle="modal" data-target="#registerModal"
-                                                                               onclick="$('#loginModal').modal('close');"> Daftar Sekarang Juga... </a>-->
-                                </div>
+
 
                             </div>
                         </div>
@@ -204,15 +197,54 @@
                                     <input type="email" class="form-control" placeholder="Email" name="email">
                                     <br>
                                     <input type="text" class="form-control" placeholder="Tanggal Lahir" id="datepicker" name="tgllahir">
+                                    <br>
+                                    <div class="row form-group">
+                                        <div class="col col-md-6"><label class=" form-control-label">Jenis Kelamin</label></div><br>
+                                        <div class="col col-md-9">
+                                            <div class="form-check">
+                                                <div class="radio">
+                                                    <label for="radio1" class="form-check-label ">
+                                                        <input type="radio" id="radio1" name="jeniskelamin"  class="form-check-input" value="laki">Laki-laki
+                                                    </label>
+                                                </div>
+                                                <div class="radio">
+                                                    <label for="radio2" class="form-check-label ">
+                                                        <input type="radio" id="radio2" name="jeniskelamin"  class="form-check-input" value="perempuan">Perempuan
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <br>
+                                    <div class="row form-group">
+                                        <div class="col col-md-6"><label for="select" class=" form-control-label">Status Perkawinan</label></div><br>
+                                        <div class="col-12 col-md-9">
+                                            <select name="statusnikah" id="select" class="form-control">
+                                                <option value="0">Silahkan Pilih</option>
+                                                <option value="1">Belum menikah</option>
+                                                <option value="2">Sudah Menikah</option>
+                                                <option value="3">Single Parent</option>
+                                            </select>
+                                            <br>
+                                        </div>
+                                    </div>
+                                    <div class="row form-group">
+                                        <div class="col col-md-6"><label for="select" class=" form-control-label">Agama</label></div><br>
+                                        <div class="col-12 col-md-9">
+                                            <select name="agama" id="select" class="form-control">
+                                                <option value="0">Silahkan Pilih</option>
+                                                <option value="1">Islam</option>
+                                                <option value="2">Kristen</option>
+                                                <option value="3">Katolik</option>
+                                                <option value="1">Budha</option>
+                                                <option value="2">Hindu</option>
+                                                <option value="3">Lainnya</option>
+                                            </select>
+                                        </div>
+                                    </div>
                                 </div>
                                 <button type="submit" class="btn btn-primary btn-flat m-b-30 m-t-30">Daftar</button>
-                                <div class="register-link m-t-15 text-center">
-                                    <p>Sudah menjadi Kandidat ? <a href="views/login.jsp"> Masuk </a></p>
-                                    <!--Sudah menjadi Kandidat ?
-                                        <a class="link-align link-drop sign-up-drop" id="registerBtn" 
-                                        href="#" data-toggle="modal" data-target="#loginModal"
-                                        onclick="$('#registerModal').modal('hide');return false;"> Masuk </a>-->
-                                </div>
+
                             </div>
                         </div>
                     </div>

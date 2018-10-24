@@ -16,6 +16,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
+import models.Kandidat;
 import models.Keluarga;
 import tools.HibernateUtil;
 
@@ -40,14 +41,17 @@ public class KeluargaServlet extends HttpServlet {
         response.setContentType("text/html;charset=UTF-8");
         HttpSession session = request.getSession();
         RequestDispatcher dis = null;
+        String idKandidat = request.getParameter("idKandidat");
         try (PrintWriter out = response.getWriter()) {
             /* TODO output your page here. You may use following sample code. */
-            
+            InterfaceController<Kandidat> ick = new GeneralController<>(HibernateUtil.getSessionFactory(), Kandidat.class);
+            Kandidat kandidat = ick.getById(idKandidat);
+            session.setAttribute("dataKandidat", kandidat);
             InterfaceController<Keluarga> ic = new GeneralController<>(HibernateUtil.getSessionFactory(), Keluarga.class);
-            session.setAttribute("dataKeluarga", ic.getAll());
-            dis = request.getRequestDispatcher("/views/??.jsp");
+            session.setAttribute("dataKeluarga", ic.search("idKandidat", kandidat));
+            dis = request.getRequestDispatcher("/views/keluarga.jsp");
             dis.include(request, response);
-            
+
         }
     }
 

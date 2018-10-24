@@ -53,7 +53,15 @@ public class GeneralController<T> implements InterfaceController<T>{
 
     @Override
     public List<T> search(String category, String key){
-        return this.castToT(iDAO.search(category, key));
+        if(category.equals("idKandidat")) 
+            return this.castToT(iDAO.search(category, new Integer(key)));
+        else
+            return this.castToT(iDAO.search(category, key));
+    }
+    
+    @Override
+    public List<T> search(String category, Kandidat kandidat){
+        return this.castToT(iDAO.search(category, kandidat));
     }
 
     @Override
