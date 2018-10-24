@@ -27,8 +27,8 @@
                         <li class="menu-item-has-children dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-laptop"></i>Data CV</a>
                             <ul class="sub-menu children dropdown-menu">
-                                <li><i class="fa fa-user"></i><a method="POST" href="./kandidat?idKandidat=${param.id}">Data Pribadi</a></li>
-                                <li><i class="fa fa-heart"></i><a href="keluarga.jsp">Keluarga</a></li>
+                                <li><i class="fa fa-user"></i><a href="./kandidat?idKandidat=${param.id}">Data Pribadi</a></li>
+                                <li><i class="fa fa-heart"></i><a href="./keluarga?idKandidat=${param.id}">Keluarga</a></li>
                                 <li><i class="fa fa-bookmark"></i><a href="pendidikanFormal.jsp">Pendidikan Formal</a></li>
                                 <li><i class="fa fa-bookmark-o"></i><a href="pendidikanNonFormal.jsp">Non Formal</a></li>
                                 <li><i class="fa fa-building-o"></i><a href="pengalamanKerja.jsp">Pengalaman Kerja</a></li>
