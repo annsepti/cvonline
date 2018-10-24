@@ -7,6 +7,7 @@ package controllers;
 
 import java.sql.SQLException;
 import java.util.List;
+import models.Kandidat;
 
 /**
  *
@@ -22,6 +23,7 @@ public interface InterfaceController<T> {
     public List<T> getAll();
 
     public List<T> search(String category, String key);
+    public List<T> search(String category, Kandidat kandidat);
 
     public T getById(Object id);
     public T getByLoginKandidat(String username, String password);

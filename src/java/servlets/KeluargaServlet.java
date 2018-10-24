@@ -48,7 +48,7 @@ public class KeluargaServlet extends HttpServlet {
             Kandidat kandidat = ick.getById(idKandidat);
             session.setAttribute("dataKandidat", kandidat);
             InterfaceController<Keluarga> ic = new GeneralController<>(HibernateUtil.getSessionFactory(), Keluarga.class);
-//            session.setAttribute("dataKeluarga", ic.search("idKandidat", idKandidat));
+            session.setAttribute("dataKeluarga", ic.search("idKandidat", kandidat));
             dis = request.getRequestDispatcher("/views/keluarga.jsp");
             dis.include(request, response);
 
