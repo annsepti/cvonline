@@ -43,7 +43,6 @@
 
             <div class="content mt-3">
                 <div class="animated fadeIn">
-
                     <div class="row">
                         <div class="limiter">
                             <div class="container-table100">

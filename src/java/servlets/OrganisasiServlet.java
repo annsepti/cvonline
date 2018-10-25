@@ -16,6 +16,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
+import models.Kandidat;
 import models.Organisasi;
 import tools.HibernateUtil;
 
@@ -40,15 +41,19 @@ public class OrganisasiServlet extends HttpServlet {
         response.setContentType("text/html;charset=UTF-8");
         HttpSession session = request.getSession();
         RequestDispatcher dis = null;
+        String idKandidat = request.getParameter("idKandidat");
         try (PrintWriter out = response.getWriter()) {
             /* TODO output your page here. You may use following sample code. */
-            out.print("<font color=\"red\">nyoba direct</font>");
+
+            InterfaceController<Kandidat> ic = new GeneralController<>(HibernateUtil.getSessionFactory(), Kandidat.class);
+            Kandidat kandidat = ic.getById(idKandidat);
+            session.setAttribute("dataKandidat", kandidat);
             
-            InterfaceController<Organisasi> ic = new GeneralController<>(HibernateUtil.getSessionFactory(), Organisasi.class);
-            session.setAttribute("dataOrganisasi", ic.getAll());
-            dis = request.getRequestDispatcher("/views/??.jsp");
+            InterfaceController<Organisasi> ico = new GeneralController<>(HibernateUtil.getSessionFactory(), Organisasi.class);
+            session.setAttribute("dataOrganisasi", ico.search("idKandidat", kandidat));
+            dis = request.getRequestDispatcher("/views/organisasi.jsp");
             dis.include(request, response);
-            
+
         }
     }
 

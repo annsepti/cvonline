@@ -31,6 +31,7 @@
                                 <li><i class="fa fa-heart"></i><a href="./keluarga?idKandidat=${param.id}">Keluarga</a></li>
                                 <li><i class="fa fa-bookmark"></i><a href="./pendidikan?idKandidat=${param.id}">Pendidikan Formal</a></li>
                                 <li><i class="fa fa-bookmark-o"></i><a href="./keahlian?idKandidat=${param.id}">Non Formal</a></li>
+                                <li><i class="fa fa-bookmark-o"></i><a href="./organisasi?idKandidat=${param.id}">Organisasi</a></li>
                                 <li><i class="fa fa-building-o"></i><a href="./pengalaman?idKandidat=${param.id}">Pengalaman Kerja</a></li>
                                 <li><i class="fa fa-group"></i><a href="./referensi?idKandidat=${param.id}">Referensi</a></li>
                                 <li><i class="fa fa-asterisk"></i><a href="./lain?idKandidat=${param.id}">Lain-lain</a></li>

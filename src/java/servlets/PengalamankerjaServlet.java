@@ -16,6 +16,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
+import models.Kandidat;
+import models.Organisasi;
 import models.Pengalamankerja;
 import tools.HibernateUtil;
 
@@ -43,18 +45,23 @@ public class PengalamankerjaServlet extends HttpServlet {
         String idKandidat = request.getParameter("idKandidat");
         try (PrintWriter out = response.getWriter()) {
             /* TODO output your page here. You may use following sample code. */
-            
-            InterfaceController<Pengalamankerja> ic = new GeneralController<>(HibernateUtil.getSessionFactory(), Pengalamankerja.class);
-            if(idKandidat.isEmpty()){
-                session.setAttribute("dataPengalaman", ic.getAll());
-                dis = request.getRequestDispatcher("/views/??.jsp");
-            } else{
-                Pengalamankerja pengalamankerja = ic.getById(idKandidat);
-                session.setAttribute("dataPengalaman", pengalamankerja);
-                dis = request.getRequestDispatcher("/views/pengalamanKerja.jsp");
-            }
-            dis.include(request, response); 
-                        
+            InterfaceController<Kandidat> ic = new GeneralController<>(HibernateUtil.getSessionFactory(), Kandidat.class);
+            Kandidat kandidat = ic.getById(idKandidat);
+            session.setAttribute("dataKandidat", kandidat);
+
+            InterfaceController<Pengalamankerja> icp = new GeneralController<>(HibernateUtil.getSessionFactory(), Pengalamankerja.class);
+            session.setAttribute("dataPengalaman", icp.search("idKandidat", kandidat));
+//            if(idKandidat.isEmpty()){
+//                session.setAttribute("dataPengalaman", icp.getAll());
+//                dis = request.getRequestDispatcher("/views/??.jsp");
+//            } else{
+//                Pengalamankerja pengalamankerja = icp.getById(idKandidat);
+//                session.setAttribute("dataPengalaman", pengalamankerja);
+            dis = request.getRequestDispatcher("/views/pengalamanKerja.jsp");
+//            }
+
+            dis.include(request, response);
+
         }
     }
 

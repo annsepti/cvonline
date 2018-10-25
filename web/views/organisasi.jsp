@@ -1,12 +1,12 @@
 <%-- 
-    Document   : pengalamanKerja
-    Created on : Oct 19, 2018, 12:59:34 AM
+    Document   : organisasi
+    Created on : Oct 25, 2018, 10:24:49 AM
     Author     : USER
 --%>
 
+<%@page import="java.util.List"%>
 <%@page import="models.Pengalamankerja"%>
 <%@page import="models.Organisasi"%>
-<%@page import="java.util.List"%>
 <%@page import="models.Kandidat"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -15,7 +15,6 @@
     <body>
         <% Kandidat kandidat = (Kandidat) session.getAttribute("dataKandidat");
             List<Organisasi> organisasis = (List<Organisasi>) session.getAttribute("dataOrganisasi");
-            List<Pengalamankerja> pengalamankerjas = (List<Pengalamankerja>) session.getAttribute("dataPengalaman");
         %>
         <jsp:include page="aside.jsp">
             <jsp:param name="id" value="<%= kandidat.getIdKandidat()%>"></jsp:param>
@@ -49,7 +48,7 @@
                         <div class="col-xs-6 col-sm-12">
                             <div class="card">
                                 <div class="card-header">
-                                    <strong>Pengalaman Kerja Profesional</strong> <small> Dimulai dengan pekerjaan saat ini hingga pekerjaan pertama anda</small>
+                                    <strong> Pengalaman Organisasi</strong>
                                 </div>
                                 <div class="card-body card-block">
                                     <div class="limiter">
@@ -58,42 +57,32 @@
                                                 <div class="table100">
 
                                                     <%
-                                                        int k = 1;
+                                                        int o = 1;
                                                     %>
-                                                    <div class="col-xs-6 col-sm-3">
-                                                        <button type="button" class="btn btn-primary btn-sm fa fa-pencil" data-toggle="modal" data-target="#tambahPengalamanModal">&nbsp; Tambah</button>
+                                                    <div class="col-xs-6 col-sm-2">
+                                                        <button type="button" class="btn btn-primary btn-sm fa fa-pencil" data-toggle="modal" data-target="#tambahOrganisasiModal">&nbsp; Tambah</button>
                                                     </div>
                                                     <table id="bootstrap-data-table" class="table table-striped table-bordered">
                                                         <thead>
                                                             <tr>
                                                                 <th>Opsi</th>
                                                                 <th>No</th>
-                                                                <th>Nama PT</th>
-                                                                <th>Bidang</th>
-                                                                <th>Tgl Masuk</th>
-                                                                <th>Tgl Keluar</th>
-                                                                <th>Posisi</th>
-                                                                <th>Uraian Jabatan</th>
+                                                                <th>Nama Organisasi</th>
                                                             </tr>
                                                         </thead>
                                                         <tbody>
                                                             <%
-                                                                for (Pengalamankerja pengalamankerja : pengalamankerjas) {
+                                                                for (Organisasi organisasi : organisasis) {
                                                             %>
                                                             <tr>
                                                                 <td>
                                                                     <button type="text" class="fa fa-recycle" data-toggle="modal" data-target="#tambahModal">Ubah</button> |
-                                                                    <button type="text" class="fa fa-trash" href="#?id=<%= pengalamankerja.getIdPengalamankerja()%>">Hapus</button>
+                                                                    <button type="text" class="fa fa-trash" href="#?id=<%= organisasi.getIdOrganisasi()%>">Hapus</button>
                                                                 </td>
-                                                                <td><%= k%></td>
-                                                                <td><%= pengalamankerja.getNamaPt()%></td>
-                                                                <td><%= pengalamankerja.getBidang()%></td>
-                                                                <td><%= pengalamankerja.getTglAwal()%></td>
-                                                                <td><%= pengalamankerja.getTglAkhir()%></td>
-                                                                <td><%= pengalamankerja.getPosisi()%></td>
-                                                                <td><%= pengalamankerja.getUraianJabatan()%></td>
+                                                                <td><%= o%></td>
+                                                                <td><%= organisasi.getNamaOrganisasi()%></td>
                                                             </tr>
-                                                            <% k++;
+                                                            <% o++;
                                                                 }%>
                                                         </tbody>
                                                     </table>
@@ -111,4 +100,3 @@
         <%@include file="footer.jsp" %>
     </body>
 </html>
-
